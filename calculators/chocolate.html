@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Chocolate Toxicity Calculator for Dogs | PetPoisonCalc</title>
+<meta name="description" content="Estimate the urgency of veterinary care after a dog eats chocolate, based on weight, chocolate type, and amount. Covers baking, dark, milk, and white chocolate theobromine risk. Not a substitute for professional care." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://petpoisoncalc.com/calculators/chocolate.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PetPoisonCalc" />
+<meta property="og:title" content="Chocolate Toxicity Calculator for Dogs | PetPoisonCalc" />
+<meta property="og:description" content="Estimate the urgency of veterinary care after a dog eats chocolate, based on weight, chocolate type, and amount. Baking chocolate is far more dangerous than milk chocolate." />
+<meta property="og:url" content="https://petpoisoncalc.com/calculators/chocolate.html" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Chocolate Toxicity Calculator for Dogs" />
+<meta name="twitter:description" content="Estimate the urgency of veterinary care after a dog eats chocolate, based on weight, chocolate type, and amount." />
+
+<!-- Structured data: MedicalWebPage + MedicalRiskCalculator -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Chocolate Toxicity Calculator for Dogs",
+  "url": "https://petpoisoncalc.com/calculators/chocolate.html",
+  "description": "Estimate the urgency of veterinary care after a dog eats chocolate, based on weight, chocolate type, and amount consumed.",
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patient"
+  },
+  "specialty": "https://schema.org/Toxicology",
+  "lastReviewed": "2026-09-08",
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "PetPoisonCalc Editorial Team"
+  },
+  "about": {
+    "@type": "MedicalRiskCalculator",
+    "name": "Chocolate Toxicity Risk Calculator",
+    "estimatesRiskOf": {
+      "@type": "MedicalCondition",
+      "name": "Theobromine and caffeine toxicosis in dogs from chocolate ingestion"
+    },
+    "includedRiskFactor": [
+      { "@type": "MedicalRiskFactor", "name": "Dog body weight" },
+      { "@type": "MedicalRiskFactor", "name": "Chocolate type (baking, dark, milk, or white)" },
+      { "@type": "MedicalRiskFactor", "name": "Amount of chocolate ingested" }
+    ],
+    "recognizingAuthority": {
+      "@type": "Organization",
+      "name": "ASPCA Animal Poison Control Center"
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "PetPoisonCalc", "item": "https://petpoisoncalc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Chocolate Toxicity Calculator", "item": "https://petpoisoncalc.com/calculators/chocolate.html" }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="../base.css" />
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="../assets/site-shell.css" />
+</head>
+<body>
+
+<!-- ============ TOP EMERGENCY BAR ============ -->
+<div class="emergency-bar" role="banner">
+  <div class="wrap">
+    <span>Dog ate chocolate right now?</span>
+    <a href="tel:8884264435">Call ASPCA Poison Control (888) 426-4435</a>
+    <span aria-hidden="true">&middot;</span>
+    <a href="tel:8557647661">Pet Poison Helpline (855) 764-7661</a>
+  </div>
+</div>
+
+<!-- ============ SITE NAV ============ -->
+<nav class="site-nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="site-nav-brand" href="../index.html">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M24 4C24 4 15 13 15 21C15 26 19 30 24 30C29 30 33 26 33 21C33 13 24 4 24 4Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M24 30V38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M16 44C16 40.5 19.5 38 24 38C28.5 38 32 40.5 32 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M24 12L24 21M19.5 16.5L28.5 16.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      PetPoisonCalc
+    </a>
+    <div class="site-nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../index.html#faq-heading">FAQ</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-shell">
+  <div class="content-col">
+    <div class="wrap">
+
+      <!-- ============ HEADER ============ -->
+      <header class="site-header" style="border-bottom: none;">
+        <p style="margin: 0 0 var(--space-3);"><a href="../index.html" style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted);">&larr; All calculators</a></p>
+        <h1>Chocolate Toxicity Calculator</h1>
+        <p class="lede">Estimate how urgently your dog needs veterinary attention after eating chocolate, based on body weight, chocolate type, and amount consumed.</p>
+
+        <div class="no-safe-dose" role="alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <div>
+            <strong>Chocolate type matters as much as the amount.</strong>
+            <p>Baking chocolate contains roughly 10 times more theobromine than milk chocolate, gram for gram. A small amount of baking or dark chocolate can be more dangerous than a much larger amount of milk chocolate. This tool estimates relative urgency using published veterinary toxicology data. It cannot rule out risk, and every ingestion should be evaluated by a veterinarian or animal poison control.</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- ============ MAIN CALCULATOR ============ -->
+      <main>
+        <section class="calc-card" aria-labelledby="calc-heading">
+          <h2 class="card-heading" id="calc-heading">Assess the situation</h2>
+          <p class="card-subheading">Fill in what you know. Estimates are fine, exact numbers are better.</p>
+
+          <form id="calcForm" novalidate>
+
+            <!-- Weight -->
+            <div class="field-group">
+              <label class="field-label" for="weightInput">Dog&rsquo;s weight</label>
+              <div class="unit-toggle" role="group" aria-label="Weight unit">
+                <button type="button" id="unitLbs" aria-pressed="true">lbs</button>
+                <button type="button" id="unitKg" aria-pressed="false">kg</button>
+              </div>
+              <div class="input-row">
+                <div class="input-shell">
+                  <input type="number" id="weightInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 45" aria-describedby="weightHint" />
+                  <span class="unit-suffix" id="weightUnitLabel">lbs</span>
+                </div>
+              </div>
+              <p class="field-hint" id="weightHint">If you're unsure, use your dog's last vet-recorded weight.</p>
+              <p class="error-msg" id="weightError">Enter a weight greater than 0.</p>
+            </div>
+
+            <!-- Chocolate type -->
+            <div class="field-group">
+              <span class="field-label">What kind of chocolate?</span>
+              <div class="seg-group" role="group" aria-label="Chocolate type" style="grid-template-columns: 1fr 1fr;">
+                <button type="button" class="seg-btn" id="typeBaking" aria-pressed="false">
+                  <strong>Baking / unsweetened</strong>
+                  <span>Highest risk, ~450 mg theobromine/oz</span>
+                </button>
+                <button type="button" class="seg-btn" id="typeDark" aria-pressed="true">
+                  <strong>Dark chocolate</strong>
+                  <span>~130&ndash;230 mg theobromine/oz</span>
+                </button>
+                <button type="button" class="seg-btn" id="typeMilk" aria-pressed="false">
+                  <strong>Milk chocolate</strong>
+                  <span>~44 mg theobromine/oz</span>
+                </button>
+                <button type="button" class="seg-btn" id="typeWhite" aria-pressed="false">
+                  <strong>White chocolate</strong>
+                  <span>Negligible theobromine</span>
+                </button>
+              </div>
+              <p class="field-hint">If unsure between dark and semi-sweet, choose dark for a more conservative (safer) estimate.</p>
+            </div>
+
+            <!-- Amount -->
+            <div class="field-group">
+              <label class="field-label" for="amountInput">How much did your dog eat?</label>
+              <div class="input-row">
+                <div class="input-shell">
+                  <input type="number" id="amountInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 3" />
+                  <span class="unit-suffix" id="amountUnitLabel">oz</span>
+                </div>
+                <div class="unit-toggle" role="group" aria-label="Amount unit">
+                  <button type="button" id="amountUnitOz" aria-pressed="true">oz</button>
+                  <button type="button" id="amountUnitG" aria-pressed="false">g</button>
+                </div>
+              </div>
+              <p class="field-hint" id="amountHint">Approximate is okay. If a whole bar or box is missing, use the highest reasonable estimate, not the lowest. 1 oz &asymp; 28 g. A standard 1.55 oz candy bar &asymp; 44 g.</p>
+              <p class="error-msg" id="amountError">Enter an amount greater than 0.</p>
+            </div>
+
+            <button type="submit" class="btn-primary" id="calcBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+              Calculate risk level
+            </button>
+          </form>
+
+          <!-- ============ RESULTS ============ -->
+          <div class="results" id="resultsWrap" aria-live="polite">
+
+            <div class="result-banner" id="resultBanner">
+              <div class="tier-label-inner">
+                <span class="tier-label" id="tierLabel"><span id="tierLabelText">Assessing</span></span>
+              </div>
+              <h3 class="result-headline" id="resultHeadline"></h3>
+              <p class="result-detail" id="resultDetail"></p>
+
+              <div class="dose-readout">
+                <div class="dose-stat">
+                  <span class="num" id="doseTheobromine">&mdash;</span>
+                  <span class="lbl">Estimated theobromine dose (mg per kg body weight)</span>
+                </div>
+                <div class="dose-stat">
+                  <span class="num" id="doseTotalMg">&mdash;</span>
+                  <span class="lbl">Total theobromine ingested (mg)</span>
+                </div>
+              </div>
+
+              <div class="action-block" id="actionBlock"></div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ============ WHAT TO DO RIGHT NOW ============ -->
+        <section class="info-section" aria-labelledby="decision-heading">
+          <h2 id="decision-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c5.5-4 8-7.5 8-12A8 8 0 0 0 4 10c0 4.5 2.5 8 8 12Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Emergency vet or poison control: which do I call?
+          </h2>
+          <p class="section-intro">Both resources exist for a reason, and in most cases you should use both. Here is how to think about the difference.</p>
+
+          <div class="decision-grid">
+            <div class="decision-card er">
+              <h3>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 8v8M8 12h8"/><circle cx="12" cy="12" r="10"/></svg>
+                Go straight to an emergency vet if&hellip;
+              </h3>
+              <ul>
+                <li>Your dog is already vomiting repeatedly, has a racing heartbeat, tremors, or seizures</li>
+                <li>It has been more than 2 hours since ingestion, so inducing vomiting at home is no longer reliable</li>
+                <li>Your dog has heart disease, is a puppy, senior, or small toy breed</li>
+                <li>The chocolate was baking chocolate, dark chocolate, or cocoa powder in any meaningful amount</li>
+                <li>A poison control consultation or your vet has told you to bring the dog in</li>
+              </ul>
+            </div>
+            <div class="decision-card hotline">
+              <h3>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                Call poison control first if&hellip;
+              </h3>
+              <ul>
+                <li>Your dog just ate the chocolate minutes ago and seems otherwise normal</li>
+                <li>You need help deciding whether the amount and type is dangerous for your dog's specific weight</li>
+                <li>You want a case number and treatment plan you can hand directly to your regular or emergency vet</li>
+                <li>You are unsure whether to induce vomiting at home, which should only be done under professional guidance</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-note">
+            In practice, the fastest safe path is usually: call ASPCA Poison Control or Pet Poison Helpline while someone else drives toward the nearest open veterinary clinic. Do not wait to see if symptoms appear. Cardiac effects and seizures can develop even after early vomiting has already passed.
+          </div>
+        </section>
+
+        <!-- ============ SYMPTOM TIMELINE ============ -->
+        <section class="info-section" aria-labelledby="symptom-heading">
+          <h2 id="symptom-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            How theobromine toxicosis develops
+          </h2>
+          <p class="section-intro">Theobromine and caffeine, the two stimulant compounds in chocolate, are metabolized far more slowly by dogs than by humans, which is why even a moderate dose can cause a prolonged reaction.</p>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="t-range">6 &ndash; 12 hours</div>
+              <h3>Early signs typically begin</h3>
+              <ul>
+                <li>Vomiting</li>
+                <li>Diarrhea</li>
+                <li>Excessive thirst (polydipsia)</li>
+                <li>Restlessness or hyperactivity</li>
+                <li>Panting</li>
+              </ul>
+            </div>
+            <div class="timeline-item critical">
+              <div class="t-range">Following hours (dose-dependent)</div>
+              <h3>Cardiac and neurological signs</h3>
+              <ul>
+                <li>Elevated or abnormal heart rate at doses around 40&ndash;50 mg/kg</li>
+                <li>Tremors and seizures possible at doses of 60 mg/kg or higher</li>
+                <li>Elevated body temperature</li>
+                <li>Muscle rigidity</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="t-range">Up to 72 hours</div>
+              <h3>Duration in severe cases</h3>
+              <ul>
+                <li>Clinical signs can persist up to 72 hours after ingestion due to slow theobromine metabolism in dogs</li>
+                <li>Ongoing monitoring is typically required through this window in significant ingestions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-note">
+            The reported lethal dose (LD50) of theobromine in dogs is 100&ndash;200 mg/kg, but severe signs and death have been documented at meaningfully lower doses in individual dogs. There is no dose considered guaranteed safe for a given dog, especially with baking or dark chocolate.
+          </div>
+        </section>
+
+        <!-- ============ REFERENCE DATA ============ -->
+        <section class="info-section" aria-labelledby="data-heading">
+          <h2 id="data-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            Published case data behind these estimates
+          </h2>
+          <p class="section-intro">These figures come from veterinary toxicology literature. They describe documented clinical thresholds, not a line between "safe" and "dangerous."</p>
+
+          <div class="ref-table-wrap">
+            <table class="ref-table">
+              <thead>
+                <tr>
+                  <th>Theobromine dose</th>
+                  <th>Documented clinical effect</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="hl">&asymp; 20 mg/kg body weight</td>
+                  <td>Mild clinical signs: vomiting, diarrhea, excessive thirst</td>
+                </tr>
+                <tr>
+                  <td class="hl">&asymp; 40&ndash;50 mg/kg body weight</td>
+                  <td>Cardiotoxic effects: abnormal heart rhythm, elevated heart rate</td>
+                </tr>
+                <tr>
+                  <td class="hl">&ge; 60 mg/kg body weight</td>
+                  <td>Seizures</td>
+                </tr>
+                <tr>
+                  <td class="hl">100&ndash;200 mg/kg body weight</td>
+                  <td>Reported oral LD50 (lethal dose in 50% of cases)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="ref-table-wrap" style="margin-top: var(--space-5);">
+            <table class="ref-table">
+              <thead>
+                <tr>
+                  <th>Chocolate type</th>
+                  <th>Theobromine per ounce (approx.)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Baking / unsweetened chocolate</td>
+                  <td class="hl">&asymp; 376&ndash;450 mg</td>
+                </tr>
+                <tr>
+                  <td>Dark chocolate (60&ndash;85% cocoa)</td>
+                  <td class="hl">&asymp; 130&ndash;230 mg</td>
+                </tr>
+                <tr>
+                  <td>Milk chocolate</td>
+                  <td class="hl">&asymp; 44&ndash;60 mg</td>
+                </tr>
+                <tr>
+                  <td>White chocolate</td>
+                  <td class="hl">Negligible (trace amounts)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="field-hint" style="margin-top: var(--space-3);">Theobromine content varies by brand and cocoa percentage. When in doubt about which category a product falls into, choose the higher-risk category for a more conservative estimate.</p>
+        </section>
+
+      </main>
+
+      <!-- ============ IN-CONTENT AD (mobile/tablet visible) ============ -->
+      <div class="ad-slot" style="margin-top: var(--space-8);">Ad slot 336x280</div>
+
+      <!-- ============ SOURCES ============ -->
+      <section class="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <ol>
+          <li>Merck Veterinary Manual, <a href="https://www.merckvetmanual.com/toxicology/food-hazards/chocolate-toxicosis-in-animals" target="_blank" rel="noopener noreferrer">Chocolate Toxicosis in Animals</a></li>
+          <li>VCA Animal Hospitals, <a href="https://vcahospitals.com/know-your-pet/chocolate-poisoning-in-dogs" target="_blank" rel="noopener noreferrer">Chocolate Poisoning in Dogs</a></li>
+          <li>MyFoodData, <a href="https://www.myfooddata.com/articles/chocolate-high-in-theobromine.php" target="_blank" rel="noopener noreferrer">Top Chocolate Products Highest in Theobromine</a></li>
+          <li>ASPCA, <a href="https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets" target="_blank" rel="noopener noreferrer">People Foods to Avoid Feeding Your Pets</a></li>
+          <li>ASPCA, <a href="https://www.aspca.org/pet-care/aspca-poison-control" target="_blank" rel="noopener noreferrer">ASPCA Animal Poison Control</a> &mdash; (888) 426-4435</li>
+          <li>Pet Poison Helpline, <a href="https://www.petpoisonhelpline.com/poison/chocolate/" target="_blank" rel="noopener noreferrer">Chocolate</a> &mdash; (855) 764-7661</li>
+        </ol>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ============ AD SIDEBAR ============ -->
+  <aside class="ad-col" aria-label="Advertisement">
+    <div class="ad-slot" data-slot="sidebar-1">Ad slot 300x250</div>
+    <div class="ad-slot" data-slot="sidebar-2">Ad slot 300x600</div>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap" style="max-width: 1180px;">
+    <p>This tool provides a general risk estimate for educational purposes only and is not a diagnosis or a substitute for veterinary care. Toxic response to chocolate varies between individual dogs based on size, health status, and sensitivity. Always contact a veterinarian or an animal poison control center after any suspected ingestion, regardless of the result shown above.</p>
+    <div class="footer-links">
+      <a href="../index.html">All calculators</a>
+      <a href="tel:8884264435">ASPCA Poison Control: (888) 426-4435</a>
+      <a href="tel:8557647661">Pet Poison Helpline: (855) 764-7661</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CALL BAR ============ -->
+<div class="sticky-call-bar">
+  <a href="tel:8884264435">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+    Call ASPCA Poison Control now
+  </a>
+</div>
+
+<script src="./chocolate.js"></script>
+</body>
+</html>
