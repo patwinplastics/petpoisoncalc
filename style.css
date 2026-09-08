@@ -1031,7 +1031,7 @@ footer {
 
 footer p {
   font-size: var(--text-xs);
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
   max-width: 60ch;
   margin-inline: auto;
   line-height: 1.6;
