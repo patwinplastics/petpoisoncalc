@@ -35,10 +35,22 @@
 }
 
 .ad-slot {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+  overflow: hidden;
+}
+
+.ad-slot.ad-slot-tall {
+  min-height: 600px;
+}
+
+/* Placeholder styling used only before an ad unit is wired in
+   (kept for any future slot added without markup yet). */
+.ad-slot:not(.adsbygoogle) {
   background: var(--color-surface);
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
-  min-height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,10 +61,6 @@
   letter-spacing: 0.06em;
   text-align: center;
   padding: var(--space-4);
-}
-
-.ad-slot[data-slot='sidebar-2'] {
-  min-height: 600px;
 }
 
 /* Below ~1080px there isn't room for a real sidebar without
