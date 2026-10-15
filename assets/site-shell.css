@@ -279,8 +279,13 @@
 }
 .skip-link:focus { top: var(--space-2); }
 
-/* ---------- Pages without ads (calculators) ---------- */
+/* ---------- Pages without ads (calculators) ----------
+   No sidebar: one column that spans the same 1180px frame as the
+   nav and footer, so the page stays centered with no empty gutter. */
 .page-shell.no-ads {
-  grid-template-columns: minmax(0, 760px);
-  max-width: calc(760px + 2 * var(--space-5));
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 1180px;
+}
+.page-shell.no-ads > .content-col > .wrap {
+  max-width: none;
 }
