@@ -263,3 +263,24 @@
 .footer-links a {
   color: var(--color-text-muted);
 }
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: -100px;
+  z-index: 1000;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 2px solid currentColor;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+.skip-link:focus { top: var(--space-2); }
+
+/* ---------- Pages without ads (calculators) ---------- */
+.page-shell.no-ads {
+  grid-template-columns: minmax(0, 760px);
+  max-width: calc(760px + 2 * var(--space-5));
+}

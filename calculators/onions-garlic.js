@@ -1,18 +1,7 @@
 (function () {
   'use strict';
 
-  /* ============================================
-     THEME TOGGLE
-     ============================================ */
-  var root = document.documentElement;
-  var themeToggle = document.getElementById('themeToggle');
-  var currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  root.setAttribute('data-theme', currentTheme);
-
-  themeToggle.addEventListener('click', function () {
-    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', currentTheme);
-  });
+  // Theme toggle lives in /assets/shell.js.
 
   /* ============================================
      STATE
@@ -151,8 +140,8 @@
     },
     caution: {
       label: 'Contact a professional today',
-      headline: 'This estimated dose is below the typical documented toxic threshold, but monitoring is still important.',
-      detail: 'The estimated dose is below the lower end of the range typically associated with toxicity in dogs, but individual sensitivity varies, and garlic and concentrated onion products are easy to underestimate. Call poison control or your vet today to confirm this estimate, and watch for lethargy, pale gums, or dark urine over the next 5 days, since effects from Allium ingestion are frequently delayed.',
+      headline: 'This estimated dose is under the 15 g/kg level this calculator uses for its higher tiers, but it may still be enough to cause harm.',
+      detail: 'Onion toxicosis has been reported in dogs that ate more than 0.5% of their body weight in onion (about 5 g per kg), well below the 15 to 30 g/kg range often cited. Individual sensitivity varies, and garlic and concentrated onion products are easy to underestimate. Call poison control or your veterinarian now to review this estimate, and watch for lethargy, pale gums, or dark urine over the next 5 days, since effects from Allium ingestion are frequently delayed.',
       actions: [
         { primary: true, tel: '8884264435', title: 'Call ASPCA Animal Poison Control', sub: '(888) 426-4435 · 24/7 · consultation fee applies' },
         { primary: false, tel: '8557647661', title: 'Call Pet Poison Helpline', sub: '(855) 764-7661 · 24/7 · consultation fee applies' },

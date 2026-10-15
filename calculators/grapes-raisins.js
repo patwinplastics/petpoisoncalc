@@ -1,18 +1,8 @@
 (function () {
   'use strict';
 
-  /* ============================================
-     THEME TOGGLE
-     ============================================ */
-  var root = document.documentElement;
-  var themeToggle = document.getElementById('themeToggle');
-  var currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  root.setAttribute('data-theme', currentTheme);
-
-  themeToggle.addEventListener('click', function () {
-    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', currentTheme);
-  });
+  // Theme toggle lives in /assets/shell.js (loaded on every page).
+  if (!document.getElementById('calcForm')) { return; }
 
   /* ============================================
      STATE
