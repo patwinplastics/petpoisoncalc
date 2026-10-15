@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Ibuprofen Toxicity Calculator for Dogs | PetPoisonCalc</title>
+<meta name="description" content="Estimate the urgency of veterinary care after a dog eats ibuprofen (Advil, Motrin) based on weight, tablet strength, and number of pills. Covers stomach ulcer, kidney injury, and neurologic risk. Not a substitute for professional care." />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://petpoisoncalc.com/calculators/ibuprofen.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="PetPoisonCalc" />
+<meta property="og:title" content="Ibuprofen Toxicity Calculator for Dogs | PetPoisonCalc" />
+<meta property="og:description" content="Estimate the urgency of veterinary care after a dog eats ibuprofen (Advil, Motrin), based on weight, tablet strength, and number of tablets." />
+<meta property="og:url" content="https://petpoisoncalc.com/calculators/ibuprofen.html" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ibuprofen Toxicity Calculator for Dogs" />
+<meta name="twitter:description" content="Estimate the urgency of veterinary care after a dog eats ibuprofen (Advil, Motrin), based on weight, tablet strength, and number of tablets." />
+
+<!-- Structured data: MedicalWebPage + MedicalRiskCalculator -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Ibuprofen Toxicity Calculator for Dogs",
+  "url": "https://petpoisoncalc.com/calculators/ibuprofen.html",
+  "description": "Estimate the urgency of veterinary care after a dog eats ibuprofen (Advil, Motrin), based on weight, tablet strength, and number of tablets.",
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patient"
+  },
+  "specialty": "https://schema.org/Toxicology",
+  "lastReviewed": "2026-10-15",
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "PetPoisonCalc Editorial Team"
+  },
+  "about": {
+    "@type": "MedicalRiskCalculator",
+    "name": "Ibuprofen Toxicity Risk Calculator",
+    "estimatesRiskOf": {
+      "@type": "MedicalCondition",
+      "name": "Gastrointestinal ulceration, acute kidney injury, and CNS signs in dogs from ibuprofen ingestion"
+    },
+    "includedRiskFactor": [
+      { "@type": "MedicalRiskFactor", "name": "Dog body weight" },
+      { "@type": "MedicalRiskFactor", "name": "Tablet strength (mg)" },
+      { "@type": "MedicalRiskFactor", "name": "Number of tablets ingested" }
+    ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "PetPoisonCalc", "item": "https://petpoisoncalc.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Ibuprofen Toxicity Calculator", "item": "https://petpoisoncalc.com/calculators/ibuprofen.html" }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="../base.css" />
+<link rel="stylesheet" href="../style.css" />
+<link rel="stylesheet" href="../assets/site-shell.css" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X4WFDJRLHR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X4WFDJRLHR');
+</script>
+
+</head>
+<body>
+
+<!-- ============ TOP EMERGENCY BAR ============ -->
+<div class="emergency-bar" role="banner">
+  <div class="wrap">
+    <span>Dog ate xylitol right now?</span>
+    <a href="tel:8884264435">Call ASPCA Poison Control (888) 426-4435</a>
+    <span aria-hidden="true">&middot;</span>
+    <a href="tel:8557647661">Pet Poison Helpline (855) 764-7661</a>
+  </div>
+</div>
+
+<!-- ============ SITE NAV ============ -->
+<nav class="site-nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="site-nav-brand" href="../index.html">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M24 4C24 4 15 13 15 21C15 26 19 30 24 30C29 30 33 26 33 21C33 13 24 4 24 4Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M24 30V38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M16 44C16 40.5 19.5 38 24 38C28.5 38 32 40.5 32 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M24 12L24 21M19.5 16.5L28.5 16.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      PetPoisonCalc
+    </a>
+    <div class="site-nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../index.html#faq-heading">FAQ</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-shell no-ads">
+  <div class="content-col">
+    <div class="wrap">
+
+      <!-- ============ HEADER ============ -->
+      <header class="site-header" style="border-bottom: none;">
+        <p style="margin: 0 0 var(--space-3);"><a href="../index.html" style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted);">&larr; All calculators</a></p>
+        <h1>Ibuprofen Toxicity Calculator</h1>
+        <p class="lede">Estimate how urgently your dog needs veterinary attention after eating ibuprofen (Advil, Motrin), based on body weight, tablet strength, and how many tablets were eaten.</p>
+
+        <div class="no-safe-dose" role="alert">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+          <div>
+            <strong>Ibuprofen has a narrow margin of safety in dogs.</strong>
+            <p>Even a single regular-strength tablet can be a significant dose for a small dog, and stomach ulcers have been reported in dogs given low doses over time. Older dogs and dogs with kidney disease can develop kidney injury at lower doses than listed here. This tool estimates relative urgency using published veterinary toxicology data. It cannot rule out risk, and every ingestion should be evaluated by a veterinarian or animal poison control. This calculator covers ibuprofen only: naproxen (Aleve) and other NSAIDs have different, often much lower, toxic doses, so call poison control right away for those.</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- ============ MAIN CALCULATOR ============ -->
+      <main>
+        <section class="calc-card" aria-labelledby="calc-heading">
+          <h2 class="card-heading" id="calc-heading">Assess the situation</h2>
+          <p class="card-subheading">Fill in what you know. Estimates are fine, exact numbers are better. Keep the packaging nearby for your call.</p>
+
+          <form id="calcForm" novalidate>
+
+            <!-- Weight -->
+            <div class="field-group">
+              <label class="field-label" for="weightInput">Dog&rsquo;s weight</label>
+              <div class="unit-toggle" role="group" aria-label="Weight unit">
+                <button type="button" id="unitLbs" aria-pressed="true">lbs</button>
+                <button type="button" id="unitKg" aria-pressed="false">kg</button>
+              </div>
+              <div class="input-row">
+                <div class="input-shell">
+                  <input type="number" id="weightInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 45" aria-describedby="weightHint" />
+                  <span class="unit-suffix" id="weightUnitLabel">lbs</span>
+                </div>
+              </div>
+              <p class="field-hint" id="weightHint">If you're unsure, use your dog's last vet-recorded weight.</p>
+              <p class="error-msg" id="weightError">Enter a weight greater than 0.</p>
+            </div>
+
+            <!-- Tablet strength -->
+            <div class="field-group">
+              <span class="field-label">Tablet strength</span>
+              <div class="seg-group" role="group" aria-label="Tablet strength" style="grid-template-columns: 1fr 1fr;">
+                <button type="button" class="seg-btn" id="str200" data-mg="200" aria-pressed="true"><strong>200 mg</strong><span>Regular over-the-counter (Advil, Motrin IB)</span></button>
+                <button type="button" class="seg-btn" id="str400" data-mg="400" aria-pressed="false"><strong>400 mg</strong><span>Prescription strength</span></button>
+                <button type="button" class="seg-btn" id="str600" data-mg="600" aria-pressed="false"><strong>600 mg</strong><span>Prescription strength</span></button>
+                <button type="button" class="seg-btn" id="str800" data-mg="800" aria-pressed="false"><strong>800 mg</strong><span>Prescription strength</span></button>
+                <button type="button" class="seg-btn" id="strCustom" data-mg="custom" aria-pressed="false" style="grid-column: 1 / -1;"><strong>Other strength</strong><span>Children's tablets, liquid, or a different dose: enter mg per tablet</span></button>
+              </div>
+              <div class="input-row" id="customMgWrap" style="display: none; margin-top: var(--space-3);">
+                <div class="input-shell">
+                  <input type="number" id="customMgInput" inputmode="decimal" min="0" step="1" placeholder="mg per tablet, e.g. 100" aria-label="Milligrams of ibuprofen per tablet" />
+                  <span class="unit-suffix">mg</span>
+                </div>
+              </div>
+              <p class="field-hint">Check the bottle label. If unsure, choose the higher strength.</p>
+              <p class="error-msg" id="customMgError">Enter the mg per tablet.</p>
+            </div>
+
+            <!-- Count -->
+            <div class="field-group">
+              <label class="field-label" for="countInput">How many tablets or capsules?</label>
+              <div class="input-row">
+                <div class="input-shell">
+                  <input type="number" id="countInput" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 2" />
+                  <span class="unit-suffix">tablets</span>
+                </div>
+              </div>
+              <p class="field-hint">If pills are missing from a bottle and you are unsure, use the highest reasonable count, not the lowest.</p>
+              <p class="error-msg" id="countError">Enter a number greater than 0.</p>
+            </div>
+
+            <button type="submit" class="btn-primary" id="calcBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+              Calculate risk level
+            </button>
+          </form>
+
+          <!-- ============ RESULTS ============ -->
+          <div class="results" id="resultsWrap" aria-live="polite">
+            <div class="result-banner" id="resultBanner">
+              <div class="tier-label-inner">
+                <span class="tier-label" id="tierLabel"><span id="tierLabelText">Assessing</span></span>
+              </div>
+              <h3 class="result-headline" id="resultHeadline"></h3>
+              <p class="result-detail" id="resultDetail"></p>
+
+              <div class="dose-readout">
+                <div class="dose-stat">
+                  <span class="num" id="doseMgKg">&mdash;</span>
+                  <span class="lbl">Estimated dose (mg ibuprofen per kg body weight)</span>
+                </div>
+                <div class="dose-stat">
+                  <span class="num" id="doseTotal">&mdash;</span>
+                  <span class="lbl">Estimated total ibuprofen ingested (mg)</span>
+                </div>
+              </div>
+
+              <div class="action-block" id="actionBlock"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ WHAT TO DO RIGHT NOW ============ -->
+        <section class="info-section" aria-labelledby="decision-heading">
+          <h2 id="decision-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c5.5-4 8-7.5 8-12A8 8 0 0 0 4 10c0 4.5 2.5 8 8 12Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Emergency vet or poison control: which do I call?
+          </h2>
+          <p class="section-intro">Treatment works best when started early, often before any signs appear. Vets commonly induce vomiting, give activated charcoal and stomach protectants, and start IV fluids to protect the kidneys at higher doses.</p>
+          <div class="decision-grid">
+            <div class="decision-card er">
+              <h3>Go straight to an emergency vet if&hellip;</h3>
+              <ul>
+                <li>Your dog is vomiting (especially blood), has black or tarry stool, is weak, wobbly, or having a seizure</li>
+                <li>The estimated dose is in the Emergency range</li>
+                <li>Your dog is older or has known kidney, liver, or stomach problems</li>
+                <li>A poison control consultation or your vet has told you to bring the dog in</li>
+              </ul>
+            </div>
+            <div class="decision-card hotline">
+              <h3>Call poison control first if&hellip;</h3>
+              <ul>
+                <li>Your dog just ate the pills and seems normal</li>
+                <li>You are unsure of the tablet strength or how many were eaten</li>
+                <li>The product was a combination medicine (cold and flu, sleep aid) with other ingredients</li>
+                <li>You want a case number and treatment plan to hand to your vet</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-note">Do not try to make your dog vomit at home unless a veterinarian or poison control tells you to, and never give your dog any other pain medicine.</div>
+        </section>
+
+        <!-- ============ SYMPTOM TIMELINE ============ -->
+        <section class="info-section" aria-labelledby="symptom-heading">
+          <h2 id="symptom-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            How ibuprofen toxicosis develops
+          </h2>
+          <p class="section-intro">Ibuprofen blocks the prostaglandins that protect the stomach lining and keep blood flowing to the kidneys. Higher doses add kidney and then nervous system effects.</p>
+          <div class="timeline">
+            <div class="timeline-item critical">
+              <div class="t-range">Within hours &ndash; 24 hours</div>
+              <h3>Stomach and gut signs</h3>
+              <ul>
+                <li>Vomiting, sometimes with blood</li>
+                <li>Diarrhea or black, tarry stool</li>
+                <li>Abdominal pain, loss of appetite</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="t-range">1 &ndash; 5 days</div>
+              <h3>Kidney injury (higher doses)</h3>
+              <ul>
+                <li>Increased or decreased thirst and urination</li>
+                <li>Lethargy, poor appetite</li>
+                <li>Kidney values on bloodwork may rise before signs appear</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="t-range">Within hours (very high doses)</div>
+              <h3>Nervous system signs</h3>
+              <ul>
+                <li>Wobbliness, depression</li>
+                <li>Seizures or coma</li>
+                <li>Shock</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-note">Stomach ulcers can develop over several days. A dog that seems fine the first day can still develop problems, so follow-up bloodwork is often recommended.</div>
+        </section>
+
+        <!-- ============ REFERENCE DATA ============ -->
+        <section class="info-section" aria-labelledby="data-heading">
+          <h2 id="data-heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            Published case data behind these estimates
+          </h2>
+          <p class="section-intro">These figures come from the Merck Veterinary Manual and ASPCA Animal Poison Control Center toxicology briefs. They describe documented clinical thresholds for a single acute ingestion, not a line between "safe" and "dangerous."</p>
+          <div class="ref-table-wrap">
+            <table class="ref-table">
+              <thead>
+                <tr>
+                  <th>Single ibuprofen dose</th>
+                  <th>Documented clinical effect</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="hl">&ge; 25 mg/kg</td>
+                  <td>Vomiting, diarrhea, abdominal pain, GI ulceration reported (ASPCA APCC)</td>
+                </tr>
+                <tr>
+                  <td class="hl">&ge; 175 mg/kg</td>
+                  <td>Increased risk of acute kidney injury, plus GI bleeding</td>
+                </tr>
+                <tr>
+                  <td class="hl">&gt; 400 mg/kg</td>
+                  <td>Seizures, wobbliness, coma, in addition to kidney and GI signs</td>
+                </tr>
+                <tr>
+                  <td class="hl">&gt; 600 mg/kg</td>
+                  <td>Potentially lethal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="field-hint" style="margin-top: var(--space-3);">This calculator uses: under 25 mg/kg = contact a professional now; 25 to under 175 mg/kg = Urgent; 175 mg/kg and above = Emergency. Older dogs and dogs with kidney disease can be affected at lower doses.</p>
+        </section>
+
+      </main>
+
+
+      <!-- ============ SOURCES ============ -->
+      <section class="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Sources</h2>
+        <p class="sources-meta">Reviewed against the sources below on October 15, 2026 by the PetPoisonCalc editorial team.</p>
+        <ol>
+          <li>Merck Veterinary Manual, <a href="https://www.merckvetmanual.com/toxicology/toxicoses-from-human-analgesics/toxicoses-from-human-analgesics-in-animals" target="_blank" rel="noopener noreferrer">Toxicoses From Human Analgesics in Animals</a></li>
+          <li>ASPCA Animal Poison Control Center, <a href="https://www.aspcapro.org/sites/default/files/t-toxbrief_0704.pdf" target="_blank" rel="noopener noreferrer">Toxicology Brief: Ibuprofen toxicosis in dogs, cats, and ferrets (Dunayer, Veterinary Medicine, 2004) (PDF)</a></li>
+          <li>ASPCA Animal Poison Control Center, <a href="https://www.aspcapro.org/sites/default/files/zm-vetm0306_142-148.pdf" target="_blank" rel="noopener noreferrer">Toxicology Brief: The 10 most common toxicoses in dogs (Meadows &amp; Gwaltney-Brant, Veterinary Medicine, 2006) (PDF)</a></li>
+          <li>ASPCA, <a href="https://www.aspca.org/pet-care/aspca-poison-control" target="_blank" rel="noopener noreferrer">ASPCA Animal Poison Control</a> &mdash; (888) 426-4435</li>
+          <li>Pet Poison Helpline, <a href="https://www.petpoisonhelpline.com/poison/ibuprofen/" target="_blank" rel="noopener noreferrer">Ibuprofen</a> &mdash; (855) 764-7661</li>
+        </ol>
+      </section>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap" style="max-width: 1180px;">
+    <p>This tool provides a general risk estimate for educational purposes only and is not a diagnosis or a substitute for veterinary care. Toxic response to ibuprofen varies between individual dogs, especially older dogs and those with kidney disease. Always contact a veterinarian or an animal poison control center after any suspected ingestion, regardless of the result shown above.</p>
+    <div class="footer-links">
+      <a href="../index.html">All calculators</a>
+      <a href="../pages/about.html">About</a>
+      <a href="../pages/contact.html">Contact</a>
+      <a href="../pages/privacy.html">Privacy Policy</a>
+      <a href="../pages/affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="tel:8884264435">ASPCA Poison Control: (888) 426-4435</a>
+      <a href="tel:8557647661">Pet Poison Helpline: (855) 764-7661</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CALL BAR ============ -->
+<div class="sticky-call-bar">
+  <a href="tel:8884264435">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+    Call ASPCA Poison Control now
+  </a>
+</div>
+
+<script src="../assets/shell.js"></script>
+<script src="./ibuprofen.js"></script>
+</body>
+</html>
