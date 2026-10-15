@@ -70,19 +70,30 @@
 
 <link rel="preload" href="../assets/fonts/Inter-var.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../assets/fonts/Fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="../assets/fonts.css" />
+<style>
+/* Self-hosted fonts (latin subset, variable where available). Source: Google Fonts, SIL Open Font License. */
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 500 700; font-display: swap; src: url(../assets/fonts/Fraunces-var.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(../assets/fonts/Inter-var.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url(../assets/fonts/IBMPlexMono-600.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url(../assets/fonts/IBMPlexMono-700.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+</style>
 
 <link rel="stylesheet" href="../base.css" />
 <link rel="stylesheet" href="../style.css" />
 <link rel="stylesheet" href="../assets/site-shell.css" />
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X4WFDJRLHR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-X4WFDJRLHR');
+  window.addEventListener('load', function () {
+    var g = document.createElement('script');
+    g.async = true;
+    g.src = 'https://www.googletagmanager.com/gtag/js?id=G-X4WFDJRLHR';
+    document.head.appendChild(g);
+  });
 </script>
 
 </head>
@@ -385,7 +396,7 @@
   </a>
 </div>
 
-<script src="../assets/shell.js"></script>
+<script src="../assets/shell.js" defer></script>
 <script src="./acetaminophen.js"></script>
 </body>
 </html>
