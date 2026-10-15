@@ -289,3 +289,37 @@
 .page-shell.no-ads > .content-col > .wrap {
   max-width: none;
 }
+
+/* ---------- Single-column pages that still carry ads ----------
+   Ads sit in a row below the content instead of a sidebar, so the
+   content uses the full centered 1180px frame. */
+.page-shell.no-ads > .ad-col {
+  position: static;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+.page-shell.no-ads > .ad-col .ad-slot {
+  flex: 1 1 300px;
+  min-height: 250px;
+}
+.page-shell.no-ads > .ad-col .ad-slot:empty {
+  min-height: 0;
+}
+@media (min-width: 1100px) {
+  .calc-picker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.picker-species {
+  display: inline-block;
+  margin-left: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-offset);
+  color: var(--color-text);
+}
+.picker-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.picker-tags .picker-species { margin-left: 0; }

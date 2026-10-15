@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>PetPoisonCalc | Pet Ingestion Risk Calculators</title>
-<meta name="description" content="Free calculators that estimate how urgently your dog needs veterinary care after eating something toxic. Weight-based risk assessment, symptom timelines, and emergency contact protocols." />
+<meta name="description" content="Free calculators that estimate how urgently your dog or cat needs veterinary care after eating something toxic. Weight-based risk assessment, symptom timelines, and emergency contact protocols." />
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
 <link rel="canonical" href="https://petpoisoncalc.com/" />
 
@@ -13,14 +13,14 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="PetPoisonCalc" />
 <meta property="og:title" content="PetPoisonCalc | Pet Ingestion Risk Calculators" />
-<meta property="og:description" content="Free calculators that estimate how urgently your dog needs veterinary care after eating something toxic. Weight-based risk assessment, symptom timelines, and emergency contact protocols." />
+<meta property="og:description" content="Free calculators that estimate how urgently your dog or cat needs veterinary care after eating something toxic. Weight-based risk assessment, symptom timelines, and emergency contact protocols." />
 <meta property="og:url" content="https://petpoisoncalc.com/" />
 <meta property="og:locale" content="en_US" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="PetPoisonCalc | Pet Ingestion Risk Calculators" />
-<meta name="twitter:description" content="Free calculators that estimate how urgently your dog needs veterinary care after eating something toxic." />
+<meta name="twitter:description" content="Free calculators that estimate how urgently your dog or cat needs veterinary care after eating something toxic." />
 
 <!-- Structured data: Organization + WebSite (sitelinks search box eligibility) -->
 <script type="application/ld+json">
@@ -112,7 +112,7 @@
   </div>
 </nav>
 
-<div class="page-shell">
+<div class="page-shell no-ads">
   <div class="content-col">
     <div class="wrap">
 
@@ -120,9 +120,9 @@
       <!-- ============ HERO ============ -->
       <header class="site-header" style="border-bottom: none; padding-block: var(--space-8) var(--space-4);">
         <h1>Pet Ingestion Risk Calculators</h1>
-        <p class="lede">Free tools that estimate how urgently your dog needs veterinary attention after eating something toxic, based on weight and amount consumed. Built from published veterinary toxicology data.</p>
+        <p class="lede">Free tools that estimate how urgently your dog or cat needs veterinary attention after eating something toxic, based on weight and amount consumed. Built from published veterinary toxicology data.</p>
 
-        <p class="section-intro"><strong>Cat owners:</strong> every calculator here is for dogs only. Cat calculators are coming. Until then, if your cat ate something toxic, call ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a> right away.</p>
+        <p class="section-intro">Each calculator is labeled for the species it covers. Cat-specific tools now include lilies and acetaminophen. If your cat ate something not listed here, call ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a> right away.</p>
 
         <div class="no-safe-dose" role="alert">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
@@ -140,63 +140,83 @@
 
         <div class="calc-picker-grid">
 
+          <a class="calc-picker-card" href="./calculators/lily-cats.html">
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Cats</span></div>
+            <div class="picker-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-8"/><path d="M12 14c-4 0-7-3-8-7 3 0 6 1 8 4 2-3 5-4 8-4-1 4-4 7-8 7Z"/><path d="M12 11V3"/></svg>
+            </div>
+            <h3>Lilies</h3>
+            <p>Easter, tiger, Asiatic, Stargazer, daylilies. Any bite, pollen, or vase water is an emergency.</p>
+            <span class="picker-cta">Open calculator &rarr;</span>
+          </a>
+
+          <a class="calc-picker-card" href="./calculators/acetaminophen.html">
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Dogs &amp; Cats</span></div>
+            <div class="picker-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></svg>
+            </div>
+            <h3>Acetaminophen (Tylenol)</h3>
+            <p>Tylenol and cold/flu products. Any amount is an emergency for cats.</p>
+            <span class="picker-cta">Open calculator &rarr;</span>
+          </a>
+
           <a class="calc-picker-card" href="./calculators/grapes-raisins.html">
-            <span class="picker-badge live">Available now</span>
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Dogs</span></div>
             <div class="picker-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="3"/><circle cx="16" cy="15" r="3"/><circle cx="12" cy="9" r="3"/><path d="M12 6V3"/></svg>
             </div>
             <h3>Grapes &amp; Raisins</h3>
-            <p>Dogs only. Covers fresh grapes, raisins, currants, and sultanas. No known safe dose.</p>
+            <p>Covers fresh grapes, raisins, currants, and sultanas. No known safe dose.</p>
             <span class="picker-cta">Open calculator &rarr;</span>
           </a>
 
           <a class="calc-picker-card" href="./calculators/chocolate.html">
-            <span class="picker-badge live">Available now</span>
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Dogs</span></div>
             <div class="picker-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4Z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
             </div>
             <h3>Chocolate</h3>
-            <p>Dogs only. Risk depends heavily on chocolate type: baking, dark, milk, or white.</p>
+            <p>Risk depends heavily on chocolate type: baking, dark, milk, or white.</p>
             <span class="picker-cta">Open calculator &rarr;</span>
           </a>
 
           <a class="calc-picker-card" href="./calculators/xylitol.html">
-            <span class="picker-badge live">Available now</span>
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Dogs</span></div>
             <div class="picker-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Z"/><circle cx="12" cy="9" r="2.5"/></svg>
             </div>
             <h3>Xylitol</h3>
-            <p>Dogs only. Found in sugar-free gum, peanut butter, and baked goods. Fast-acting and severe.</p>
+            <p>Found in sugar-free gum, peanut butter, and baked goods. Fast-acting and severe.</p>
             <span class="picker-cta">Open calculator &rarr;</span>
           </a>
 
           <a class="calc-picker-card" href="./calculators/onions-garlic.html">
-            <span class="picker-badge live">Available now</span>
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Dogs</span></div>
             <div class="picker-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C9 6 5 9 5 14a7 7 0 0 0 14 0c0-5-4-8-7-12Z"/></svg>
             </div>
             <h3>Onions &amp; Garlic</h3>
-            <p>Dogs only. Damages red blood cells. Includes raw, cooked, and powdered forms.</p>
+            <p>Damages red blood cells. Includes raw, cooked, and powdered forms.</p>
             <span class="picker-cta">Open calculator &rarr;</span>
           </a>
 
           <a class="calc-picker-card" href="./calculators/ibuprofen.html">
-            <span class="picker-badge live">Available now</span>
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Dogs</span></div>
             <div class="picker-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></svg>
             </div>
             <h3>Ibuprofen (Advil, Motrin)</h3>
-            <p>Dogs only. Narrow margin of safety: can cause stomach ulcers and kidney injury.</p>
+            <p>Narrow margin of safety: can cause stomach ulcers and kidney injury.</p>
             <span class="picker-cta">Open calculator &rarr;</span>
           </a>
 
           <a class="calc-picker-card" href="./calculators/marijuana-thc.html">
-            <span class="picker-badge live">Available now</span>
+            <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Dogs</span></div>
             <div class="picker-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M12 15c-3 0-6-2-8-5 3 0 5 1 6.5 2.5C9 9 9.5 6 12 3c2.5 3 3 6 1.5 9.5C15 11 17 10 20 10c-2 3-5 5-8 5Z"/></svg>
             </div>
             <h3>Marijuana &amp; THC Edibles</h3>
-            <p>Dogs only. Gummies, brownies, flower, and oils. Flags edibles with chocolate or xylitol.</p>
+            <p>Gummies, brownies, flower, and oils. Flags edibles with chocolate or xylitol.</p>
             <span class="picker-cta">Open calculator &rarr;</span>
           </a>
 

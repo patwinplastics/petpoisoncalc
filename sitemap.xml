@@ -43,6 +43,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://petpoisoncalc.com/calculators/lily-cats.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://petpoisoncalc.com/calculators/acetaminophen.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://petpoisoncalc.com/pages/about.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>yearly</changefreq>
