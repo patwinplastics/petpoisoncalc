@@ -365,3 +365,4 @@
   .page-shell.no-ads .calc-picker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 section[aria-labelledby="faq-heading"] > p.section-intro { max-width: none; }
+.last-reviewed { margin: var(--space-3) 0 0; font-size: var(--text-sm); color: var(--color-text-muted); }
