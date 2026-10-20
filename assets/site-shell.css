@@ -354,3 +354,14 @@
 .share-btn:hover { background: var(--color-primary); color: var(--color-text-inverse); }
 .share-note { flex-basis: 100%; margin: 0; font-size: var(--text-sm); color: var(--color-text-muted); }
 @media print { .share-result { display: none; } }
+
+/* Homepage: guarantee full-width content and a 4-up card grid at desktop widths. */
+.page-shell.no-ads > .content-col,
+.page-shell.no-ads > .content-col > .wrap,
+.page-shell.no-ads main,
+.page-shell.no-ads .info-section,
+.page-shell.no-ads .calc-picker-grid { max-width: none; width: 100%; }
+@media (min-width: 1180px) {
+  .page-shell.no-ads .calc-picker-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+section[aria-labelledby="faq-heading"] > p.section-intro { max-width: none; }
