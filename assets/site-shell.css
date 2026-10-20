@@ -323,3 +323,25 @@
 }
 .picker-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
 .picker-tags .picker-species { margin-left: 0; }
+
+/* ---------- Guides ---------- */
+.guide-hotlines {
+  display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); align-items: center;
+  padding: var(--space-4) var(--space-5); margin: var(--space-6) 0;
+  border-radius: var(--radius-md); background: var(--risk-emergency-bg, #fde8e8);
+  border: 1px solid var(--risk-emergency-border, #e5a5a5); color: var(--color-text);
+}
+.guide-hotlines a { font-weight: 700; }
+.guide-hotlines span { font-size: var(--text-sm); color: var(--color-text-muted); }
+.guide-cta {
+  display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; justify-content: space-between;
+  padding: var(--space-5) var(--space-6); margin: var(--space-8) 0;
+  border-radius: var(--radius-lg, 16px); background: var(--color-surface); border: 2px solid var(--color-primary);
+}
+.guide-cta p { margin: var(--space-1) 0 0; color: var(--color-text-muted); }
+.guide-cta-btn { width: auto; text-decoration: none; padding-inline: var(--space-6); }
+.guide-list { padding-left: var(--space-6); line-height: 1.7; max-width: 75ch; }
+.guide-list li { margin-bottom: var(--space-2); }
+.faq-q { font-size: var(--text-base); margin: var(--space-5) 0 var(--space-2); }
+.related-links { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-3); }
+.related-links a { padding: var(--space-2) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-full); background: var(--color-surface); font-weight: 600; font-size: var(--text-sm); text-decoration: none; }
