@@ -345,3 +345,7 @@
 .faq-q { font-size: var(--text-base); margin: var(--space-5) 0 var(--space-2); }
 .related-links { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-3); }
 .related-links a { padding: var(--space-2) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-full); background: var(--color-surface); font-weight: 600; font-size: var(--text-sm); text-decoration: none; }
+.calc-filter { margin-top: var(--space-5); max-width: 520px; }
+.calc-filter-input { width: 100%; height: 48px; padding: 0 var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); font: inherit; }
+.calc-filter-input:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+.calc-picker-card[hidden] { display: none; }
