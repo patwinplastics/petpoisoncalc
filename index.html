@@ -166,7 +166,12 @@
         <h2 id="picker-heading" class="card-heading">Choose a calculator</h2>
         <p class="card-subheading">Select what your pet ate to get a weight-adjusted risk assessment.</p>
 
-        <div class="calc-picker-grid">
+        <div class="calc-filter">
+          <label class="field-label" for="calcFilter">Search calculators</label>
+          <input type="search" id="calcFilter" class="calc-filter-input" placeholder="Type what your pet ate, e.g. gum, Tylenol, lily" autocomplete="off" aria-describedby="calcFilterStatus" />
+          <p class="field-hint" id="calcFilterStatus" aria-live="polite"></p>
+        </div>
+        <div class="calc-picker-grid" id="calcGrid">
 
           <a class="calc-picker-card" href="./calculators/lily-cats.html">
             <div class="picker-tags"><span class="picker-badge live">Available now</span><span class="picker-species">Cats</span></div>
@@ -319,5 +324,6 @@
 </footer>
 
 <script src="./assets/shell.js" defer></script>
+<script src="./assets/home.js" defer></script>
 </body>
 </html>
