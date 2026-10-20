@@ -349,3 +349,8 @@
 .calc-filter-input { width: 100%; height: 48px; padding: 0 var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); font: inherit; }
 .calc-filter-input:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
 .calc-picker-card[hidden] { display: none; }
+.share-result { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+.share-btn { height: 44px; padding: 0 var(--space-5); border-radius: var(--radius-md); border: 2px solid var(--color-primary); background: var(--color-surface); color: var(--color-primary); font: inherit; font-weight: 700; cursor: pointer; }
+.share-btn:hover { background: var(--color-primary); color: var(--color-text-inverse); }
+.share-note { flex-basis: 100%; margin: 0; font-size: var(--text-sm); color: var(--color-text-muted); }
+@media print { .share-result { display: none; } }
