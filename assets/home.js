@@ -33,7 +33,7 @@
     if (!q) {
       status.textContent = '';
     } else if (shown === 0) {
-      status.innerHTML = 'No calculator matches yet. If your pet ate something toxic, call ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a>.';
+      status.innerHTML = '<img class="no-results-mascot" src="./assets/mascot.svg?v=2026102003" width="88" height="64" alt="" /> No calculator matches yet. If your pet ate something toxic, call ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a>.';
     } else {
       status.textContent = shown + (shown === 1 ? ' calculator matches.' : ' calculators match.');
     }
