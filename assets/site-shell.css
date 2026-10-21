@@ -456,3 +456,17 @@ section[aria-labelledby="faq-heading"] > p.section-intro { max-width: none; }
 .pet-status.pet-warn { color: var(--color-danger); font-weight: 600; }
 .pet-privacy { margin-bottom: 0; }
 @media print { .pet-profiles { display: none; } }
+
+/* In-article ad on guide pages (never on calculators). Visible on phones too. */
+.ad-inline { margin: var(--space-8) 0; padding-top: var(--space-2); border-top: 1px solid var(--color-divider); }
+.ad-inline-label { display: block; font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--space-2); }
+.ad-inline .ad-slot { min-height: 0; }
+@media print { .ad-inline { display: none; } }
+
+/* Seasonal banner on the homepage */
+.seasonal-banner { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); align-items: center; margin: 0 0 var(--space-6); padding: var(--space-4) var(--space-5); border-radius: var(--radius-md); background: var(--color-primary-highlight); border: 1px solid var(--color-border); font-size: var(--text-sm); }
+.seasonal-banner[hidden] { display: none; }
+.seasonal-banner a { font-weight: 700; }
+.table-action { display: inline-block; margin-top: var(--space-1); font-weight: 600; font-size: var(--text-xs); }
+table.ref-table.ref-table-fit { min-width: 0; width: 100%; }
+.table-action a { text-decoration: underline; }
