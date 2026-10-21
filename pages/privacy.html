@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Privacy Policy | PetPoisonCalc</title>
-<meta name="description" content="How PetPoisonCalc handles cookies, analytics, and advertising data. PetPoisonCalc does not require account creation and does not collect information about your pet." />
+<meta name="description" content="What information PetPoisonCalc and its service providers collect, how Google Analytics and Google AdSense cookies work, and your privacy choices and rights." />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="canonical" href="https://petpoisoncalc.com/pages/privacy.html" />
 
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="PetPoisonCalc" />
 <meta property="og:title" content="Privacy Policy | PetPoisonCalc" />
-<meta property="og:description" content="How PetPoisonCalc handles cookies, analytics, and advertising data." />
+<meta property="og:description" content="What information PetPoisonCalc and its service providers collect, how Google Analytics and Google AdSense cookies work, and your privacy choices and rights." />
 <meta property="og:url" content="https://petpoisoncalc.com/pages/privacy.html" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:image" content="https://petpoisoncalc.com/assets/og-image.png" />
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://petpoisoncalc.com/assets/og-image.png" />
 <meta name="twitter:title" content="Privacy Policy | PetPoisonCalc" />
-<meta name="twitter:description" content="How PetPoisonCalc handles cookies, analytics, and advertising data." />
+<meta name="twitter:description" content="What information PetPoisonCalc and its service providers collect, how Google Analytics and Google AdSense cookies work, and your privacy choices and rights." />
 
 <!-- Structured data: WebPage -->
 <script type="application/ld+json">
@@ -33,7 +33,7 @@
   "@type": "WebPage",
   "name": "Privacy Policy",
   "url": "https://petpoisoncalc.com/pages/privacy.html",
-  "description": "How PetPoisonCalc handles cookies, analytics, and advertising data.",
+  "description": "What information PetPoisonCalc and its service providers collect, how Google Analytics and Google AdSense cookies work, and your privacy choices and rights.",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -54,9 +54,9 @@
 @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url(../assets/fonts/IBMPlexMono-700.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 </style>
 
-<link rel="stylesheet" href="../base.css?v=2026102003" />
-<link rel="stylesheet" href="../style.css?v=2026102003" />
-<link rel="stylesheet" href="../assets/site-shell.css?v=2026102003" />
+<link rel="stylesheet" href="../base.css?v=2026102101" />
+<link rel="stylesheet" href="../style.css?v=2026102101" />
+<link rel="stylesheet" href="../assets/site-shell.css?v=2026102101" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -75,6 +75,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH'] });
+  if (navigator.globalPrivacyControl) {
+    gtag('set', 'allow_google_signals', false);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  }
   gtag('js', new Date());
   gtag('config', 'G-X4WFDJRLHR');
   window.addEventListener('load', function () {
@@ -87,9 +93,10 @@
 
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ============ TOP EMERGENCY BAR ============ -->
-<div class="emergency-bar" role="banner">
+<div class="emergency-bar" role="region" aria-label="Emergency poison control numbers">
   <div class="wrap">
     <span>Pet ate something toxic right now?</span>
     <a href="tel:8884264435">Call ASPCA Poison Control (888) 426-4435</a>
@@ -102,7 +109,7 @@
 <nav class="site-nav" aria-label="Primary">
   <div class="wrap">
     <a class="site-nav-brand" href="../index.html">
-      <img class="brand-mascot" src="../assets/mascot.svg?v=2026102003" width="44" height="32" alt="" />
+      <img class="brand-mascot" src="../assets/mascot.svg?v=2026102101" width="44" height="32" alt="" />
       PetPoisonCalc
     </a>
     <div class="site-nav-links">
@@ -125,70 +132,89 @@
       <header class="site-header" style="border-bottom: none;">
         <p style="margin: 0 0 var(--space-3);"><a href="../index.html" style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted);">&larr; All calculators</a></p>
         <h1>Privacy Policy</h1>
-        <p class="lede">Last updated September 8, 2026. This policy explains what data PetPoisonCalc collects, how cookies and advertising work on this site, and what choices you have.</p>
+        <p class="lede">Effective and last updated October 20, 2026. This policy explains what information is collected when you use PetPoisonCalc, why, and the choices and rights you have.</p>
       </header>
 
       <!-- ============ MAIN CONTENT ============ -->
-      <main>
+      <main id="main-content">
+        <!--
+          TODO FOR JIM / LAWYER: add the legal owner (data controller) name and a postal address if required,
+          and confirm the analytics data retention setting in Google Analytics (Admin > Data collection and modification > Data retention).
+          Legal entity name: [ADD LEGAL ENTITY NAME]
+        -->
 
-        <section class="info-section" aria-labelledby="overview-heading">
-          <h2 id="overview-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
-            Overview
-          </h2>
-          <p class="section-intro">PetPoisonCalc does not require you to create an account, does not ask for your name or your pet's identity, and does not store the weight, substance, or amount you enter into any calculator on our servers. Calculator inputs are processed entirely in your browser and are not transmitted to PetPoisonCalc or saved anywhere once you leave or refresh the page.</p>
-          <p class="section-intro">This policy covers the data collected by third-party services used on this site: website analytics and, where enabled, advertising.</p>
+        <section class="info-section legal-section" aria-labelledby="summary-heading" id="summary">
+          <h2 id="summary-heading">The short version</h2>
+          <p class="section-intro">You do not need an account to use PetPoisonCalc, and we never ask for your name or details about your pet. What you type into a calculator stays in your browser. It is not sent to us or saved after you leave or refresh the page.</p>
+          <p class="section-intro">We use Google Analytics to understand how the site is used, and Google AdSense to show ads on some pages (never on calculator pages). These Google services use cookies and similar technologies. You can limit them using the choices below.</p>
         </section>
 
-        <section class="info-section" aria-labelledby="analytics-heading">
-          <h2 id="analytics-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>
-            Analytics
-          </h2>
-          <p class="section-intro">PetPoisonCalc uses standard website analytics tools, such as Google Analytics and Google Search Console, to understand aggregate traffic patterns, such as which calculator pages are visited and which search queries bring visitors to the site. These tools use cookies and similar technologies to distinguish visitors and do not identify you personally. No information about you or your pet entered into a calculator is included in this data.</p>
+        <section class="info-section legal-section" aria-labelledby="collect-heading" id="collect">
+          <h2 id="collect-heading">Information collected</h2>
+          <p class="section-intro"><strong>Calculator inputs.</strong> The weight, substance and amount you enter are processed by code running in your browser. They are not sent to PetPoisonCalc, Google, or anyone else, and they are not included in the page address.</p>
+          <p class="section-intro"><strong>Copy and share buttons.</strong> "Copy result" puts a text summary on your device's clipboard. "Share with my vet" opens your device's own share menu. The site does not send or store the summary. Whatever app you choose to share with handles it under its own policy.</p>
+          <p class="section-intro"><strong>Theme setting.</strong> The light or dark theme follows your device setting. If you use the theme button, the choice lasts only until you leave the page. The site's own code does not set cookies or use local storage or session storage.</p>
+          <p class="section-intro"><strong>Hosting logs.</strong> The site is hosted on GitHub Pages. GitHub logs visitors' IP addresses for security purposes, as described in <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>.</p>
+          <p class="section-intro"><strong>Google Analytics.</strong> On every page, Google Analytics collects information such as the pages you visit, how you got to the site, approximate location (country or city), device and browser type, and how you interact with pages. It sets first-party cookies (such as _ga) to tell visits apart. Google states that Google Analytics 4 does not log or store IP addresses. We use this information only in aggregate to improve the site.</p>
+          <p class="section-intro"><strong>Google AdSense.</strong> On pages that show ads (not calculator pages), Google and its partners may use cookies, device identifiers and similar technologies to show ads, limit how often you see an ad, measure performance and prevent fraud. See the advertising section below.</p>
+          <p class="section-intro"><strong>Email.</strong> If you email us, we receive your email address and whatever you include in your message. We use it only to reply and to fix any problem you report, and we do not add you to any mailing list.</p>
+          <p class="section-intro"><strong>Fonts and images.</strong> Fonts and photos are served from this site, not from third-party font or image services.</p>
         </section>
 
-        <section class="info-section" aria-labelledby="ads-heading">
-          <h2 id="ads-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
-            Advertising and cookies
-          </h2>
-          <p class="section-intro">PetPoisonCalc may display advertising served by third-party ad networks, including Google AdSense. These networks and their partners may use cookies, web beacons, and similar technologies to serve ads based on your prior visits to this site or other websites, and to measure ad performance. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and other sites on the internet.</p>
-          <p class="section-intro">You can opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a>, or opt out of third-party vendor use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>. Most browsers also let you block or delete cookies through their settings, though this may affect how some parts of the site display.</p>
-          <p class="section-intro">This site does not currently sell personal information, and any advertising cookies present are used solely for standard ad delivery and measurement by our network partners, not for any purpose specific to PetPoisonCalc.</p>
-          <p class="section-intro">PetPoisonCalc may also earn commissions through affiliate links. See our <a href="./affiliate-disclosure.html">Affiliate Disclosure</a> for details.</p>
+        <section class="info-section legal-section" aria-labelledby="ads-heading" id="ads">
+          <h2 id="ads-heading">Advertising cookies and personalized ads</h2>
+          <p class="section-intro">Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this site and other sites on the internet.</p>
+          <p class="section-intro">You can opt out of personalized advertising from Google in <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>, and from many other vendors at <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">optout.aboutads.info</a> or <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener noreferrer">youronlinechoices.eu</a> in Europe. Learn more in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites that use its services</a>.</p>
+          <p class="section-intro">You can also block or delete cookies in your browser settings. The site works without cookies.</p>
         </section>
 
-        <section class="info-section" aria-labelledby="thirdparty-heading">
-          <h2 id="thirdparty-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><circle cx="17" cy="7" r="3" opacity="0.5"/></svg>
-            Third-party links
-          </h2>
-          <p class="section-intro">PetPoisonCalc links to external resources, including the ASPCA Animal Poison Control Center, the Pet Poison Helpline, and various veterinary and toxicology references cited on calculator pages. This privacy policy does not apply to those external sites, and we encourage you to review their own privacy practices.</p>
+        <section class="info-section legal-section" aria-labelledby="affiliate-heading" id="affiliate">
+          <h2 id="affiliate-heading">Affiliate links</h2>
+          <p class="section-intro">PetPoisonCalc may add affiliate links in the future, for example through the Impact partner network. Right now the site has no affiliate links. The only Impact item on the site is a verification tag in the homepage code that confirms we own the site. It does not track visitors. If we add affiliate links later, clicking one may let the partner set its own cookies to credit us for a sale. We will label those links and update this policy. See our <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
         </section>
 
-        <section class="info-section" aria-labelledby="rights-heading">
-          <h2 id="rights-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-            Your choices and regional rights
-          </h2>
-          <p class="section-intro">Depending on where you live, you may have rights under laws such as the EU General Data Protection Regulation (GDPR) or the California Consumer Privacy Act (CCPA) to access, delete, or restrict the use of data collected about you by analytics or advertising partners. Because PetPoisonCalc itself does not collect or store personal data beyond standard analytics and advertising cookies, most such requests should be directed to the relevant third-party provider, such as Google, using the opt-out links above. For questions specific to this site, use the <a href="./contact.html">contact page</a>.</p>
+        <section class="info-section legal-section" aria-labelledby="do-not-sell-heading" id="do-not-sell">
+          <h2 id="do-not-sell-heading">Do Not Sell or Share My Personal Information</h2>
+          <p class="section-intro">We do not sell personal information for money. However, some US state privacy laws, such as the California Consumer Privacy Act as amended by the CPRA, may treat the use of Google advertising cookies for personalized ads as "selling" or "sharing" personal information for cross-context behavioral advertising.</p>
+          <p class="section-intro">To opt out: (1) turn off personalized ads in <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>; (2) use <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">optout.aboutads.info</a>; and (3) turn on Global Privacy Control (GPC) in your browser or extension. When this site detects a GPC signal, it asks Google AdSense to show only non-personalized ads and turns off ad personalization signals in Google Analytics for that visit. You can also email <a href="mailto:contact@petpoisoncalc.com">contact@petpoisoncalc.com</a> with the subject "Do Not Sell or Share" and we will help.</p>
         </section>
 
-        <section class="info-section" aria-labelledby="children-heading">
-          <h2 id="children-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-            Children's privacy
-          </h2>
-          <p class="section-intro">PetPoisonCalc is not directed at children under 13 and does not knowingly collect personal information from children. The site's calculators can be used by anyone without providing any personal or identifying information.</p>
+        <section class="info-section legal-section" aria-labelledby="us-rights-heading" id="us-rights">
+          <h2 id="us-rights-heading">Your rights in US states</h2>
+          <p class="section-intro">Depending on where you live (for example California, Colorado, Connecticut, New Jersey, Oregon, Texas, Virginia and other states with privacy laws), you may have the right to know what personal information is collected about you, to access it, to correct it, to delete it, and to opt out of the sale or sharing of personal information and of targeted advertising. You will not be treated differently for using these rights.</p>
+          <p class="section-intro">Because we do not keep accounts or profiles, we usually hold no personal information about you other than emails you send us. Data held by Google can be viewed and managed in your Google account and through the links above. To make a request, email <a href="mailto:contact@petpoisoncalc.com">contact@petpoisoncalc.com</a>. We may need to ask for information to confirm the request. If we decline a request, you may appeal by replying to our answer with the word "Appeal".</p>
         </section>
 
-        <section class="info-section" aria-labelledby="changes-heading">
-          <h2 id="changes-heading">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
-            Changes to this policy
-          </h2>
-          <p class="section-intro">This policy may be updated periodically as the site adds new features or advertising partners. The date at the top of this page reflects the most recent update. Continued use of the site after changes constitutes acceptance of the revised policy.</p>
+        <section class="info-section legal-section" aria-labelledby="gdpr-heading" id="gdpr">
+          <h2 id="gdpr-heading">Your rights in the EU, EEA, UK and Switzerland</h2>
+          <p class="section-intro">If you are in the European Economic Area, the United Kingdom or Switzerland, data protection laws such as the GDPR and UK GDPR apply. We rely on your consent for analytics and advertising cookies where consent is required, on legitimate interests for security logs, and on legitimate interests to reply to emails you send us.</p>
+          <p class="section-intro">For visitors in these regions, the site tells Google to keep analytics and advertising storage off by default (Google Consent Mode) until consent is given. You have the right to access, correct, delete, restrict or object to the use of your personal data, to data portability, and to withdraw consent at any time. You can also complain to your local data protection authority.</p>
+          <p class="section-intro">Google and GitHub may process data in the United States and other countries. They state that they use legal safeguards such as standard contractual clauses or the EU-US Data Privacy Framework for these transfers.</p>
+        </section>
+
+        <section class="info-section legal-section" aria-labelledby="retention-heading" id="retention">
+          <h2 id="retention-heading">How long information is kept</h2>
+          <p class="section-intro">Calculator inputs are never stored. Google Analytics keeps data according to the retention setting in our account (Google allows 2 to 14 months for most user-level data). Emails are kept only as long as needed to respond and keep a record of corrections. Google and GitHub keep their own data according to their own policies.</p>
+        </section>
+
+        <section class="info-section legal-section" aria-labelledby="children-heading" id="children">
+          <h2 id="children-heading">Children's privacy</h2>
+          <p class="section-intro">PetPoisonCalc is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has sent us personal information, email us and we will delete it.</p>
+        </section>
+
+        <section class="info-section legal-section" aria-labelledby="links-heading" id="links">
+          <h2 id="links-heading">Other websites</h2>
+          <p class="section-intro">The site links to other websites, such as poison control centers, veterinary references and Unsplash. Their privacy policies, not this one, apply when you visit them.</p>
+        </section>
+
+        <section class="info-section legal-section" aria-labelledby="changes-heading" id="changes">
+          <h2 id="changes-heading">Changes to this policy</h2>
+          <p class="section-intro">If we change how the site handles information, for example by adding affiliate links or new tools, we will update this policy and the date at the top of this page.</p>
+        </section>
+
+        <section class="info-section legal-section" aria-labelledby="contact-heading" id="contact">
+          <h2 id="contact-heading">Contact</h2>
+          <p class="section-intro">Privacy questions and requests: <a href="mailto:contact@petpoisoncalc.com">contact@petpoisoncalc.com</a>.</p>
         </section>
 
       </main>
@@ -224,7 +250,10 @@
       <a href="./about.html">About</a>
       <a href="./contact.html">Contact</a>
       <a href="./privacy.html" aria-current="page">Privacy Policy</a>
+      <a href="./terms.html">Terms of Use</a>
+      <a href="./medical-disclaimer.html">Medical Disclaimer</a>
       <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="./privacy.html#do-not-sell">Do Not Sell or Share My Personal Information</a>
       <a href="tel:8884264435">ASPCA Poison Control: (888) 426-4435</a>
       <a href="tel:8557647661">Pet Poison Helpline: (855) 764-7661</a>
     </div>
@@ -239,6 +268,6 @@
   </a>
 </div>
 
-<script src="../assets/shell.js?v=2026102003" defer></script>
+<script src="../assets/shell.js?v=2026102101" defer></script>
 </body>
 </html>

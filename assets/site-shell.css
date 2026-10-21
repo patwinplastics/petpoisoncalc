@@ -420,3 +420,16 @@ section[aria-labelledby="faq-heading"] > p.section-intro { max-width: none; }
   .site-nav-brand { gap: 6px; }
   .site-nav-brand .brand-mascot { width: 28px; height: 20px; }
 }
+
+/* Legal and accessibility pass */
+[data-theme='light'] { --color-text-faint: #5f7378; }
+[data-theme='dark'] { --color-text-faint: #8a9fa4; }
+[data-theme='dark'] .emergency-bar,
+[data-theme='dark'] .call-btn.primary-call,
+[data-theme='dark'] .sticky-call-bar { background: #b8291d; border-color: #b8291d; }
+[data-theme='dark'] .error-msg { color: #f2786c; }
+.call-btn.primary-call .call-sub { color: #fff; opacity: 1; }
+.result-disclaimer { margin: var(--space-4) 0 0; padding-top: var(--space-3); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); color: var(--color-text-muted); }
+.result-disclaimer a { font-weight: 600; }
+.guide-disclaimer { display: block; font-size: var(--text-sm); }
+.legal-section h2 { font-size: 1.25rem; }
