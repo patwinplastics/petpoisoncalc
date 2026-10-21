@@ -11,6 +11,7 @@
     'xylitol': 'gum sugar-free mint peanut butter birch sugar candy',
     'onions-garlic': 'onion garlic leek chive shallot powder allium',
     'ibuprofen': 'advil motrin nsaid pain pill medicine',
+    'naproxen': 'aleve naprosyn anaprox midol naproxen sodium nsaid pain pill medicine',
     'marijuana-thc': 'weed cannabis pot edible gummy thc cbd brownie',
     'lily-cats': 'lily lilies flower plant pollen vase cat daylily easter',
     'acetaminophen': 'tylenol paracetamol pain pill medicine cold flu cat',
