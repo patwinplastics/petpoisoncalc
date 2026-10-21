@@ -14,7 +14,7 @@
   function buildSummary() {
     var lines = [];
     var h1 = document.querySelector('h1');
-    lines.push('PetPoisonCalc result: ' + clean(h1 ? h1.textContent : document.title));
+    lines.push('PetPoisonCalc result: ' + clean(h1 ? (h1.getAttribute('data-calc-name') || h1.textContent) : document.title));
     lines.push('Calculated: ' + new Date().toLocaleString(undefined, { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }));
     lines.push('');
     lines.push('What I entered:');
