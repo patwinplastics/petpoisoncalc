@@ -366,3 +366,25 @@
 }
 section[aria-labelledby="faq-heading"] > p.section-intro { max-width: none; }
 .last-reviewed { margin: var(--space-3) 0 0; font-size: var(--text-sm); color: var(--color-text-muted); }
+
+/* Poison-proofing checklist */
+.checklist { list-style: none; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-2); }
+.checklist label { display: flex; gap: var(--space-3); align-items: flex-start; cursor: pointer; line-height: 1.5; }
+.checklist input[type="checkbox"] { width: 1.1rem; height: 1.1rem; margin-top: 0.2rem; flex: none; accent-color: var(--color-primary, #0b6e6e); }
+.checklist-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin-bottom: var(--space-4); }
+.emergency-card { margin-top: var(--space-4); padding: var(--space-4); border: 2px solid currentColor; border-radius: 12px; max-width: 520px; }
+.emergency-card p { margin: 0 0 var(--space-2); }
+.emergency-card-title { font-weight: 700; font-size: 1.1rem; }
+.fill-line { display: inline-block; min-width: 14rem; border-bottom: 1px solid currentColor; height: 1em; vertical-align: bottom; }
+@media print {
+  .no-print, .site-nav, .emergency-bar, .sticky-call-bar, .ad-col, .theme-toggle { display: none !important; }
+  body:has(.checklist-page) { background: #fff !important; color: #000 !important; }
+  body:has(.checklist-page) footer .footer-links { display: none; }
+  .checklist-section { break-inside: avoid; padding: 0 !important; margin: 0 0 12px !important; border: none !important; box-shadow: none !important; background: none !important; }
+  .checklist-section h2 { font-size: 14pt; margin: 0 0 4px; }
+  .checklist { gap: 2px; }
+  .checklist label { font-size: 10.5pt; }
+  .checklist a { color: inherit; text-decoration: none; }
+  .emergency-card { break-inside: avoid; }
+  .site-header .lede, .site-header p:first-child { font-size: 10.5pt; }
+}
