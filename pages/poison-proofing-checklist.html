@@ -54,9 +54,9 @@
 @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url(../assets/fonts/IBMPlexMono-700.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 </style>
 
-<link rel="stylesheet" href="../base.css?v=2026102003" />
-<link rel="stylesheet" href="../style.css?v=2026102003" />
-<link rel="stylesheet" href="../assets/site-shell.css?v=2026102003" />
+<link rel="stylesheet" href="../base.css?v=2026102101" />
+<link rel="stylesheet" href="../style.css?v=2026102101" />
+<link rel="stylesheet" href="../assets/site-shell.css?v=2026102101" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -75,6 +75,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH'] });
+  if (navigator.globalPrivacyControl) {
+    gtag('set', 'allow_google_signals', false);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  }
   gtag('js', new Date());
   gtag('config', 'G-X4WFDJRLHR');
   window.addEventListener('load', function () {
@@ -87,9 +93,10 @@
 
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ============ TOP EMERGENCY BAR ============ -->
-<div class="emergency-bar" role="banner">
+<div class="emergency-bar" role="region" aria-label="Emergency poison control numbers">
   <div class="wrap">
     <span>Pet ate something toxic right now?</span>
     <a href="tel:8884264435">Call ASPCA Poison Control (888) 426-4435</a>
@@ -102,7 +109,7 @@
 <nav class="site-nav" aria-label="Primary">
   <div class="wrap">
     <a class="site-nav-brand" href="../index.html">
-      <img class="brand-mascot" src="../assets/mascot.svg?v=2026102003" width="44" height="32" alt="" />
+      <img class="brand-mascot" src="../assets/mascot.svg?v=2026102101" width="44" height="32" alt="" />
       PetPoisonCalc
     </a>
     <div class="site-nav-links">
@@ -124,13 +131,13 @@
       <!-- ============ HEADER ============ -->
       <header class="site-header" style="border-bottom: none;">
         <p style="margin: 0 0 var(--space-3);"><a href="../index.html" style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted);">&larr; All calculators</a></p>
-        <img class="checklist-mascot" src="../assets/mascot.svg?v=2026102003" width="132" height="96" alt="A friendly cartoon dog and cat sitting together" />
+        <img class="checklist-mascot" src="../assets/mascot.svg?v=2026102101" width="132" height="96" alt="A friendly cartoon dog and cat sitting together" />
         <h1>Pet poison-proofing checklist</h1>
         <p class="lede">Walk through your home room by room. Most pet poisonings happen with everyday items left within reach, and a few small changes prevent most of them.</p>
       </header>
 
       <!-- ============ MAIN CONTENT ============ -->
-      <main class="checklist-page">
+      <main id="main-content" class="checklist-page">
         <div class="checklist-actions no-print">
           <button type="button" class="share-btn" id="printChecklistBtn">Print this checklist</button>
           <span class="share-note">Tick boxes on screen or print it and check items off by hand. Nothing is saved or sent.</span>
@@ -277,7 +284,10 @@
       <a href="./about.html">About</a>
       <a href="./contact.html">Contact</a>
       <a href="./privacy.html">Privacy Policy</a>
+      <a href="./terms.html">Terms of Use</a>
+      <a href="./medical-disclaimer.html">Medical Disclaimer</a>
       <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="./privacy.html#do-not-sell">Do Not Sell or Share My Personal Information</a>
       <a href="tel:8884264435">ASPCA Poison Control: (888) 426-4435</a>
       <a href="tel:8557647661">Pet Poison Helpline: (855) 764-7661</a>
     </div>
@@ -292,7 +302,7 @@
   </a>
 </div>
 
-<script src="../assets/shell.js?v=2026102003" defer></script>
+<script src="../assets/shell.js?v=2026102101" defer></script>
 <script>document.getElementById('printChecklistBtn').addEventListener('click', function () { window.print(); });</script>
 </body>
 </html>

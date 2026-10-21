@@ -71,9 +71,9 @@
 @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url(./assets/fonts/IBMPlexMono-700.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 </style>
 
-<link rel="stylesheet" href="./base.css?v=2026102003" />
-<link rel="stylesheet" href="./style.css?v=2026102003" />
-<link rel="stylesheet" href="./assets/site-shell.css?v=2026102003" />
+<link rel="stylesheet" href="./base.css?v=2026102101" />
+<link rel="stylesheet" href="./style.css?v=2026102101" />
+<link rel="stylesheet" href="./assets/site-shell.css?v=2026102101" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -92,6 +92,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH'] });
+  if (navigator.globalPrivacyControl) {
+    gtag('set', 'allow_google_signals', false);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  }
   gtag('js', new Date());
   gtag('config', 'G-X4WFDJRLHR');
   window.addEventListener('load', function () {
@@ -107,7 +113,7 @@
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ============ TOP EMERGENCY BAR ============ -->
-<div class="emergency-bar" role="banner">
+<div class="emergency-bar" role="region" aria-label="Emergency poison control numbers">
   <div class="wrap">
     <span>Pet ate something toxic right now?</span>
     <a href="tel:8884264435">Call ASPCA Poison Control (888) 426-4435</a>
@@ -120,7 +126,7 @@
 <nav class="site-nav" aria-label="Primary">
   <div class="wrap">
     <a class="site-nav-brand" href="./index.html">
-      <img class="brand-mascot" src="./assets/mascot.svg?v=2026102003" width="44" height="32" alt="" />
+      <img class="brand-mascot" src="./assets/mascot.svg?v=2026102101" width="44" height="32" alt="" />
       PetPoisonCalc
     </a>
     <div class="site-nav-links">
@@ -282,7 +288,7 @@
       <!-- ============ FAQ / ABOUT ============ -->
       <section class="info-section why-section" aria-labelledby="why-heading">
         <div class="why-grid">
-          <img class="why-mascot" src="./assets/mascot.svg?v=2026102003" width="220" height="160" loading="lazy" alt="A friendly cartoon dog and cat sitting together" />
+          <img class="why-mascot" src="./assets/mascot.svg?v=2026102101" width="220" height="160" loading="lazy" alt="A friendly cartoon dog and cat sitting together" />
           <div>
             <h2 id="why-heading">Why we built this</h2>
             <p class="section-intro">We are pet owners too. When a dog or cat gets into something it should not, the first few minutes are scary and confusing, and most search results are slow, vague, or buried under ads. We wanted one place that gives a fast, clear answer to two questions: how worried should I be, and what should I do right now?</p>
@@ -336,14 +342,17 @@
       <a href="./pages/about.html">About</a>
       <a href="./pages/contact.html">Contact</a>
       <a href="./pages/privacy.html">Privacy Policy</a>
+      <a href="./pages/terms.html">Terms of Use</a>
+      <a href="./pages/medical-disclaimer.html">Medical Disclaimer</a>
       <a href="./pages/affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="./pages/privacy.html#do-not-sell">Do Not Sell or Share My Personal Information</a>
       <a href="tel:8884264435">ASPCA Poison Control: (888) 426-4435</a>
       <a href="tel:8557647661">Pet Poison Helpline: (855) 764-7661</a>
     </div>
   </div>
 </footer>
 
-<script src="./assets/shell.js?v=2026102003" defer></script>
-<script src="./assets/home.js?v=2026102003" defer></script>
+<script src="./assets/shell.js?v=2026102101" defer></script>
+<script src="./assets/home.js?v=2026102101" defer></script>
 </body>
 </html>

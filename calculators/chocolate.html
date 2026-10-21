@@ -81,14 +81,20 @@
 @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url(../assets/fonts/IBMPlexMono-700.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 </style>
 
-<link rel="stylesheet" href="../base.css?v=2026102003" />
-<link rel="stylesheet" href="../style.css?v=2026102003" />
-<link rel="stylesheet" href="../assets/site-shell.css?v=2026102003" />
+<link rel="stylesheet" href="../base.css?v=2026102101" />
+<link rel="stylesheet" href="../style.css?v=2026102101" />
+<link rel="stylesheet" href="../assets/site-shell.css?v=2026102101" />
 
 <!-- Google tag (gtag.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500, region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH'] });
+  if (navigator.globalPrivacyControl) {
+    gtag('set', 'allow_google_signals', false);
+    gtag('set', 'allow_ad_personalization_signals', false);
+    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  }
   gtag('js', new Date());
   gtag('config', 'G-X4WFDJRLHR');
   window.addEventListener('load', function () {
@@ -101,9 +107,10 @@
 
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <!-- ============ TOP EMERGENCY BAR ============ -->
-<div class="emergency-bar" role="banner">
+<div class="emergency-bar" role="region" aria-label="Emergency poison control numbers">
   <div class="wrap">
     <span>Dog ate chocolate right now?</span>
     <a href="tel:8884264435">Call ASPCA Poison Control (888) 426-4435</a>
@@ -116,7 +123,7 @@
 <nav class="site-nav" aria-label="Primary">
   <div class="wrap">
     <a class="site-nav-brand" href="../index.html">
-      <img class="brand-mascot" src="../assets/mascot.svg?v=2026102003" width="44" height="32" alt="" />
+      <img class="brand-mascot" src="../assets/mascot.svg?v=2026102101" width="44" height="32" alt="" />
       PetPoisonCalc
     </a>
     <div class="site-nav-links">
@@ -152,7 +159,7 @@
       </header>
 
       <!-- ============ MAIN CALCULATOR ============ -->
-      <main>
+      <main id="main-content">
         <section class="calc-card" aria-labelledby="calc-heading">
           <h2 class="card-heading" id="calc-heading">Assess the situation</h2>
           <p class="card-subheading">Fill in what you know. Estimates are fine, exact numbers are better.</p>
@@ -245,6 +252,7 @@
               </div>
 
               <div class="action-block" id="actionBlock"></div>
+              <p class="result-disclaimer">This is an estimate, not a diagnosis, and it can be wrong. Whatever the result, call your veterinarian or a poison control line now: ASPCA Animal Poison Control <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline <a href="tel:8557647661">(855) 764-7661</a> (fees may apply). <a href="../pages/medical-disclaimer.html">Read the medical disclaimer</a>.</p>
             </div>
 
           </div>
@@ -469,7 +477,10 @@
       <a href="../pages/about.html">About</a>
       <a href="../pages/contact.html">Contact</a>
       <a href="../pages/privacy.html">Privacy Policy</a>
+      <a href="../pages/terms.html">Terms of Use</a>
+      <a href="../pages/medical-disclaimer.html">Medical Disclaimer</a>
       <a href="../pages/affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="../pages/privacy.html#do-not-sell">Do Not Sell or Share My Personal Information</a>
       <a href="tel:8884264435">ASPCA Poison Control: (888) 426-4435</a>
       <a href="tel:8557647661">Pet Poison Helpline: (855) 764-7661</a>
     </div>
@@ -484,8 +495,8 @@
   </a>
 </div>
 
-<script src="../assets/shell.js?v=2026102003" defer></script>
-<script src="../assets/share-result.js?v=2026102003" defer></script>
-<script src="./chocolate.js?v=2026102003"></script>
+<script src="../assets/shell.js?v=2026102101" defer></script>
+<script src="../assets/share-result.js?v=2026102101" defer></script>
+<script src="./chocolate.js?v=2026102101"></script>
 </body>
 </html>
