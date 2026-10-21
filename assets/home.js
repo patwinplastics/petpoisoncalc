@@ -1,12 +1,21 @@
 (function () {
   'use strict';
+  // Seasonal banners: show only between data-start and data-end (MM-DD, inclusive, local date).
+  var today = new Date();
+  var md = ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+  Array.prototype.forEach.call(document.querySelectorAll('.seasonal-banner[data-start][data-end]'), function (b) {
+    if (md >= b.getAttribute('data-start') && md <= b.getAttribute('data-end')) { b.hidden = false; }
+  });
+})();
+(function () {
+  'use strict';
   var input = document.getElementById('calcFilter');
   var grid = document.getElementById('calcGrid');
   var status = document.getElementById('calcFilterStatus');
   if (!input || !grid) { return; }
   // Extra search words so common product and brand names find the right card.
   var KEYWORDS = {
-    'chocolate': 'cocoa brownie candy bar baking dark milk',
+    'chocolate': 'cocoa brownie candy bar baking dark milk halloween trick treat',
     'grapes-raisins': 'raisin currant sultana trail mix fruit',
     'xylitol': 'gum sugar-free mint peanut butter birch sugar candy',
     'onions-garlic': 'onion garlic leek chive shallot powder allium',
