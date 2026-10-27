@@ -71,6 +71,38 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What if I do not know how much THC was in the edible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the best estimate you can, and say clearly that it is an estimate. Bring the package. Edibles vary widely, and some also contain chocolate or xylitol, which are separate emergencies. If the label is gone, tell the vet what the product looked like and how much is missing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I not make my dog vomit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "THC can make a dog sedated and less able to swallow safely. Vomiting in that state can lead to inhaling stomach contents. Do not induce vomiting at home. Call a veterinarian or poison control, and keep your dog from falling or wandering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is wobbliness a mild sign I can watch at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wobbliness, urine leaking, and a low heart rate are common, and many dogs recover with supportive care, but some become severely sedated. This page cannot tell you that a given dog will be fine. Call now, especially if your dog is very hard to wake, is vomiting while sedated, or also ate chocolate or xylitol."
+      }
+    }
+  ]
+}
+</script>
 <link rel="preload" href="../assets/fonts/Inter-var.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="../assets/fonts/Fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
 <style>
@@ -82,7 +114,7 @@
 </style>
 
 <link rel="stylesheet" href="../base.css?v=2026102101" />
-<link rel="stylesheet" href="../style.css?v=2026102101" />
+<link rel="stylesheet" href="../style.css?v=2026102701" />
 <link rel="stylesheet" href="../assets/site-shell.css?v=2026102202" />
 
 <!-- Google tag (gtag.js) -->
@@ -122,14 +154,14 @@
 <!-- ============ SITE NAV ============ -->
 <nav class="site-nav" aria-label="Primary">
   <div class="wrap">
-    <a class="site-nav-brand" href="../index.html">
+    <a class="site-nav-brand" href="/">
       <img class="brand-mascot" src="../assets/mascot.svg?v=2026102101" width="44" height="32" alt="" />
       PetPoisonCalc
     </a>
     <div class="site-nav-links">
-      <a href="../index.html">Calculators</a>
+      <a href="/">Calculators</a>
       <a href="../guides/index.html">Guides</a>
-      <a href="../index.html#faq-heading">FAQ</a>
+      <a href="/#faq-heading">FAQ</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
@@ -144,7 +176,7 @@
 
       <!-- ============ HEADER ============ -->
       <header class="site-header" style="border-bottom: none;">
-        <p style="margin: 0 0 var(--space-3);"><a href="../index.html" style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted);">&larr; All calculators</a></p>
+        <p style="margin: 0 0 var(--space-3);"><a href="/" style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted);">&larr; All calculators</a></p>
         <h1 data-calc-name="Marijuana &amp; THC Edible Calculator">Did your dog eat a THC edible? Check the risk.</h1>
         <p class="lede">Estimate how urgently your dog needs veterinary attention after eating marijuana or a THC edible, based on body weight and the amount of THC on the label.</p>
         <p class="last-reviewed">Last reviewed <time datetime="2026-10-15">October 15, 2026</time> by PetPoisonCalc against the <a href="#sources-heading">sources listed below</a>.</p>
@@ -364,6 +396,18 @@
       </main>
 
 
+      <!-- ============ FAQ ============ -->
+      <section class="info-section" aria-labelledby="calc-faq-heading">
+        <h2 id="calc-faq-heading">Common questions</h2>
+        <div class="faq-list">
+          <h3>What if I do not know how much THC was in the edible?</h3>
+          <p>Use the best estimate you can, and say clearly that it is an estimate. Bring the package. Edibles vary widely, and some also contain chocolate or xylitol, which are separate emergencies. If the label is gone, tell the vet what the product looked like and how much is missing.</p>
+          <h3>Why should I not make my dog vomit?</h3>
+          <p>THC can make a dog sedated and less able to swallow safely. Vomiting in that state can lead to inhaling stomach contents. Do not induce vomiting at home. Call a veterinarian or poison control, and keep your dog from falling or wandering.</p>
+          <h3>Is wobbliness a mild sign I can watch at home?</h3>
+          <p>Wobbliness, urine leaking, and a low heart rate are common, and many dogs recover with supportive care, but some become severely sedated. This page cannot tell you that a given dog will be fine. Call now, especially if your dog is very hard to wake, is vomiting while sedated, or also ate chocolate or xylitol.</p>
+        </div>
+      </section>
       <!-- ============ LEARN MORE ============ -->
       <section class="info-section" aria-labelledby="learn-heading">
         <h2 id="learn-heading">Learn more</h2>
@@ -399,7 +443,7 @@
   <div class="wrap" style="max-width: 1180px;">
     <p>This tool provides a general risk estimate for educational purposes only and is not a diagnosis or a substitute for veterinary care. THC product labels are often inaccurate, and response varies between individual dogs. Always contact a veterinarian or an animal poison control center after any suspected ingestion, regardless of the result shown above.</p>
     <div class="footer-links">
-      <a href="../index.html">All calculators</a>
+      <a href="/">All calculators</a>
       <a href="../pages/poison-proofing-checklist.html">Poison-proofing checklist</a>
       <a href="../pages/about.html">About</a>
       <a href="../pages/contact.html">Contact</a>
