@@ -785,6 +785,39 @@ input[type='number']:focus {
   max-width: 65ch;
 }
 
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 65ch;
+}
+
+.faq-list h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 var(--space-2);
+}
+
+.faq-list p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.guide-group + .guide-group {
+  margin-top: var(--space-8);
+}
+
+.guide-group h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0 0 var(--space-4);
+}
+
 /* Timeline */
 .timeline {
   position: relative;
