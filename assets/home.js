@@ -15,15 +15,15 @@
   if (!input || !grid) { return; }
   // Extra search words so common product and brand names find the right card.
   var KEYWORDS = {
-    'chocolate': 'cocoa brownie candy bar baking dark milk halloween trick treat',
-    'grapes-raisins': 'raisin currant sultana trail mix fruit',
+    'chocolate': 'cocoa brownie candy bar baking dark milk halloween trick treat christmas holiday fudge gelt cookie',
+    'grapes-raisins': 'raisin currant sultana trail mix fruit fruitcake stollen mince pie christmas',
     'xylitol': 'gum sugar-free mint peanut butter birch sugar candy',
     'onions-garlic': 'onion garlic leek chive shallot powder allium',
     'ibuprofen': 'advil motrin nsaid pain pill medicine',
     'naproxen': 'aleve naprosyn anaprox midol naproxen sodium nsaid pain pill medicine',
     'aspirin': 'bayer bufferin ecotrin excedrin baby low-dose 81 acetylsalicylic salicylate nsaid pain pill medicine cat',
     'marijuana-thc': 'weed cannabis pot edible gummy thc cbd brownie',
-    'lily-cats': 'lily lilies flower plant pollen vase cat daylily easter',
+    'lily-cats': 'lily lilies flower plant pollen vase cat daylily easter bouquet christmas holiday',
     'acetaminophen': 'tylenol paracetamol pain pill medicine cold flu cat',
     'macadamia-nuts': 'nut nuts cookie',
     'rat-poison': 'mouse rodent bait rodenticide d-con bromethalin warfarin'
