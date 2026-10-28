@@ -21,6 +21,7 @@
     'onions-garlic': 'onion garlic leek chive shallot powder allium',
     'ibuprofen': 'advil motrin nsaid pain pill medicine',
     'naproxen': 'aleve naprosyn anaprox midol naproxen sodium nsaid pain pill medicine',
+    'aspirin': 'bayer bufferin ecotrin excedrin baby low-dose 81 acetylsalicylic salicylate nsaid pain pill medicine cat',
     'marijuana-thc': 'weed cannabis pot edible gummy thc cbd brownie',
     'lily-cats': 'lily lilies flower plant pollen vase cat daylily easter',
     'acetaminophen': 'tylenol paracetamol pain pill medicine cold flu cat',
