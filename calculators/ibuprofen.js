@@ -76,13 +76,13 @@
 
   var COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This estimated dose is in the range linked to kidney injury in dogs.',
       detail: 'The estimated dose is at or above 175 mg per kg body weight, where veterinary sources report an increased risk of acute kidney injury in addition to stomach bleeding and ulcers. Do not wait for symptoms. Call animal poison control or an emergency vet immediately and plan to have your dog seen in person right away.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Head to the nearest emergency vet', sub: 'Bring the pill bottle so the vet can confirm strength and count' }]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This estimated dose is in the range linked to stomach ulcers and vomiting.',
       detail: 'The estimated dose is at or above 25 mg per kg body weight, where vomiting, diarrhea, and stomach ulceration have been reported in dogs. Treatment is most effective when started early, before signs appear. Call poison control or your veterinarian now.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Call or message your regular veterinarian', sub: 'If after hours, use one of the hotlines above first' }]

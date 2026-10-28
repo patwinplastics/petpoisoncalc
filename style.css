@@ -4,7 +4,7 @@
 
 :root,
 [data-theme='light'] {
-  /* Surfaces — clinical, cool, calm */
+  /* Surfaces: clinical, cool, calm */
   --color-bg: #f4f6f6;
   --color-surface: #ffffff;
   --color-surface-2: #fbfcfc;
@@ -19,7 +19,7 @@
   --color-text-faint: #90a3a8;
   --color-text-inverse: #f7fafa;
 
-  /* Primary accent — deep vet-clinic teal */
+  /* Primary accent: deep vet-clinic teal */
   --color-primary: #0a6e74;
   --color-primary-hover: #08565b;
   --color-primary-active: #063f43;
@@ -141,7 +141,7 @@ body {
 }
 
 /* ============================================
-   TOP EMERGENCY BAR — always visible, always first
+   TOP EMERGENCY BAR, always visible, always first
    ============================================ */
 
 .emergency-bar {

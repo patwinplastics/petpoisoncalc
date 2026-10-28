@@ -119,7 +119,7 @@
      ============================================ */
   var TIER_COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This estimated dose is well within the documented toxic range.',
       detail: 'Based on the weight, food type, and amount entered, the estimated dose (adjusted for garlic and concentrated-form potency) meets or exceeds the higher end of the documented toxic range for dogs. Red blood cell damage can begin within hours even though visible symptoms often take days to appear. Call an emergency veterinarian or animal poison control immediately and plan for bloodwork now, not just if symptoms develop.',
       actions: [
@@ -129,7 +129,7 @@
       ]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This estimated dose falls within the documented toxic range for dogs.',
       detail: 'The estimated dose (adjusted for garlic and concentrated-form potency) is within the 15 to 30 gram per kilogram range the Merck Veterinary Manual associates with toxicity in dogs. Because clinical signs of hemolytic anemia often do not appear for 3 to 5 days, a normal-looking dog right now does not rule out a problem developing. Call poison control or your veterinarian now to establish a monitoring and bloodwork plan.',
       actions: [

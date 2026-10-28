@@ -71,19 +71,19 @@
 
   var COPY = {
     cat: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'Any amount of acetaminophen is an emergency for a cat.',
       detail: 'Cats lack the liver enzymes to process acetaminophen safely, and clinical signs have been reported at doses as low as 10 mg per kg, less than a quarter of a regular tablet for an average cat. Damage to red blood cells can begin within a few hours. Call an emergency vet or animal poison control now and head in.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Go to the nearest emergency vet now', sub: 'Bring the packaging' }]
     },
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This estimated dose is in the range linked to liver injury in dogs.',
       detail: 'The estimated dose is at or above 100 mg per kg, where veterinary sources report clinical signs and possible liver injury in dogs. Do not wait for symptoms. Call animal poison control or an emergency vet immediately. An antidote is available and works best when started early.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Head to the nearest emergency vet', sub: 'Bring the bottle so the vet can confirm strength and count' }]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This estimated dose is approaching the range linked to liver injury.',
       detail: 'The estimated dose is at or above 50 mg per kg, half of the 100 mg/kg level where liver injury is reported in dogs. Individual sensitivity, repeated doses, and combination products can lower the toxic dose. Call poison control or your veterinarian now.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Call or message your regular veterinarian', sub: 'If after hours, use one of the hotlines above first' }]

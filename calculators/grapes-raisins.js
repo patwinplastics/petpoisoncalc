@@ -169,7 +169,7 @@
      ============================================ */
   var TIER_COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This amount is at or above doses linked to kidney injury in dogs.',
       detail: 'Based on the weight and amount entered, the estimated dose meets or exceeds the lowest amounts documented to cause acute kidney injury in published veterinary case data. Do not wait for symptoms. Call an emergency veterinarian or animal poison control immediately, and plan to have your dog seen in person within the next hour if a professional advises it.',
       actions: [
@@ -179,7 +179,7 @@
       ]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This amount falls in a range where reactions have been documented.',
       detail: 'The estimated dose is a meaningful fraction of amounts linked to kidney injury in some dogs, or meets the general clinical marker veterinarians use to flag risk. Individual sensitivity to grapes and raisins varies unpredictably, so this amount cannot be assumed safe. Call poison control or your veterinarian now, before symptoms start, so you have a documented case number and a treatment plan.',
       actions: [

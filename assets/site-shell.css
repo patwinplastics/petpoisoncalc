@@ -482,3 +482,22 @@ table.ref-table.ref-table-fit { min-width: 0; width: 100%; }
 @media (max-width: 440px) {
   .sticky-call-bar .er-vet-more { display: none; }
 }
+
+/* ---------- Small phones: keep the top nav inside the screen ---------- */
+@media (max-width: 400px) {
+  .site-nav .wrap { gap: 10px; padding-inline: 12px; }
+  .site-nav-brand { gap: 6px; font-size: 0.9rem; min-width: 0; white-space: nowrap; }
+  .site-nav-brand .brand-mascot { width: 33px; height: 24px; }
+  .site-nav-links { gap: 10px; flex-shrink: 0; }
+  .site-nav-links a { white-space: nowrap; }
+  .site-nav-links .theme-toggle { width: 34px; height: 34px; }
+  .site-nav-links .theme-toggle svg { width: 16px; height: 16px; }
+}
+@media (max-width: 340px) {
+  .site-nav .wrap { padding-inline: 10px; gap: 6px; }
+  .site-nav-brand { font-size: 0.82rem; }
+  .site-nav-brand .brand-mascot { width: 28px; height: 20px; }
+  .site-nav-links { gap: 7px; font-size: 0.72rem; }
+  .site-nav-links .theme-toggle { width: 30px; height: 30px; }
+  .site-nav-links .theme-toggle svg { width: 15px; height: 15px; }
+}
