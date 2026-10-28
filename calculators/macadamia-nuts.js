@@ -75,13 +75,13 @@
 
   var COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This exposure needs immediate veterinary care.',
       detail: 'Based on what you entered, this is a large dose of macadamia nuts for your dog\'s size (at or above the 20 g/kg dose that caused marked weakness in a study), or the product contains xylitol. Call animal poison control or an emergency vet now.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Head to the nearest emergency vet', sub: 'Bring the packaging' }]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This amount is in the range where dogs have developed weakness and vomiting.',
       detail: 'The estimated dose is at or above 0.7 g per kg, the lowest dose linked to signs in published reports, or the nuts were chocolate-covered or in baked goods. A vet may recommend inducing vomiting if the nuts were eaten recently. Call poison control or your veterinarian now.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Call or message your regular veterinarian', sub: 'If after hours, use one of the hotlines above first' }]

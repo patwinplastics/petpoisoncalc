@@ -134,7 +134,7 @@
      ============================================ */
   var TIER_COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This estimated dose is in the range where seizures have been documented.',
       detail: 'Based on the weight, chocolate type, and amount entered, the estimated theobromine dose meets or exceeds 60 mg per kg body weight, the threshold associated with seizures in published veterinary data. Do not wait for symptoms. Call an emergency veterinarian or animal poison control immediately, and plan to have your dog seen in person right away.',
       actions: [
@@ -144,7 +144,7 @@
       ]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This estimated dose falls in a range associated with cardiac effects.',
       detail: 'The estimated theobromine dose is at or above 40 mg per kg body weight, a range veterinary sources associate with abnormal heart rhythm and elevated heart rate. Individual sensitivity to theobromine varies, so this amount cannot be assumed safe. Call poison control or your veterinarian now, before symptoms start, so you have a documented case number and a treatment plan.',
       actions: [

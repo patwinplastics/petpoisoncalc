@@ -68,7 +68,7 @@
   segGroup([$('rAnti'), $('rBrom'), $('rChol'), $('rZinc'), $('rUnknown')], function (b) { type = b.getAttribute('data-v'); });
 
   var COPY = {
-    label: 'Emergency — act now',
+    label: 'Emergency: act now',
     headline: 'Any rat or mouse poison ingestion is an emergency for dogs.',
     detail: 'Rodenticides are designed to kill mammals, the margin of safety is narrow, and the most dangerous types often cause no signs until treatment is harder. Call animal poison control or an emergency vet now and head in. Bring the package.',
     actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Go to the nearest emergency vet now', sub: 'Do not wait for signs. Bring the package or a photo of the label' }]

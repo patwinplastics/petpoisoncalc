@@ -65,7 +65,7 @@
 
   var COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'Any exposure to this type of lily is a medical emergency for cats.',
       detail: 'Even a small bite of a leaf or petal, a few grains of pollen licked from fur, or a drink of vase water can cause fatal kidney failure in cats. Treatment is most effective when started within hours, before signs appear. Call an emergency vet or animal poison control now and head in. Bring the plant or a photo.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Go to the nearest emergency vet now', sub: 'Do not wait for vomiting or other signs' }]

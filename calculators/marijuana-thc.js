@@ -72,13 +72,13 @@
 
   var COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This exposure needs immediate veterinary care.',
       detail: 'Based on what you entered, this falls in the highest-risk group: a THC dose at or above the range where moderate to severe signs are reported, or an edible that also contains xylitol. Call animal poison control or an emergency vet immediately and plan to have your dog seen in person now. Tell the vet exactly what was eaten; they are there to help, not to judge.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Head to the nearest emergency vet', sub: 'Bring the packaging so the vet can see THC content and ingredients' }]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This amount is in the range where dogs commonly show signs.',
       detail: 'The estimated THC dose is at or above the range where clinical signs such as wobbliness, sleepiness, and dribbling urine are reported, or the THC amount is unknown, the product is a concentrate, or it contains chocolate. Product labels are often inaccurate. Call poison control or your veterinarian now.',
       actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Call or message your regular veterinarian', sub: 'If after hours, use one of the hotlines above first' }]

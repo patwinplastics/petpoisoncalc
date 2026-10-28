@@ -125,7 +125,7 @@
      ============================================ */
   var TIER_COPY = {
     emergency: {
-      label: 'Emergency — act now',
+      label: 'Emergency: act now',
       headline: 'This estimated dose is in the range associated with severe liver injury.',
       detail: 'Based on the weight and amount entered, the estimated xylitol dose meets or exceeds 500 mg per kg body weight, the threshold the Merck Veterinary Manual associates with severe hepatic (liver) insufficiency or failure, in addition to the hypoglycemia risk present at lower doses. Do not wait for symptoms. Call an emergency veterinarian or animal poison control immediately, and get your dog seen in person right away. Baseline liver enzyme testing and dextrose supplementation are typically needed even if your dog seems normal.',
       actions: [
@@ -135,7 +135,7 @@
       ]
     },
     urgent: {
-      label: 'Urgent — contact a professional now',
+      label: 'Urgent: contact a professional now',
       headline: 'This estimated dose is in the range associated with hypoglycemia.',
       detail: 'The estimated xylitol dose is at or above 100 mg per kg body weight, the threshold veterinary sources associate with hypoglycemia (dangerously low blood sugar). Signs can appear within 30 minutes. Call poison control or your veterinarian now, and plan to have your dog seen and have blood glucose checked as soon as possible, even before symptoms appear.',
       actions: [
