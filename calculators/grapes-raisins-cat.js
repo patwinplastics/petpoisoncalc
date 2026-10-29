@@ -53,16 +53,12 @@
     $('resultsWrap').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
-  /* Cats: no established toxic dose. Merck Veterinary Manual mentions only anecdotal reports of kidney
+  /* Cats: no established safe or toxic dose. Merck Veterinary Manual mentions only anecdotal reports of kidney
      failure in cats; VPIS (Sutton et al. 2009) described acute renal failure in two cats; Dijkman et al. 2022
      (J Small Anim Pract, PMC9303671) found clinical signs in 2 of 13 cats and no acute kidney injury.
-     Conservative PetPoisonCalc cutoffs, not from a cat study:
-       Emergency if dose >= 25% of the lowest dog kidney injury dose used by the dog calculator
-       (9 g/kg grapes -> 2.25 g/kg, 2.8 g/kg raisins -> 0.7 g/kg), or 1 or more grapes or raisins per 4.5 kg
-       (Merck clinical marker for dogs). Otherwise Urgent. No lower tier and no safe tier. */
+     Because no cat dose can be cited, ANY amount is Emergency. No Urgent tier, no lower tier, no safe tier.
+     The g/kg readout uses average weights (5 g per grape, 1 g per raisin) and is shown only to share with a vet. */
   var AVG_GRAPE_G = 5, AVG_RAISIN_G = 1;
-  var GRAPE_EMERG_G_KG = 9 * 0.25, RAISIN_EMERG_G_KG = 2.8 * 0.25;
-  var MERCK_UNITS_PER_KG = 1 / 4.5;
 
   var fruit = 'grape';
   segGroup([$('typeGrape'), $('typeRaisin')], function (b) {
@@ -80,20 +76,11 @@
     $('gramToggleBtn').textContent = useGrams ? 'Use a count instead of grams' : 'I know the weight in grams instead';
   });
 
-  var EVIDENCE = 'Evidence in cats is limited: only a few cat cases have been reported, including two cats with kidney failure in the UK, and no toxic dose has been established. There is no known safe amount.';
   var COPY = {
-    emergency: {
-      label: 'Emergency: act now',
-      headline: 'Treat this amount as an emergency for your cat.',
-      detail: 'The estimated amount is at or above one quarter of the lowest dose linked to kidney injury in dogs, or one or more grapes or raisins per 4.5 kg (about 10 lb) of body weight. ' + EVIDENCE + ' Call animal poison control or an emergency vet now. Do not try to make your cat vomit at home.',
-      actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Head to the nearest emergency vet', sub: 'Bring the packaging or a sample of what was eaten if possible' }]
-    },
-    urgent: {
-      label: 'Urgent: contact a professional now',
-      headline: 'No safe amount of grapes or raisins is known for cats.',
-      detail: 'The estimated amount is below the cautious cutoffs this calculator uses, but those cutoffs are adapted from dog data and are not safety lines. ' + EVIDENCE + ' Call poison control or your vet now, and watch for vomiting, lethargy, or loss of appetite over the next 72 hours.',
-      actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Call or message your regular veterinarian', sub: 'If after hours, use one of the hotlines above first' }]
-    }
+    label: 'Emergency: act now',
+    headline: 'Treat any amount of grapes or raisins as an emergency for your cat.',
+    detail: 'There is no established safe or toxic dose of grapes or raisins for cats, so any amount is treated as an emergency. Evidence in cats is limited: only a few cat cases have been reported, including two cats with kidney failure in the UK. The dose shown is an estimate to share with your vet; it does not mean a smaller amount is safe. Call animal poison control or an emergency vet now. Do not try to make your cat vomit at home.',
+    actions: [ACT_ASPCA, ACT_PPH, { primary: false, tel: null, title: 'Head to the nearest emergency vet', sub: 'Bring the packaging or a sample of what was eaten if possible' }]
   };
 
   $('calcForm').addEventListener('submit', function (e) {
@@ -109,9 +96,7 @@
     var totalG = grams > 0 ? grams : count * avg;
     var units = grams > 0 ? grams / avg : count;
     var gKg = totalG / kg, unitsKg = units / kg;
-    var emerg = gKg >= (fruit === 'grape' ? GRAPE_EMERG_G_KG : RAISIN_EMERG_G_KG) || unitsKg >= MERCK_UNITS_PER_KG;
-    var key = emerg ? 'emergency' : 'urgent';
     var name = fruit === 'grape' ? 'grape' : 'raisin';
-    render(key, COPY[key], '', gKg.toFixed(2) + ' g/kg', unitsKg.toFixed(2) + ' ' + name + 's/kg');
+    render('emergency', COPY, '', gKg.toFixed(2) + ' g/kg', unitsKg.toFixed(2) + ' ' + name + 's/kg');
   });
 })();
