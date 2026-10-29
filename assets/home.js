@@ -26,7 +26,10 @@
     'lily-cats': 'lily lilies flower plant pollen vase cat daylily easter bouquet christmas holiday',
     'acetaminophen': 'tylenol paracetamol pain pill medicine cold flu cat',
     'macadamia-nuts': 'nut nuts cookie',
-    'rat-poison': 'mouse rodent bait rodenticide d-con bromethalin warfarin'
+    'rat-poison': 'mouse rodent bait rodenticide d-con bromethalin warfarin',
+    'nicotine': 'cigarette butt cigar tobacco smoking vape vaping e-cigarette e-liquid juul pod gum lozenge patch pouch zyn snuff chew',
+    'bromethalin': 'rat mouse poison rodent bait block pellet rodenticide tomcat',
+    'grapes-raisins-cat': 'grape raisin currant sultana fruit kitten'
   };
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.calc-picker-card'));
   cards.forEach(function (card) {
