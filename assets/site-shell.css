@@ -501,3 +501,20 @@ table.ref-table.ref-table-fit { min-width: 0; width: 100%; }
   .site-nav-links .theme-toggle { width: 30px; height: 30px; }
   .site-nav-links .theme-toggle svg { width: 15px; height: 15px; }
 }
+
+/* Comfort photos: homepage strip and calculator calm note */
+.photo-strip-grid { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.photo-strip-grid li { margin: 0; padding: 0; }
+.photo-strip-grid img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; background: var(--color-surface-offset); }
+@media (min-width: 760px) {
+  .photo-strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+}
+.photo-credit { margin: var(--space-2) 0 0; font-size: 0.75rem; color: var(--color-text-muted); }
+.photo-credit a { color: inherit; }
+.calm-note { display: flex; align-items: center; gap: var(--space-4); margin: var(--space-5) 0; padding: var(--space-4); border-radius: 16px; background: var(--color-primary-highlight); color: var(--color-text); }
+.calm-note img { flex: none; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; background: var(--color-surface-offset); }
+.calm-note > div { min-width: 0; }
+.calm-note p { margin: 0; }
+@media (min-width: 600px) {
+  .calm-note img { width: 112px; height: 112px; }
+}
