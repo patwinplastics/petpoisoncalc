@@ -37,6 +37,11 @@
       });
       if (values.length) { lines.push('- ' + (label ? label + ': ' : '') + values.join(', ')); }
     });
+    // Optional time from ingest-timer.js (kept on this device only)
+    if (typeof window.PetPoisonCalcIngestLine === 'function') {
+      var when = window.PetPoisonCalcIngestLine();
+      if (when) { lines.push('- ' + when); }
+    }
     // Custom-strength inputs that sit outside a field group
     form.querySelectorAll('[id^="customMgWrap"]').forEach(function (w) {
       var inp = w.querySelector('input');
