@@ -547,3 +547,16 @@ table.ref-table.ref-table-fit { min-width: 0; width: 100%; }
 .ingest-result strong { display: block; }
 .ingest-result-sub { display: block; font-size: var(--text-sm); color: var(--color-text-muted); }
 @media print { .ingest-timer { display: none; } }
+
+/* Email signup (assets/email-signup.js). Hidden until a provider form is connected. */
+.email-signup { display: grid; gap: var(--space-4); margin: var(--space-8) 0; padding: var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface-offset); }
+.email-signup[hidden] { display: none; }
+@media (min-width: 900px) { .email-signup { grid-template-columns: 1fr 1fr; align-items: center; } }
+.email-signup-title { margin: 0 0 var(--space-2); font-size: var(--text-lg); }
+.email-signup-text p { margin: 0; }
+.email-signup-label { display: block; font-weight: 700; font-size: var(--text-sm); margin-bottom: var(--space-2); }
+.email-signup-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.email-signup-row input { flex: 1 1 200px; min-width: 0; min-height: 44px; padding: 0 var(--space-3); border: 1.5px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); color: var(--color-text); font: inherit; }
+.email-signup-btn { width: auto; min-height: 44px; padding: 0 var(--space-6); }
+.email-signup-note { margin: var(--space-2) 0 0; font-size: var(--text-xs); color: var(--color-text-muted); }
+@media print { .email-signup { display: none; } }
