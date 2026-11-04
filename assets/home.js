@@ -29,7 +29,8 @@
     'rat-poison': 'mouse rodent bait rodenticide d-con bromethalin warfarin',
     'nicotine': 'cigarette butt cigar tobacco smoking vape vaping e-cigarette e-liquid juul pod gum lozenge patch pouch zyn snuff chew',
     'bromethalin': 'rat mouse poison rodent bait block pellet rodenticide tomcat',
-    'grapes-raisins-cat': 'grape raisin currant sultana fruit kitten'
+    'grapes-raisins-cat': 'grape raisin currant sultana fruit kitten',
+    'antifreeze': 'coolant radiator ethylene glycol engine car garage puddle leak drip snow globe brake fluid de-icer deicer winter prestone cabin toilet rv'
   };
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.calc-picker-card'));
   cards.forEach(function (card) {
