@@ -203,7 +203,7 @@
 
 <link rel="stylesheet" href="./base.css?v=2026102101" />
 <link rel="stylesheet" href="./style.css?v=2026102701" />
-<link rel="stylesheet" href="./assets/site-shell.css?v=2026111101" />
+<link rel="stylesheet" href="./assets/site-shell.css?v=2026111201" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -275,7 +275,7 @@
   <div class="content-col">
     <div class="wrap">
 
-      <main id="main-content">
+      <main id="main-content" class="home-compact">
       <!-- ============ HERO ============ -->
       <header class="site-header" style="border-bottom: none; padding-block: var(--space-8) var(--space-4);">
         <div class="hero-grid">
@@ -283,7 +283,6 @@
           <h1>Pet Poison Calculator for Dogs and Cats</h1>
           <p class="lede">Enter your dog or cat's weight and what they ate. This free pet poison calculator estimates how urgently you should call a veterinarian. It is a first look, not a diagnosis.</p>
 
-          <p class="section-intro">Each calculator is labeled for the species it covers. The dog poison calculator pages include chocolate, grapes and raisins, xylitol, onions and garlic, macadamia nuts, marijuana, nicotine, rat poison, bromethalin, antifreeze, salt and ice melt, ibuprofen, naproxen, and aspirin. The cat toxicity calculator pages cover true lilies, acetaminophen (Tylenol), aspirin, nicotine, bromethalin, antifreeze, salt and ice melt, and grapes and raisins. Any amount of lilies or acetaminophen is an emergency for a cat, and the aspirin calculator treats any aspirin a cat eats as an emergency too. If your pet ate something that is not listed, call ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a> right away. Both lines answer 24 hours a day. A consultation fee may apply.</p>
           </div>
           <figure class="hero-photo">
             <img src="./assets/img/hero-1200.webp" srcset="./assets/img/hero-800.webp 800w, ./assets/img/hero-1200.webp 1200w, ./assets/img/hero-1600.webp 1600w" sizes="(min-width: 1180px) 540px, (min-width: 900px) 46vw, 100vw" width="1600" height="900" fetchpriority="high" decoding="async" alt="A white dog and a tabby cat cuddling in the grass" />
@@ -503,30 +502,73 @@
         </div>
       </section>
 
-      <section class="info-section offline-box" id="offlineBox" aria-labelledby="offline-heading">
-        <h2 id="offline-heading">Keep PetPoisonCalc on your phone, even with no signal</h2>
+      <section class="info-section first-minutes-strip" aria-labelledby="first-minutes-heading">
+        <h2 id="first-minutes-heading">What to do in the first few minutes</h2>
+        <p class="section-intro">Move your pet away from the substance and pick up anything left so they cannot eat more. Do not offer a home remedy, and do not try to make them vomit. Keep the package or a photo of the label, and note the time. Then call, even if they look normal. If your pet collapses, has a seizure, or cannot be woken, go to an emergency clinic now.</p>
+        <p class="section-intro"><a href="https://www.google.com/maps/search/?api=1&amp;query=24%20hour%20emergency%20vet" target="_blank" rel="noopener noreferrer" data-er-vet="home"><strong>Find a 24/7 emergency vet near me</strong></a> (opens Google Maps in a new tab; we never see your location). Save the number of your closest one now, before you need it.</p>
+        <p class="first-minutes-calls"><a href="tel:8884264435">ASPCA Poison Control (888) 426-4435</a> <a href="tel:8557647661">Pet Poison Helpline (855) 764-7661</a></p>
+      </section>
+      <section class="info-section home-guides" aria-labelledby="guides-heading">
+        <h2 id="guides-heading">Popular guides</h2>
+        <div class="related-links">
+          <a href="./guides/dog-ate-chocolate.html">Dog ate chocolate</a>
+          <a href="./guides/dog-ate-xylitol.html">Dog ate xylitol</a>
+          <a href="./guides/dog-ate-grapes-raisins.html">Dog ate grapes or raisins</a>
+          <a href="./guides/cat-lily-poisoning.html">Cat and lilies</a>
+          <a href="./guides/cat-ate-raisins.html">Can cats eat raisins?</a>
+          <a href="./guides/index.html">All guides &rarr;</a>
+          <a href="./pages/poison-proofing-checklist.html">Poison-proofing checklist</a>
+        </div>
+      </section>
+      <div data-email-signup="home" hidden></div>
+      <h2 class="fold-group-heading" id="more-heading">More about PetPoisonCalc</h2>
+      <section class="info-section fold-section offline-box" id="offlineBox" aria-labelledby="offline-heading">
+        <details class="fold">
+          <summary><h2 id="offline-heading">Keep PetPoisonCalc on your phone, even with no signal</h2></summary>
+          <div class="fold-body">
         <p class="section-intro">Pets get into things at cabins, trailheads, and in basements where the internet drops out. After you open this page once, every calculator is saved in this browser and keeps working offline. You can also add it to your home screen like an app, so it is one tap away in an emergency.</p>
         <p class="field-hint offline-status" id="offlineStatus" role="status">Checking offline support...</p>
         <button type="button" class="btn-primary install-btn" id="installBtn" hidden>Add PetPoisonCalc to my home screen</button>
         <p class="field-hint" id="installHint" hidden></p>
         <p class="field-hint">The saved copy stays on this device, and what you type into a calculator is never sent anywhere. Phone calls to poison control work without internet, so save (888) 426-4435 and (855) 764-7661 in your contacts too.</p>
+          </div>
+        </details>
       </section>
-
-      <section class="info-section" aria-labelledby="how-heading">
-        <h2 id="how-heading">How the calculators work</h2>
+      <section class="info-section fold-section" aria-labelledby="species-heading">
+        <details class="fold">
+          <summary><h2 id="species-heading">Which calculators cover dogs and which cover cats</h2></summary>
+          <div class="fold-body">
+          <p class="section-intro">Each calculator is labeled for the species it covers. The dog poison calculator pages include chocolate, grapes and raisins, xylitol, onions and garlic, macadamia nuts, marijuana, nicotine, rat poison, bromethalin, antifreeze, salt and ice melt, ibuprofen, naproxen, and aspirin. The cat toxicity calculator pages cover true lilies, acetaminophen (Tylenol), aspirin, nicotine, bromethalin, antifreeze, salt and ice melt, and grapes and raisins. Any amount of lilies or acetaminophen is an emergency for a cat, and the aspirin calculator treats any aspirin a cat eats as an emergency too. If your pet ate something that is not listed, call ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a> right away. Both lines answer 24 hours a day. A consultation fee may apply.</p>
+          </div>
+        </details>
+      </section>
+      <section class="info-section fold-section" aria-labelledby="how-heading">
+        <details class="fold">
+          <summary><h2 id="how-heading">How the calculators work</h2></summary>
+          <div class="fold-body">
         <p class="section-intro">Each page is a toxicity calculator for one substance. You enter a body weight and, for most substances, what was eaten and how much. The page converts that into a dose per kilogram and compares it with published ranges, using the more cautious end when sources disagree. You get an urgency level (caution, urgent, or emergency) and a next step. The page cannot examine your pet.</p>
         <p class="section-intro">The pet poison calculator is only a triage aid. It does not replace a veterinarian, bloodwork, or a toxicologist who can ask follow-up questions. A few hazards are not given a "small amount is probably fine" result. Grapes and raisins have no established safe dose in dogs. True lilies and daylilies are an emergency for cats after pollen, vase water, or a bite of leaf or flower. Any rat or mouse poison is an emergency, and this site does not calculate a safe bait dose. Any amount of acetaminophen is an emergency for cats. Call a veterinarian or a poison control line even when an estimate looks mild.</p>
+          </div>
+        </details>
       </section>
-
-      <section class="info-section" aria-labelledby="first-minutes-heading">
-        <h2 id="first-minutes-heading">What to do in the first few minutes</h2>
-        <p class="section-intro">Move your pet away from the substance and pick up anything left so they cannot eat more. Do not offer a home remedy, and do not try to make them vomit. Keep the package or a photo of the label, and note the time. Then call, even if they look normal. If your pet collapses, has a seizure, or cannot be woken, go to an emergency clinic now.</p>
-        <p class="section-intro"><a href="https://www.google.com/maps/search/?api=1&amp;query=24%20hour%20emergency%20vet" target="_blank" rel="noopener noreferrer" data-er-vet="home"><strong>Find a 24/7 emergency vet near me</strong></a> (opens Google Maps in a new tab; we never see your location). Save the number of your closest one now, before you need it.</p>
+      <section class="info-section fold-section why-section" aria-labelledby="why-heading">
+        <details class="fold">
+          <summary><h2 id="why-heading">Why we built this</h2></summary>
+          <div class="fold-body"><div class="why-grid">
+          <img class="why-mascot" src="./assets/mascot.svg?v=2026102101" width="220" height="160" loading="lazy" alt="A friendly cartoon dog and cat sitting together" />
+          <div>
+            
+            <p class="section-intro">We are pet owners too. When a dog or cat gets into something it should not, the first few minutes are scary and confusing, and most search results are slow, vague, or buried under ads. We wanted one place that gives a fast, clear answer to two questions: how worried should I be, and what should I do right now?</p>
+            <p class="section-intro">Every calculator is built from published veterinary toxicology sources, and each page lists the sources it uses. PetPoisonCalc is not a substitute for a veterinarian. If your pet may have eaten something toxic, call your vet or a poison control line right away: ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a>. A consultation fee may apply.</p>
+          </div>
+        </div>
+          </div>
+        </details>
       </section>
-
-      <!-- ppc-photo -->
-      <section class="info-section photo-strip" aria-labelledby="calm-heading">
-        <h2 id="calm-heading">Take a breath. You are doing the right thing.</h2>
+      <section class="info-section fold-section photo-strip" aria-labelledby="calm-heading">
+        <details class="fold">
+          <summary><h2 id="calm-heading">Take a breath. You are doing the right thing.</h2></summary>
+          <div class="fold-body">
         <p class="section-intro">A scare with a pet you love is stressful. Checking quickly and calling for advice is exactly what a caring owner does. Keep your pet close and calm, and call your veterinarian, ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a>, or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a>.</p>
         <ul class="photo-strip-grid">
           <li><img src="./assets/img/home-puppy-400.webp" srcset="./assets/img/home-puppy-400.webp 400w, ./assets/img/home-puppy-800.webp 800w" sizes="(min-width: 760px) 30vw, 46vw" width="800" height="600" loading="lazy" decoding="async" alt="A golden retriever puppy napping on a sunlit wooden floor" /></li>
@@ -537,50 +579,60 @@
           <li><img src="./assets/img/home-cats-400.webp" srcset="./assets/img/home-cats-400.webp 400w, ./assets/img/home-cats-800.webp 800w" sizes="(min-width: 760px) 30vw, 46vw" width="800" height="600" loading="lazy" decoding="async" alt="Two tabby cats napping side by side on a couch" /></li>
         </ul>
         <p class="photo-credit">Photos: <a href="https://unsplash.com/@flo_raw?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Florian Schindler</a> on <a href="https://unsplash.com/photos/a-golden-retriever-puppy-sleeps-on-a-wooden-floor-2LHLhMLqeIQ?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>, <a href="https://unsplash.com/@jagjeetdhuna?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Jagjeet Dhuna</a> on <a href="https://unsplash.com/photos/a-small-kitten-laying-on-top-of-a-white-blanket-hvAd9uScjSA?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>, <a href="https://unsplash.com/@alvannee?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Alvan Nee</a> on <a href="https://unsplash.com/photos/a-happy-corgi-dog-sits-in-a-field-of-flowers-iSRb5JZ5CfY?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>, <a href="https://unsplash.com/@ejleusink?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Erik-Jan Leusink</a> on <a href="https://unsplash.com/photos/silver-tabby-cat-sleeping-on-white-blanket-QTe-MHNUrz4?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>, <a href="https://unsplash.com/@wadeaustinellis?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Wade Austin Ellis</a> on <a href="https://unsplash.com/photos/woman-hugging-a-dog-FtuJIuBbUhI?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>, <a href="https://unsplash.com/@david_r_pariente?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">David R Pariente</a> on <a href="https://unsplash.com/photos/a-couple-of-cats-laying-next-to-each-other-on-a-couch-TLzCyGo1iXE?utm_source=petpoisoncalc&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a>.</p>
-      </section>
-      <!-- /ppc-photo -->
-      <!-- ============ FAQ / ABOUT ============ -->
-      <section class="info-section why-section" aria-labelledby="why-heading">
-        <div class="why-grid">
-          <img class="why-mascot" src="./assets/mascot.svg?v=2026102101" width="220" height="160" loading="lazy" alt="A friendly cartoon dog and cat sitting together" />
-          <div>
-            <h2 id="why-heading">Why we built this</h2>
-            <p class="section-intro">We are pet owners too. When a dog or cat gets into something it should not, the first few minutes are scary and confusing, and most search results are slow, vague, or buried under ads. We wanted one place that gives a fast, clear answer to two questions: how worried should I be, and what should I do right now?</p>
-            <p class="section-intro">Every calculator is built from published veterinary toxicology sources, and each page lists the sources it uses. PetPoisonCalc is not a substitute for a veterinarian. If your pet may have eaten something toxic, call your vet or a poison control line right away: ASPCA Animal Poison Control at <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline at <a href="tel:8557647661">(855) 764-7661</a>. A consultation fee may apply.</p>
           </div>
-        </div>
+        </details>
       </section>
-
-      <section class="info-section" aria-labelledby="checklist-heading">
-        <h2 id="checklist-heading">Prevent it before it happens</h2>
+      <section class="info-section fold-section" aria-labelledby="checklist-heading">
+        <details class="fold">
+          <summary><h2 id="checklist-heading">Prevent it before it happens</h2></summary>
+          <div class="fold-body">
         <p class="section-intro">Most pet poisonings involve everyday items left within reach. Our free, printable <a href="./pages/poison-proofing-checklist.html">pet poison-proofing checklist</a> walks you through the kitchen, medicine cabinet, garden and garage in a few minutes.</p>
+          </div>
+        </details>
       </section>
-
-      <div data-email-signup="home" hidden></div>
       <section class="info-section" aria-labelledby="faq-heading">
         <h2 id="faq-heading">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 2-3 4"/><path d="M12 17h.01"/></svg>
           Frequently asked questions
         </h2>
-        <p class="section-intro">These answers follow the same guidance as the calculator pages. PetPoisonCalc estimates relative urgency from published veterinary toxicology data and known case reports. A result is not a diagnosis and cannot rule out risk at any dose. Every suspected ingestion should be checked by a veterinarian or an animal poison control center, whatever an estimate shows.</p>
-        <div class="faq-list">
-          <h3>How does a pet poison calculator work?</h3>
-          <p>You choose the substance, enter a weight, and enter how much was eaten. For lilies and rat poison, you identify the plant or the active ingredient instead. Most pages turn that into a dose per kilogram, compare it with published thresholds, and return an urgency level plus who to call. Any true lily in a cat, and any rat poison, is an emergency at any amount. The math runs in your browser. If the amount or product is wrong, so is the estimate. Use it as a reason to call, not as an all-clear.</p>
-          <h3>How accurate is it?</h3>
-          <p>It is only as good as the published ranges behind it, and those ranges are not a promise about your pet. Where sources disagree, this site uses the lower, more cautious figure. The estimate cannot account for age, breed, pregnancy, other illnesses, other medicines, or a second toxin in the same product. A result labeled caution means call. It does not mean wait and see, and it cannot rule out risk.</p>
-          <h3>Should I call ASPCA Animal Poison Control or Pet Poison Helpline?</h3>
-          <p>Either line is appropriate. You do not need to call both. ASPCA Animal Poison Control is (888) 426-4435. Pet Poison Helpline is (855) 764-7661. Both answer 24 hours a day. A consultation fee may apply, so confirm the cost when you call. If your own vet or an emergency clinic is open, call them too. If the clinic is closed, call one hotline first and save the case number for the treating veterinarian.</p>
-          <h3>Should I make my pet vomit?</h3>
-          <p>No. Never make a dog or cat vomit unless a veterinarian or animal poison control tells you to, for this pet and this substance. Salt, oil, and hydrogen peroxide are not safe defaults. Do not make a cat vomit at home. THC can leave a dog too sedated to protect the airway, and phosphide rat baits can release a toxic gas if vomited. If a phosphide is possible, travel with the windows open. Call first.</p>
-          <h3>What are the most common pet poisons?</h3>
-          <p>Human medicines and foods make up a large share of animal poison calls. These pages cover chocolate, xylitol, grapes and raisins, onions and garlic, macadamia nuts, THC edibles, nicotine and vapes, ibuprofen, naproxen, aspirin, acetaminophen, rat poison including bromethalin, antifreeze, ice melt and salt dough, true lilies for cats, and grapes and raisins for cats. Cleaners, oils, and veterinary drugs cause poisonings too and are not all listed. If yours is missing, call (888) 426-4435 or (855) 764-7661. A consultation fee may apply.</p>
-          <h3>What information should I have ready when I call a vet?</h3>
-          <p>Have species, breed, age, sex, and whether your pet is pregnant. Give a weight, even an estimate. Name the product, the active ingredient, how much is missing, and when it happened. Mention other pets with access, symptoms, current medicines, and illnesses such as kidney or stomach disease. A photo of the package or plant helps. An approximate weight and a picture of the label are enough to start.</p>
-          <h3>Is this only a tool for dogs?</h3>
-          <p>No. Most calculators are for dogs because that is where the published dose data is. The lily page treats any true lily or daylily contact as an emergency for cats, including pollen and vase water. Peace lilies and calla lilies irritate the mouth. Lily of the valley affects the heart. Any acetaminophen in a cat is an emergency. If a cat ate something with only a dog page, do not reuse the dog dose. Call and say it was a cat.</p>
-          <h3>What if the estimate says the dose is low?</h3>
-          <p>Call anyway. A low result only means the amount you entered is under the cautious threshold used here. It is not a finding that the ingestion is safe. Grapes, true lilies, rodenticides, and acetaminophen in cats are emergencies even in small amounts. Onion, garlic, and naproxen problems can appear days later. If your pet collapses, seizes, or cannot be woken, go to an emergency clinic now.</p>
+        <div class="faq-list fold-list">
+          <details class="fold fold-q">
+            <summary><h3>How does a pet poison calculator work?</h3></summary>
+            <div class="fold-body"><p>You choose the substance, enter a weight, and enter how much was eaten. For lilies and rat poison, you identify the plant or the active ingredient instead. Most pages turn that into a dose per kilogram, compare it with published thresholds, and return an urgency level plus who to call. Any true lily in a cat, and any rat poison, is an emergency at any amount. The math runs in your browser. If the amount or product is wrong, so is the estimate. Use it as a reason to call, not as an all-clear.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>How accurate is it?</h3></summary>
+            <div class="fold-body"><p>It is only as good as the published ranges behind it, and those ranges are not a promise about your pet. Where sources disagree, this site uses the lower, more cautious figure. The estimate cannot account for age, breed, pregnancy, other illnesses, other medicines, or a second toxin in the same product. A result labeled caution means call. It does not mean wait and see, and it cannot rule out risk.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>Should I call ASPCA Animal Poison Control or Pet Poison Helpline?</h3></summary>
+            <div class="fold-body"><p>Either line is appropriate. You do not need to call both. ASPCA Animal Poison Control is (888) 426-4435. Pet Poison Helpline is (855) 764-7661. Both answer 24 hours a day. A consultation fee may apply, so confirm the cost when you call. If your own vet or an emergency clinic is open, call them too. If the clinic is closed, call one hotline first and save the case number for the treating veterinarian.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>Should I make my pet vomit?</h3></summary>
+            <div class="fold-body"><p>No. Never make a dog or cat vomit unless a veterinarian or animal poison control tells you to, for this pet and this substance. Salt, oil, and hydrogen peroxide are not safe defaults. Do not make a cat vomit at home. THC can leave a dog too sedated to protect the airway, and phosphide rat baits can release a toxic gas if vomited. If a phosphide is possible, travel with the windows open. Call first.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>What are the most common pet poisons?</h3></summary>
+            <div class="fold-body"><p>Human medicines and foods make up a large share of animal poison calls. These pages cover chocolate, xylitol, grapes and raisins, onions and garlic, macadamia nuts, THC edibles, nicotine and vapes, ibuprofen, naproxen, aspirin, acetaminophen, rat poison including bromethalin, antifreeze, ice melt and salt dough, true lilies for cats, and grapes and raisins for cats. Cleaners, oils, and veterinary drugs cause poisonings too and are not all listed. If yours is missing, call (888) 426-4435 or (855) 764-7661. A consultation fee may apply.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>What information should I have ready when I call a vet?</h3></summary>
+            <div class="fold-body"><p>Have species, breed, age, sex, and whether your pet is pregnant. Give a weight, even an estimate. Name the product, the active ingredient, how much is missing, and when it happened. Mention other pets with access, symptoms, current medicines, and illnesses such as kidney or stomach disease. A photo of the package or plant helps. An approximate weight and a picture of the label are enough to start.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>Is this only a tool for dogs?</h3></summary>
+            <div class="fold-body"><p>No. Most calculators are for dogs because that is where the published dose data is. The lily page treats any true lily or daylily contact as an emergency for cats, including pollen and vase water. Peace lilies and calla lilies irritate the mouth. Lily of the valley affects the heart. Any acetaminophen in a cat is an emergency. If a cat ate something with only a dog page, do not reuse the dog dose. Call and say it was a cat.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>What if the estimate says the dose is low?</h3></summary>
+            <div class="fold-body"><p>Call anyway. A low result only means the amount you entered is under the cautious threshold used here. It is not a finding that the ingestion is safe. Grapes, true lilies, rodenticides, and acetaminophen in cats are emergencies even in small amounts. Onion, garlic, and naproxen problems can appear days later. If your pet collapses, seizes, or cannot be woken, go to an emergency clinic now.</p></div>
+          </details>
         </div>
+        <details class="fold fold-q">
+          <summary><h3>About these answers</h3></summary>
+          <div class="fold-body"><p class="section-intro">These answers follow the same guidance as the calculator pages. PetPoisonCalc estimates relative urgency from published veterinary toxicology data and known case reports. A result is not a diagnosis and cannot rule out risk at any dose. Every suspected ingestion should be checked by a veterinarian or an animal poison control center, whatever an estimate shows.</p></div>
+        </details>
         <p class="section-intro" style="margin-top: var(--space-6);">Have a suggestion for another ingestion calculator we should build? We're actively expanding this toolset.</p>
       </section>
       </main>
@@ -631,5 +683,6 @@
 <script src="./assets/er-vet.js?v=2026102801" defer></script>
 <script src="./assets/email-signup.js?v=2026110403" defer></script>
 <script src="./assets/home.js?v=2026111101" defer></script>
+<script src="./assets/fold.js?v=2026111201" defer></script>
 </body>
 </html>
