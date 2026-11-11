@@ -6,7 +6,7 @@
    Strategy: network first (so medical content is always the latest when online), falling back
    to the saved copy when the network fails or takes longer than a few seconds. */
 'use strict';
-var VERSION = 'ppc-2026111202';
+var VERSION = 'ppc-2026111203';
 var PRECACHE = [
   '/',
   '/guides/index.html',
@@ -84,7 +84,24 @@ var PRECACHE = [
   '/assets/img/thumb-rat-240.webp',
   '/assets/img/thumb-salt-240.webp',
   '/assets/img/thumb-thc-240.webp',
-  '/assets/img/thumb-xylitol-240.webp'
+  '/assets/img/thumb-xylitol-240.webp',
+  '/assets/img/card-chocolate-160.webp',
+  '/assets/img/card-xylitol-160.webp',
+  '/assets/img/card-grapes-160.webp',
+  '/assets/img/card-raisins-160.webp',
+  '/assets/img/card-lily-160.webp',
+  '/assets/img/card-nicotine-160.webp',
+  '/assets/img/card-ibuprofen-160.webp',
+  '/assets/img/card-naproxen-160.webp',
+  '/assets/img/card-aspirin-160.webp',
+  '/assets/img/card-acetaminophen-160.webp',
+  '/assets/img/card-antifreeze-160.webp',
+  '/assets/img/card-salt-160.webp',
+  '/assets/img/card-onion-160.webp',
+  '/assets/img/card-macadamia-160.webp',
+  '/assets/img/card-thc-160.webp',
+  '/assets/img/card-rat-160.webp',
+  '/assets/img/card-brom-160.webp'
 ];
 var TIMEOUT_MS = 3500;
 

@@ -58,5 +58,12 @@ These images were created with an AI image generator for PetPoisonCalc. They are
 | assets/img/guide-lily-easter-{600,1200}.webp | guides/cat-lily-poisoning.html | A cat sniffing Easter lilies (Lilium longiflorum) in a vase |
 | assets/img/thumb-lily-easter-240.webp | calculators/lily-cats.html (small picture below the calculator) | Square crop of the same illustration |
 | assets/img/lilyid-{easter,stargazer,asiatic,tiger,daylily,valley,peace,calla}-480.webp | calculators/lily-cats.html, guides/cat-lily-poisoning.html (lily ID pictures) | Easter lily, Stargazer lily, Asiatic lily, tiger lily, daylily, lily of the valley, peace lily, calla lily |
+| assets/img/choctype-{baking,cocoa,dark,milk,white}-320.webp | calculators/chocolate.html, guides/dog-ate-chocolate.html (chocolate types strip) | Unbranded baking chocolate, cocoa powder, dark, milk, and white chocolate |
+| assets/img/photo-grapes-raisins-{600,1200}.webp | calculators/grapes-raisins.html, calculators/grapes-raisins-cat.html, guides/dog-ate-grapes-raisins.html, guides/cat-ate-grapes-raisins.html, guides/cat-ate-raisins.html | Grapes next to raisins with a teaspoon for scale |
+| assets/img/nicprod-{cig,butts,vape,gum,patch,pouch}-320.webp | calculators/nicotine.html, guides/dog-ate-nicotine.html, guides/dog-ate-nicotine-pouch.html (nicotine products grid) | Generic cigarettes, butts, vape pen, gum and lozenges, patch, pouches and tin |
+| assets/img/photo-rodent-bait-{600,1200}.webp | calculators/rat-poison.html, calculators/bromethalin.html, guides/dog-ate-rat-poison.html, guides/dog-ate-bromethalin.html | Generic bait pellets, blocks, and a place pack |
+| assets/img/card-*-160.webp | Homepage calculator cards | One substance thumbnail per calculator (17) |
 
 assets/mascot.svg is an original hand-built SVG made for PetPoisonCalc.
+
+The chocolate amount drawing, the rodent bait panel graphic, and the symptom timelines are hand-built SVG and CSS.
