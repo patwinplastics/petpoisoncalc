@@ -48,6 +48,7 @@ var PRECACHE = [
   '/calculators/nicotine.html',
   '/calculators/onions-garlic.html',
   '/calculators/rat-poison.html',
+  '/calculators/salt-ice-melt.html',
   '/calculators/xylitol.html',
   '/calculators/acetaminophen.js',
   '/calculators/antifreeze.js',
@@ -64,6 +65,7 @@ var PRECACHE = [
   '/calculators/nicotine.js',
   '/calculators/onions-garlic.js',
   '/calculators/rat-poison.js',
+  '/calculators/salt-ice-melt.js',
   '/calculators/xylitol.js',
   '/assets/img/thumb-acet-240.webp',
   '/assets/img/thumb-antifreeze-240.webp',
@@ -79,6 +81,7 @@ var PRECACHE = [
   '/assets/img/thumb-nicotine-240.webp',
   '/assets/img/thumb-onion-240.webp',
   '/assets/img/thumb-rat-240.webp',
+  '/assets/img/thumb-salt-240.webp',
   '/assets/img/thumb-thc-240.webp',
   '/assets/img/thumb-xylitol-240.webp'
 ];
