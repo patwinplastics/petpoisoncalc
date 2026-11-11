@@ -661,3 +661,56 @@ table.ref-table.ref-table-fit { min-width: 0; width: 100%; }
 .id-sci { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.3; }
 .id-split { display: grid; gap: 0 var(--space-5); grid-template-columns: 1fr; }
 @media (min-width: 720px) { .id-split { grid-template-columns: 1fr 2fr; } .id-split .id-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+
+/* Homepage calculator cards: small substance thumbnail in place of the line icon. */
+.calc-picker-card .picker-thumb { display: block; width: 64px; height: 64px; border-radius: 12px; object-fit: cover; background: var(--color-surface-offset); box-shadow: 0 2px 6px hsl(var(--shadow-color) / 0.14); }
+
+/* Picture strips (chocolate types, nicotine products). */
+.pic-strip { margin: var(--space-6) 0; }
+.pic-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 600px) { .pic-strip-5 .pic-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } .pic-strip-6 .pic-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .pic-strip-6 .pic-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+.pic-tile { display: flex; flex-direction: column; gap: 2px; padding: var(--space-2); border-radius: 12px; background: var(--color-surface); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); }
+.pic-tile img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; background: var(--color-surface-offset); margin-bottom: var(--space-2); }
+.pic-label { font-weight: 700; font-size: var(--text-sm); line-height: 1.25; }
+.pic-sub { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.3; }
+.pic-strip figcaption { margin-top: var(--space-2); font-size: 0.8125rem; color: var(--color-text-muted); }
+
+/* Chocolate amount estimate next to the amount field. */
+.amount-visual { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3); padding: var(--space-3); border-radius: 12px; background: var(--color-surface-offset); color: var(--color-text-muted); }
+.amount-visual .amount-svg { flex: none; width: 112px; height: auto; color: var(--color-text-muted); }
+.amount-visual p { margin: 0; font-size: var(--text-sm); }
+
+/* Rodent bait panel: you can't tell the type by looking. */
+.bait-panel { margin: var(--space-6) 0; padding: var(--space-5); border: 2px solid var(--risk-emergency-border); border-radius: 16px; background: var(--risk-emergency-bg); color: var(--risk-emergency-text); }
+.bait-panel-head { display: flex; align-items: center; gap: var(--space-4); }
+.bait-svg { flex: none; width: 110px; height: auto; }
+.bait-panel-title { margin: 0; font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; line-height: 1.25; }
+.bait-paths { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: 1fr; }
+@media (min-width: 720px) { .bait-paths { grid-template-columns: repeat(3, 1fr); } }
+.bait-paths li { display: flex; flex-direction: column; gap: 4px; padding: var(--space-3); border-radius: 12px; background: var(--color-surface); color: var(--color-text); border-left: 4px solid var(--risk-emergency-border); }
+.bait-paths li span { font-size: var(--text-sm); }
+.bait-paths .bait-act { font-weight: 700; color: var(--color-danger); }
+.bait-paths a { font-weight: 700; font-size: var(--text-sm); margin-top: auto; }
+.bait-note { margin: var(--space-3) 0 0; font-size: var(--text-sm); }
+.bait-note a { color: inherit; font-weight: 700; }
+
+/* Symptom timelines (guides). Text list, styled as a timeline. No safe zone. */
+.sx-timeline { margin: var(--space-5) 0; padding: var(--space-4); border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-surface); }
+.sxt-title { margin: 0 0 var(--space-3); font-weight: 700; font-size: var(--text-sm); }
+.sxt-list { list-style: none; margin: 0; padding: 0 0 0 var(--space-5); position: relative; display: grid; gap: var(--space-3); }
+.sxt-list::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 3px; border-radius: 2px; background: linear-gradient(var(--risk-urgent-border), var(--risk-emergency-border)); }
+.sxt-list li { position: relative; display: flex; flex-direction: column; gap: 2px; padding: var(--space-2) var(--space-3); border-radius: 10px; }
+.sxt-list li::before { content: ""; position: absolute; left: calc(-1 * var(--space-5) + 2px); top: 12px; width: 13px; height: 13px; border-radius: 50%; border: 3px solid var(--color-surface); }
+.sxt-warn { background: var(--risk-urgent-bg); color: var(--risk-urgent-text); }
+.sxt-warn::before { background: var(--risk-urgent-border); }
+.sxt-danger { background: var(--risk-emergency-bg); color: var(--risk-emergency-text); }
+.sxt-danger::before { background: var(--risk-emergency-border); }
+.sxt-time { font-family: var(--font-mono, monospace); font-weight: 700; font-size: var(--text-sm); }
+.sxt-text { font-size: var(--text-sm); }
+.sxt-note { margin: var(--space-3) 0 0; font-size: var(--text-xs); color: var(--color-text-muted); }
+@media (min-width: 820px) {
+  .sxt-list { padding: var(--space-5) 0 0; grid-auto-flow: column; grid-auto-columns: 1fr; }
+  .sxt-list::before { left: 6px; right: 6px; top: 6px; bottom: auto; height: 3px; width: auto; background: linear-gradient(90deg, var(--risk-urgent-border), var(--risk-emergency-border)); }
+  .sxt-list li::before { left: 12px; top: calc(-1 * var(--space-5) + 1px); }
+}

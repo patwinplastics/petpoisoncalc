@@ -121,7 +121,7 @@
 
 <link rel="stylesheet" href="../base.css?v=2026102101" />
 <link rel="stylesheet" href="../style.css?v=2026102701" />
-<link rel="stylesheet" href="../assets/site-shell.css?v=2026111202" />
+<link rel="stylesheet" href="../assets/site-shell.css?v=2026111203" />
 
 <!-- Google tag (gtag.js) -->
 <script>
@@ -272,6 +272,14 @@
                 </div>
               </div>
               <p class="field-hint" id="amountHint">Approximate is okay. If a whole bar or box is missing, use the highest reasonable estimate, not the lowest. 1 oz &asymp; 28 g. A standard 1.55 oz candy bar &asymp; 44 g.</p>
+              <div class="amount-visual" aria-hidden="false">
+                <svg class="amount-svg" viewBox="0 0 132 72" width="132" height="72" role="img" aria-labelledby="amtSvgT"><title id="amtSvgT">A chocolate bar drawn as 12 pieces with 3 pieces missing, next to a kitchen scale</title>
+                  <g fill="#7a4a2b" stroke="#5a3520" stroke-width="1"><rect x="2" y="21" width="13" height="13" rx="2"/><rect x="17" y="21" width="13" height="13" rx="2"/><rect x="2" y="36" width="13" height="13" rx="2"/><rect x="17" y="36" width="13" height="13" rx="2"/><rect x="32" y="36" width="13" height="13" rx="2"/><rect x="2" y="51" width="13" height="13" rx="2"/><rect x="17" y="51" width="13" height="13" rx="2"/><rect x="32" y="51" width="13" height="13" rx="2"/></g>
+                  <g fill="none" stroke="#7a4a2b" stroke-width="1" stroke-dasharray="2 2"><rect x="2" y="6" width="13" height="13" rx="2"/><rect x="17" y="6" width="13" height="13" rx="2"/><rect x="32" y="6" width="13" height="13" rx="2"/><rect x="32" y="21" width="13" height="13" rx="2"/></g>
+                  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M70 62h56l-6-30H76z"/><path d="M84 32v-6h40v6"/><circle cx="98" cy="47" r="8"/><path d="M98 47l4-4"/></g>
+                </svg>
+                <p>Count the missing pieces against the whole bar. For a closer number, weigh what is left on a kitchen scale and subtract it from the weight printed on the package.</p>
+              </div>
               <p class="error-msg" id="amountError">Enter an amount greater than 0.</p>
             </div>
 
@@ -317,6 +325,18 @@
           </div>
         </aside>
         <!-- /ppc-photo -->
+        <!-- ppc-pics -->
+        <figure class="pic-strip pic-strip-5" id="choc-types">
+          <ul class="pic-grid">
+            <li class="pic-tile"><img src="../assets/img/choctype-baking-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Illustration of thick, very dark unsweetened baking chocolate squares" /><span class="pic-label">Unsweetened baking chocolate</span><span class="pic-sub">Most theobromine</span></li>
+            <li class="pic-tile"><img src="../assets/img/choctype-cocoa-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Illustration of dark brown cocoa powder in a plain white bowl" /><span class="pic-label">Cocoa powder</span><span class="pic-sub">Most theobromine</span></li>
+            <li class="pic-tile"><img src="../assets/img/choctype-dark-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Illustration of squares of very dark chocolate" /><span class="pic-label">Dark chocolate</span><span class="pic-sub">Next highest</span></li>
+            <li class="pic-tile"><img src="../assets/img/choctype-milk-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Illustration of light brown milk chocolate squares" /><span class="pic-label">Milk chocolate</span><span class="pic-sub">Much less</span></li>
+            <li class="pic-tile"><img src="../assets/img/choctype-white-320.webp" width="320" height="320" loading="lazy" decoding="async" alt="Illustration of ivory white chocolate squares" /><span class="pic-label">White chocolate</span><span class="pic-sub">Almost none, but fat and sugar can upset the stomach</span></li>
+          </ul>
+          <figcaption>Illustrations of chocolate types, from most to least theobromine. Darker and more bitter means more dangerous. If you are unsure, choose the darker type for a more cautious estimate.</figcaption>
+        </figure>
+        <!-- /ppc-pics -->
 
         <!-- ============ WHAT TO DO RIGHT NOW ============ -->
         <section class="info-section" aria-labelledby="decision-heading">
