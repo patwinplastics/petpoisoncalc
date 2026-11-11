@@ -6,7 +6,7 @@
    Strategy: network first (so medical content is always the latest when online), falling back
    to the saved copy when the network fails or takes longer than a few seconds. */
 'use strict';
-var VERSION = 'ppc-2026111102';
+var VERSION = 'ppc-2026111201';
 var PRECACHE = [
   '/',
   '/guides/index.html',
@@ -23,6 +23,7 @@ var PRECACHE = [
   '/assets/icon-192.png',
   '/assets/email-signup.js',
   '/assets/er-vet.js',
+  '/assets/fold.js',
   '/assets/home.js',
   '/assets/ingest-timer.js',
   '/assets/offline.js',
