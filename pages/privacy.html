@@ -6,6 +6,9 @@
 <title>Privacy Policy | PetPoisonCalc</title>
 <meta name="description" content="What information PetPoisonCalc and its service providers collect, how Google Analytics and Google AdSense cookies work, and your privacy choices and rights." />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#0a6e74" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 <link rel="canonical" href="https://petpoisoncalc.com/pages/privacy.html" />
 
 <!-- Open Graph -->
@@ -57,7 +60,7 @@
 
 <link rel="stylesheet" href="../base.css?v=2026102101" />
 <link rel="stylesheet" href="../style.css?v=2026102101" />
-<link rel="stylesheet" href="../assets/site-shell.css?v=2026110403" />
+<link rel="stylesheet" href="../assets/site-shell.css?v=2026111101" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -133,7 +136,7 @@
       <header class="site-header" style="border-bottom: none;">
         <p style="margin: 0 0 var(--space-3);"><a href="/" style="font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted);">&larr; All calculators</a></p>
         <h1>Privacy Policy</h1>
-        <p class="lede">Effective October 20, 2026. Last updated November 4, 2026. This policy explains what information is collected when you use PetPoisonCalc, why, and the choices and rights you have.</p>
+        <p class="lede">Effective October 20, 2026. Last updated November 11, 2026. This policy explains what information is collected when you use PetPoisonCalc, why, and the choices and rights you have.</p>
       </header>
 
       <!-- ============ MAIN CONTENT ============ -->
@@ -157,6 +160,7 @@
           <p class="section-intro"><strong>Theme setting.</strong> The light or dark theme follows your device setting. If you use the theme button, the choice lasts only until you leave the page. The site's own code does not set cookies. The only session storage it uses is the optional "When did it happen?" time described below.</p>
           <p class="section-intro"><strong>My pets (optional).</strong> If you choose to save a pet on a calculator page, the pet's name, species, weight, and the date you saved it are stored in your browser's local storage on your device, so calculators can fill in the weight for you next time. This information never leaves your device: it is not sent to PetPoisonCalc, Google, or anyone else. Nothing is stored unless you tap Save. You can delete a saved pet at any time with the remove button next to its name, or by clearing your browser's site data.</p>
           <p class="section-intro"><strong>When did it happen? (optional).</strong> On calculator pages you can tap a button or enter the time your pet ate something, so a running clock shows how long ago it was. That time is kept in your browser's session storage for that page only, so it survives a reload, and it is deleted when you close the tab or tap Clear. It is never sent to PetPoisonCalc, Google, or anyone else. It is included in the "Copy result" and "Share with my vet" summary only when you use those buttons. When you set a time, Google Analytics records an anonymous "ingest_time_set" event saying only which kind of button was used (a preset, the clock, or not sure), so we can tell whether the feature is useful. The time itself and pet details are not included.</p>
+          <p class="section-intro"><strong>Offline copies.</strong> So the calculators still work without a signal, your browser saves copies of PetPoisonCalc's own pages, scripts, and images in its cache on your device (using a standard "service worker"). These are the same files anyone can download from the site. They contain nothing about you or your pet, and nothing you type into a calculator is saved in them or sent anywhere. If you install the site to your home screen, Google Analytics records an anonymous "app_installed" event with no other details. You can remove the offline copies at any time by clearing your browser's site data for petpoisoncalc.com.</p>
           <p class="section-intro"><strong>Find a 24/7 emergency vet near me.</strong> This button opens a Google Maps search for emergency vets in a new tab. PetPoisonCalc does not ask for or see your location; Google Maps uses whatever location access you have already given your browser or the Maps app, under Google's own privacy policy. When you tap the button, Google Analytics records an anonymous "er_vet_click" event with only where on the page it was tapped, so we can tell whether the button is useful. No pet details or location are included.</p>
           <p class="section-intro" id="email"><strong>Email list (optional, when offered).</strong> If we offer a signup form for seasonal pet safety emails and you choose to sign up, your email address goes directly from your browser to our email service provider, Kit (ConvertKit), which stores it, asks you to confirm, and sends the emails under <a href="https://kit.com/privacy" target="_blank" rel="noopener noreferrer">Kit's privacy policy</a>. We use it only to send those emails, never sell it, and every email has an unsubscribe link. Google Analytics records only an anonymous "email_signup_submit" event with where on the page the form was used, never your address. You can unsubscribe at any time or email us to have your address deleted.</p>
           <p class="section-intro"><strong>Hosting logs.</strong> The site is hosted on GitHub Pages. GitHub logs visitors' IP addresses for security purposes, as described in <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>.</p>
@@ -275,6 +279,7 @@
 </div>
 
 <script src="../assets/shell.js?v=2026102101" defer></script>
+<script src="../assets/offline.js?v=2026111101" defer></script>
 <script src="../assets/er-vet.js?v=2026102801" defer></script>
 </body>
 </html>
