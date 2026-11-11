@@ -8,6 +8,9 @@
 <title>Pet Poison Calculator for Dogs &amp; Cats: Free Toxicity Check</title>
 <meta name="description" content="Free pet poison calculator for dogs and cats. Enter weight and what they ate (chocolate, xylitol, grapes, lilies, Tylenol) to see how urgently to call a vet." />
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#0a6e74" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
 <link rel="canonical" href="https://petpoisoncalc.com/" />
 
 <!-- Open Graph -->
@@ -200,7 +203,7 @@
 
 <link rel="stylesheet" href="./base.css?v=2026102101" />
 <link rel="stylesheet" href="./style.css?v=2026102701" />
-<link rel="stylesheet" href="./assets/site-shell.css?v=2026110403" />
+<link rel="stylesheet" href="./assets/site-shell.css?v=2026111101" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -500,6 +503,15 @@
         </div>
       </section>
 
+      <section class="info-section offline-box" id="offlineBox" aria-labelledby="offline-heading">
+        <h2 id="offline-heading">Keep PetPoisonCalc on your phone, even with no signal</h2>
+        <p class="section-intro">Pets get into things at cabins, trailheads, and in basements where the internet drops out. After you open this page once, every calculator is saved in this browser and keeps working offline. You can also add it to your home screen like an app, so it is one tap away in an emergency.</p>
+        <p class="field-hint offline-status" id="offlineStatus" role="status">Checking offline support...</p>
+        <button type="button" class="btn-primary install-btn" id="installBtn" hidden>Add PetPoisonCalc to my home screen</button>
+        <p class="field-hint" id="installHint" hidden></p>
+        <p class="field-hint">The saved copy stays on this device, and what you type into a calculator is never sent anywhere. Phone calls to poison control work without internet, so save (888) 426-4435 and (855) 764-7661 in your contacts too.</p>
+      </section>
+
       <section class="info-section" aria-labelledby="how-heading">
         <h2 id="how-heading">How the calculators work</h2>
         <p class="section-intro">Each page is a toxicity calculator for one substance. You enter a body weight and, for most substances, what was eaten and how much. The page converts that into a dose per kilogram and compares it with published ranges, using the more cautious end when sources disagree. You get an urgency level (caution, urgent, or emergency) and a next step. The page cannot examine your pet.</p>
@@ -615,6 +627,7 @@
 </footer>
 
 <script src="./assets/shell.js?v=2026102101" defer></script>
+<script src="./assets/offline.js?v=2026111101" defer></script>
 <script src="./assets/er-vet.js?v=2026102801" defer></script>
 <script src="./assets/email-signup.js?v=2026110403" defer></script>
 <script src="./assets/home.js?v=2026111101" defer></script>
