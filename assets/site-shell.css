@@ -644,3 +644,20 @@ table.ref-table.ref-table-fit { min-width: 0; width: 100%; }
   .home-compact .hero-photo { display: none; }
   .home-compact .site-header { padding-block: var(--space-5) 0 !important; }
 }
+
+/* Lily ID pictures (cat lily pages). Labeled illustrations grouped by danger. */
+.id-set { margin: var(--space-6) 0; padding: var(--space-5); border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-surface); }
+.id-set-cap { margin: 0 0 var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted); }
+.id-set-cap strong { color: var(--color-text); }
+.id-group { margin: var(--space-4) 0 var(--space-3); padding: var(--space-2) var(--space-3); border-left: 4px solid; border-radius: 6px; font-size: var(--text-sm); font-weight: 700; }
+.id-group-danger { border-color: var(--risk-emergency-border); background: var(--risk-emergency-bg); color: var(--risk-emergency-text); }
+.id-group-warn { border-color: var(--risk-urgent-border); background: var(--risk-urgent-bg); color: var(--risk-urgent-text); }
+.id-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.id-card { margin: 0; display: flex; flex-direction: column; gap: 2px; padding: var(--space-2); border-radius: 12px; background: var(--color-surface-offset); border: 2px solid transparent; }
+.id-card.id-danger { border-color: var(--risk-emergency-border); }
+.id-card.id-warn { border-color: var(--risk-urgent-border); }
+.id-card img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; background: var(--color-surface-2, #f3f3f3); margin-bottom: var(--space-2); }
+.id-name { font-weight: 700; font-size: var(--text-sm); line-height: 1.25; }
+.id-sci { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.3; }
+.id-split { display: grid; gap: 0 var(--space-5); grid-template-columns: 1fr; }
+@media (min-width: 720px) { .id-split { grid-template-columns: 1fr 2fr; } .id-split .id-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }

@@ -11,7 +11,6 @@ All photos are from Unsplash and used under the Unsplash License (https://unspla
 | assets/img/guide-onion-{600,1200}.webp | guides/dog-ate-onions-garlic.html | [Caroline Badran](https://unsplash.com/@___atmos) | https://unsplash.com/photos/golden-retriever-in-a-stylish-kitchen-KQxVUH5UF18 |
 | assets/img/guide-ibuprofen-{600,1200}.webp | guides/dog-ate-ibuprofen.html | [Lucrezia Carnelos](https://unsplash.com/@ciabattespugnose) | https://unsplash.com/photos/brown-short-coated-dog-lying-on-brown-wooden-floor-se39QTzU5bk |
 | assets/img/guide-thc-{600,1200}.webp | guides/dog-ate-marijuana-edible.html | [Max Nie](https://unsplash.com/@leitothemax) | https://unsplash.com/photos/a-fluffy-white-dog-sleeps-curled-on-a-cushion-Hq9Q4sccz0s |
-| assets/img/guide-lily-{600,1200}.webp | guides/cat-lily-poisoning.html | [Payam Moin Afshari](https://unsplash.com/@panevesht) | https://unsplash.com/photos/a-black-and-white-cat-sitting-next-to-a-vase-of-flowers-Tyz8OuYZnnI |
 | assets/img/guide-acet-{600,1200}.webp | guides/pet-ate-acetaminophen.html | [Alec Favale](https://unsplash.com/@alecfavale) | https://unsplash.com/photos/dog-and-cat-resting-together-Ivzo69e18nk |
 | assets/img/guide-macadamia-{600,1200}.webp | guides/dog-ate-macadamia-nuts.html | [Duncan Kidd](https://unsplash.com/@we_the_royal) | https://unsplash.com/photos/white-and-brown-short-coated-dog-sitting-on-black-and-white-area-rug-sDBjzk7XFV4 |
 | assets/img/guide-rat-{600,1200}.webp | guides/dog-ate-rat-poison.html | [Lotte Vollmuller](https://unsplash.com/@lottevollmuller) | https://unsplash.com/photos/a-dog-sitting-in-a-wheelbarrow-in-the-grass-pvibxXC54w4 |
@@ -39,7 +38,6 @@ All photos are from Unsplash and used under the Unsplash License (https://unspla
 | assets/img/thumb-catgrape-240.webp | calculators/grapes-raisins-cat.html (small photo below the calculator) | [wonika bhatta](https://unsplash.com/@wonika) | https://unsplash.com/photos/grey-cat-on-wooden-floor-FxPxcZ5rGBU |
 | assets/img/thumb-grapes-240.webp | calculators/grapes-raisins.html (small photo below the calculator) | [Людмила Гуцалюк](https://unsplash.com/@gutsalyuk) | https://unsplash.com/photos/a-dog-laying-on-a-blanket-in-the-grass-6feEs_8_Vt0 |
 | assets/img/thumb-ibuprofen-240.webp | calculators/ibuprofen.html (small photo below the calculator) | [Lucrezia Carnelos](https://unsplash.com/@ciabattespugnose) | https://unsplash.com/photos/brown-short-coated-dog-lying-on-brown-wooden-floor-se39QTzU5bk |
-| assets/img/thumb-lily-240.webp | calculators/lily-cats.html (small photo below the calculator) | [Payam Moin Afshari](https://unsplash.com/@panevesht) | https://unsplash.com/photos/a-black-and-white-cat-sitting-next-to-a-vase-of-flowers-Tyz8OuYZnnI |
 | assets/img/thumb-macadamia-240.webp | calculators/macadamia-nuts.html (small photo below the calculator) | [Duncan Kidd](https://unsplash.com/@we_the_royal) | https://unsplash.com/photos/white-and-brown-short-coated-dog-sitting-on-black-and-white-area-rug-sDBjzk7XFV4 |
 | assets/img/thumb-salt-240.webp | calculators/salt-ice-melt.html (small photo below the calculator) | [Juli Kosolapova](https://unsplash.com/@yuli_superson) | https://unsplash.com/photos/a-dog-wearing-a-sweater-standing-in-the-snow-xNrLwuXFjKI |
 | assets/img/thumb-thc-240.webp | calculators/marijuana-thc.html (small photo below the calculator) | [Max Nie](https://unsplash.com/@leitothemax) | https://unsplash.com/photos/a-fluffy-white-dog-sleeps-curled-on-a-cushion-Hq9Q4sccz0s |
@@ -50,5 +48,15 @@ All photos are from Unsplash and used under the Unsplash License (https://unspla
 | assets/img/thumb-xylitol-240.webp | calculators/xylitol.html (small photo below the calculator) | [Dmytro Shyrokov](https://unsplash.com/@neoleephoto) | https://unsplash.com/photos/a-brown-dog-sits-beside-a-handbag-8g2Ho5o-ayI |
 
 ## Illustration
+
+### Generated illustrations
+
+These images were created with an AI image generator for PetPoisonCalc. They are illustrations, not photos, and are captioned as illustrations on the page. They show no brands, packaging, or lettering. Plant illustrations were checked against reference photos of each species on Wikimedia Commons.
+
+| File | Used on | What it shows |
+|---|---|---|
+| assets/img/guide-lily-easter-{600,1200}.webp | guides/cat-lily-poisoning.html | A cat sniffing Easter lilies (Lilium longiflorum) in a vase |
+| assets/img/thumb-lily-easter-240.webp | calculators/lily-cats.html (small picture below the calculator) | Square crop of the same illustration |
+| assets/img/lilyid-{easter,stargazer,asiatic,tiger,daylily,valley,peace,calla}-480.webp | calculators/lily-cats.html, guides/cat-lily-poisoning.html (lily ID pictures) | Easter lily, Stargazer lily, Asiatic lily, tiger lily, daylily, lily of the valley, peace lily, calla lily |
 
 assets/mascot.svg is an original hand-built SVG made for PetPoisonCalc.
