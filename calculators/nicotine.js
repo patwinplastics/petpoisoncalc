@@ -70,16 +70,31 @@
   segGroup([$('spDog'), $('spCat')], function (b) { species = b.getAttribute('data-v'); });
 
   var product = 'butt';
-  segGroup([$('pButt'), $('pCig'), $('pCigar'), $('pGum'), $('pPatch'), $('pLiquid'), $('pMg')], function (b) {
+  segGroup([$('pButt'), $('pCig'), $('pCigar'), $('pGum'), $('pPatch'), $('pPouch'), $('pLiquid'), $('pMg')], function (b) {
     product = b.getAttribute('data-v');
-    var counted = product !== 'liquid' && product !== 'mg';
+    var counted = product !== 'liquid' && product !== 'mg' && product !== 'pouch';
     $('countWrap').style.display = counted ? '' : 'none';
     $('gumWrap').style.display = product === 'gum' ? '' : 'none';
     $('liquidWrap').style.display = product === 'liquid' ? '' : 'none';
     $('mgWrap').style.display = product === 'mg' ? '' : 'none';
+    $('pouchWrap').style.display = product === 'pouch' ? '' : 'none';
     if (counted) { $('countSuffix').textContent = SUFFIX[product]; }
   });
   $('countSuffix').textContent = SUFFIX.butt;
+
+  /* Nicotine pouches: strength buttons only (no brand presets). "Not sure" counts 12 mg per pouch,
+     the highest strength listed on major US brand sites checked Nov 11, 2026 (VELO MAX FAQ; on! PLUS).
+     Used pouches are counted at full strength: Azzopardi et al. 2026 found more than half the nicotine
+     left after 30 minutes of use. A whole can is counted as 20 pouches (cans hold 15 or 20; on! PLUS 14). */
+  var pouchMg = 12;
+  var pouchBtns = Array.prototype.slice.call(document.querySelectorAll('.pouch-mg'));
+  segGroup(pouchBtns, function (b) {
+    var v = b.getAttribute('data-mg');
+    pouchMg = v === 'other' ? 'other' : parseFloat(v);
+    $('pouchOtherWrap').style.display = v === 'other' ? '' : 'none';
+  });
+  $('pouchWholeCan').addEventListener('change', function () { $('pouchUnusedInput').disabled = this.checked; });
+  var POUCH_CAN = 20;
 
   var gumMg = 4;
   segGroup([$('gum2'), $('gum4')], function (b) { gumMg = parseFloat(b.getAttribute('data-mg')); });
@@ -123,6 +138,13 @@
       var ml = parseFloat($('liquidMlInput').value), mgml = parseFloat($('liquidStrengthInput').value);
       ok = showError('liquidError', !(ml > 0 && mgml > 0)) && ok;
       total = ml * mgml;
+    } else if (product === 'pouch') {
+      var per = pouchMg === 'other' ? parseFloat($('pouchMgInput').value) : pouchMg;
+      var unused = $('pouchWholeCan').checked ? POUCH_CAN : (parseFloat($('pouchUnusedInput').value) || 0);
+      var used = parseFloat($('pouchUsedInput').value) || 0;
+      count = unused + used;
+      ok = showError('pouchError', !(per > 0 && count > 0 && unused >= 0 && used >= 0)) && ok;
+      total = count * per;
     } else if (product === 'mg') {
       total = parseFloat($('mgInput').value);
       ok = showError('mgError', !(total > 0)) && ok;
@@ -148,6 +170,9 @@
     }
     if (product === 'gum') {
       extra += (extra ? ' ' : '') + 'Check the gum or lozenge label for xylitol. If it is listed, tell poison control and also use the xylitol calculator.';
+    }
+    if (product === 'pouch') {
+      extra += (extra ? ' ' : '') + 'Check the pouch ingredients for xylitol. If it is listed, tell poison control and also use the xylitol calculator. A swallowed pouch or can can also cause choking or a blockage.';
     }
     if (product === 'liquid') {
       extra += (extra ? ' ' : '') + 'If your pet chewed the device itself, the battery can also burn the mouth and throat.';
