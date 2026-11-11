@@ -279,7 +279,8 @@
                 <button type="button" class="seg-btn" id="pGum" data-v="gum" aria-pressed="false"><strong>Nicotine gum or lozenge</strong><span>2 mg or 4 mg per piece, from the label</span></button>
                 <button type="button" class="seg-btn" id="pPatch" data-v="patch" aria-pressed="false"><strong>Nicotine patch</strong><span>New or used. Counted as 114 mg each (8.3 to 114 mg reported)</span></button>
                 <button type="button" class="seg-btn" id="pLiquid" data-v="liquid" aria-pressed="false"><strong>Vape e-liquid, pod, or disposable</strong><span>Enter mL and strength from the label</span></button>
-                <button type="button" class="seg-btn" id="pMg" data-v="mg" aria-pressed="false"><strong>I know the total mg</strong><span>Nicotine pouches, chewing tobacco, snuff, or anything else</span></button>
+                <button type="button" class="seg-btn" id="pPouch" data-v="pouch" aria-pressed="false"><strong>Nicotine pouch</strong><span>Used or unused pouches, or a whole can. Pick the mg per pouch from the can</span></button>
+                <button type="button" class="seg-btn" id="pMg" data-v="mg" aria-pressed="false"><strong>I know the total mg</strong><span>Chewing tobacco, snuff, or anything else</span></button>
               </div>
               <p class="field-hint">Nicotine content varies a lot between brands, so this calculator uses the high end of each published range. If the label gives you the exact amount, choose "I know the total mg".</p>
             </div>
@@ -292,6 +293,49 @@
                 <button type="button" class="seg-btn" id="gum4" data-mg="4" aria-pressed="true"><strong>4 mg</strong><span>Per piece. Choose this if unsure</span></button>
               </div>
               <p class="field-hint" id="xylitolNote"><strong>Check for xylitol too.</strong> Many nicotine gums and some lozenges are sweetened with xylitol, which can cause a dangerous drop in blood sugar and liver injury in dogs. If xylitol is on the ingredient list, also use the <a href="./xylitol.html">xylitol calculator</a>.</p>
+            </div>
+
+            <!-- Nicotine pouch -->
+            <div class="field-group" id="pouchWrap" style="display: none;">
+              <span class="field-label">Pouch strength (mg per pouch)</span>
+              <div class="seg-group" role="group" aria-label="Nicotine pouch strength" style="grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));">
+                <button type="button" class="seg-btn pouch-mg" data-mg="2" aria-pressed="false"><strong>2 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="3" aria-pressed="false"><strong>3 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="4" aria-pressed="false"><strong>4 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="6" aria-pressed="false"><strong>6 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="7" aria-pressed="false"><strong>7 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="8" aria-pressed="false"><strong>8 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="9" aria-pressed="false"><strong>9 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="11" aria-pressed="false"><strong>11 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="12" aria-pressed="false"><strong>12 mg</strong><span>Per pouch</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="12" data-unsure="1" aria-pressed="true"><strong>Not sure</strong><span>Counted as 12 mg</span></button>
+                <button type="button" class="seg-btn pouch-mg" data-mg="other" aria-pressed="false"><strong>Other</strong><span>Enter the mg</span></button>
+              </div>
+              <div class="input-row" id="pouchOtherWrap" style="display: none; margin-top: var(--space-3);">
+                <div class="input-shell">
+                  <input type="number" id="pouchMgInput" inputmode="decimal" min="0" step="0.5" placeholder="mg per pouch, e.g. 6" aria-label="Nicotine per pouch in mg" />
+                  <span class="unit-suffix">mg per pouch</span>
+                </div>
+              </div>
+              <p class="field-hint">The strength is printed on the can as mg per pouch. For example, common US brands such as Zyn, on!, Velo, and Rogue come in strengths of about 2 to 12 mg per pouch (brand websites and the FDA list of authorized pouches), and some products are stronger. If you are not sure, "Not sure" counts each pouch as 12 mg.</p>
+
+              <label class="field-label" for="pouchUnusedInput" style="margin-top: var(--space-4);">How many pouches?</label>
+              <div class="input-row">
+                <div class="input-shell">
+                  <input type="number" id="pouchUnusedInput" inputmode="decimal" min="0" step="1" placeholder="unused, e.g. 2" aria-label="Number of unused (fresh) pouches eaten" />
+                  <span class="unit-suffix">unused</span>
+                </div>
+              </div>
+              <div class="input-row" style="margin-top: var(--space-3);">
+                <div class="input-shell">
+                  <input type="number" id="pouchUsedInput" inputmode="decimal" min="0" step="1" placeholder="used, e.g. 1" aria-label="Number of used pouches eaten" />
+                  <span class="unit-suffix">used</span>
+                </div>
+              </div>
+              <label class="field-hint" style="display:flex; gap: var(--space-2); align-items:center; cursor:pointer;"><input type="checkbox" id="pouchWholeCan" /> A whole can (or most of one) is missing. Counted as 20 unused pouches</label>
+              <p class="field-hint">A used pouch still holds a large share of its nicotine: in a 2026 clinical study, pouches used for 30 minutes still held more than half of it (Azzopardi et al.). This calculator counts used pouches at full strength. Cans commonly hold 15 or 20 pouches, so a whole can is counted as 20. If you know the exact number, enter it instead.</p>
+              <p class="field-hint"><strong>Check the ingredients for xylitol.</strong> If xylitol is listed, tell poison control and also use the <a href="./xylitol.html">xylitol calculator</a>. A swallowed pouch or can may also get stuck in the throat or gut, especially in small pets. See the <a href="../guides/dog-ate-nicotine-pouch.html">nicotine pouch guide</a>.</p>
+              <p class="error-msg" id="pouchError">Enter how many pouches (used, unused, or both), or tick the whole can box, and pick a strength.</p>
             </div>
 
             <!-- Count -->
@@ -521,7 +565,7 @@
       <!-- ============ LEARN MORE ============ -->
       <section class="info-section" aria-labelledby="learn-heading">
         <h2 id="learn-heading">Learn more</h2>
-        <p class="section-intro">Read the full guide: <a href="../guides/dog-ate-nicotine.html"><strong>My Dog or Cat Ate Nicotine: What to Do Now</strong></a>. It covers cigarettes, gum, patches, vapes, symptoms, what the vet will do, and prevention.</p>
+        <p class="section-intro">Read the full guide: <a href="../guides/dog-ate-nicotine.html"><strong>My Dog or Cat Ate Nicotine: What to Do Now</strong></a>. It covers cigarettes, gum, patches, vapes, symptoms, what the vet will do, and prevention. For pouches, see <a href="../guides/dog-ate-nicotine-pouch.html">My dog or cat ate a nicotine pouch</a>.</p>
         <p class="section-intro" style="margin-bottom: 0;">Related calculators:</p>
         <div class="related-links">
           <a href="./xylitol.html">Xylitol (sugar-free gum)</a>
@@ -588,6 +632,6 @@
 <script src="../assets/share-result.js?v=2026110402" defer></script>
 <script src="../assets/ingest-timer.js?v=2026110402" defer></script>
 <script src="../assets/pet-profiles.js?v=2026102201" defer></script>
-<script src="./nicotine.js?v=2026102901"></script>
+<script src="./nicotine.js?v=2026111101"></script>
 </body>
 </html>
