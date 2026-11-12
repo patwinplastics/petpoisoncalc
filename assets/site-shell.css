@@ -615,9 +615,10 @@ table.ref-table.ref-table-fit { min-width: 0; width: 100%; }
 /* Homepage compact mode */
 .home-compact .picker-badge.live, .home-compact .picker-cta { display: none; }
 .home-compact .calc-picker-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
-.home-compact .calc-picker-card { display: grid; grid-template-columns: 44px minmax(0, 1fr); grid-template-areas: "icon title" "icon tags"; column-gap: var(--space-3); row-gap: 2px; align-items: center; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); }
+.home-compact .calc-picker-card { display: grid; grid-template-columns: 64px minmax(0, 1fr); grid-template-areas: "icon title" "icon tags"; column-gap: var(--space-3); row-gap: 2px; align-items: center; align-content: center; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); }
 .home-compact .calc-picker-card[hidden] { display: none; }
-.home-compact .calc-picker-card .picker-icon { grid-area: icon; }
+.home-compact .calc-picker-card .picker-icon,
+.home-compact .calc-picker-card .picker-thumb { grid-area: icon; }
 .home-compact .calc-picker-card h3 { grid-area: title; font-size: var(--text-base); line-height: 1.25; align-self: end; }
 .home-compact .calc-picker-card .picker-tags { grid-area: tags; align-self: start; }
 .home-compact .calc-picker-card .picker-species { font-size: var(--text-xs); color: var(--color-text-muted); }
