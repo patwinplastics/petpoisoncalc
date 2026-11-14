@@ -525,5 +525,16 @@
     renderResults(calc);
   });
 
+  function applyCookiesHash() {
+    if (location.hash === '#cookies') {
+      setInputMode('cookie');
+      var el = document.getElementById('cookies');
+      if (el && el.scrollIntoView) {
+        el.scrollIntoView({ block: 'start' });
+      }
+    }
+  }
   setInputMode('chocolate');
+  applyCookiesHash();
+  window.addEventListener('hashchange', applyCookiesHash);
 })();

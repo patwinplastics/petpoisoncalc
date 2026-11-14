@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Dog Chocolate Toxicity Calculator (Free, by Weight &amp; Type)</title>
-<meta name="description" content="Free dog chocolate toxicity calculator. How much chocolate is toxic to a dog? Enter weight, chocolate type, and amount to see how urgently to call a vet." />
+<meta name="description" content="Free dog chocolate toxicity calculator for chocolate chip cookies, brownies, and bars. Enter weight, type, or cookie count to see how urgently to call a vet." />
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta name="theme-color" content="#0a6e74" />
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="PetPoisonCalc" />
 <meta property="og:title" content="Dog Chocolate Toxicity Calculator (Free, by Weight &amp; Type)" />
-<meta property="og:description" content="Estimate the urgency of veterinary care after a dog eats chocolate, based on weight, chocolate type, and amount. Baking chocolate is far more dangerous than milk chocolate." />
+<meta property="og:description" content="Estimate the urgency of veterinary care after a dog eats chocolate, including chocolate chip cookies and brownies. Enter weight, type, or cookie count." />
 <meta property="og:url" content="https://petpoisoncalc.com/calculators/chocolate.html" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:image" content="https://petpoisoncalc.com/assets/og-image.png" />
@@ -28,7 +28,7 @@
 <meta name="twitter:site" content="@PetPoisonCalc" />
 <meta name="twitter:image" content="https://petpoisoncalc.com/assets/og-image.png" />
 <meta name="twitter:title" content="Dog Chocolate Toxicity Calculator (Free, by Weight &amp; Type)" />
-<meta name="twitter:description" content="Estimate the urgency of veterinary care after a dog eats chocolate, based on weight, chocolate type, and amount." />
+<meta name="twitter:description" content="Estimate the urgency of veterinary care after a dog eats chocolate, including chocolate chip cookies and brownies." />
 
 <!-- Structured data: MedicalWebPage + MedicalRiskCalculator -->
 <script type="application/ld+json">
@@ -37,7 +37,7 @@
   "@type": "MedicalWebPage",
   "name": "Chocolate Toxicity Calculator for Dogs",
   "url": "https://petpoisoncalc.com/calculators/chocolate.html",
-  "description": "Estimate the urgency of veterinary care after a dog eats chocolate, based on weight, chocolate type, and amount consumed.",
+  "description": "Estimate the urgency of veterinary care after a dog eats chocolate, including chocolate chip cookies and brownies, based on weight, type, and amount.",
   "medicalAudience": {
     "@type": "MedicalAudience",
     "audienceType": "Patient"
@@ -60,7 +60,8 @@
     "includedRiskFactor": [
       { "@type": "MedicalRiskFactor", "name": "Dog body weight" },
       { "@type": "MedicalRiskFactor", "name": "Chocolate type (baking, dark, milk, or white)" },
-      { "@type": "MedicalRiskFactor", "name": "Amount of chocolate ingested" }
+      { "@type": "MedicalRiskFactor", "name": "Amount of chocolate ingested" },
+      { "@type": "MedicalRiskFactor", "name": "Cookie type, size, and count, when a cookie or brownie was eaten" }
     ],
     "recognizingAuthority": {
       "@type": "Organization",
@@ -108,10 +109,26 @@
     },
     {
       "@type": "Question",
-      "name": "My dog ate a chocolate chip cookie. How does this calculator estimate that?",
+      "name": "My dog ate a chocolate chip cookie. What should I do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can pick a cookie type, size, and count. The calculator converts that into a chocolate type and amount, then uses the same theobromine math as the rest of this page. Cookie recipes vary, so the estimate rounds chocolate up and uses the darker chocolate type when a cookie is made with semisweet chips. If the cookie was sugar-free, also check the xylitol calculator. Call a veterinarian or poison control about any chocolate ingestion."
+        "text": "Call a veterinarian or poison control about any chocolate ingestion. You can also use this calculator: pick chocolate chip cookie, the size, and how many. A regular chocolate chip cookie is counted as 6 g of dark chocolate, a small one as 4 g, and a large or bakery cookie as 22 g. Cookie recipes vary, so the estimate rounds chocolate up and uses the darker chocolate type for semisweet chips. If the cookie was sugar-free, also check the xylitol calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My dog ate a brownie. What should I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call a veterinarian or poison control about any chocolate ingestion. In this calculator, pick brownie, then size and count. A regular brownie is counted as 6 g of dark chocolate, a small one as 3 g, and a large or bakery brownie as 19 g. Homemade brownies can vary, so the estimate rounds chocolate up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many chocolate chip cookies can kill a dog?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This page cannot give a lethal cookie count or call any amount safe. It depends on your dog's weight and the cookie size. A regular chocolate chip cookie is counted as 6 g of dark chocolate, a small one as 4 g, and a large or bakery cookie as 22 g. Use the calculator with your dog's weight and how many were eaten, then call a veterinarian or poison control."
       }
     }
   ]
@@ -252,6 +269,7 @@
             </div>
 
             <!-- What was eaten -->
+            <div id="cookies">
             <div class="field-group">
               <span class="field-label">What was eaten?</span>
               <div class="seg-group" role="group" aria-label="What was eaten" style="grid-template-columns: 1fr 1fr;">
@@ -367,6 +385,7 @@
                   </div>
                 </details>
               </div>
+            </div>
             </div>
 
             <!-- Chocolate type -->
@@ -680,8 +699,16 @@
             <div class="fold-body"><p>Do not try to make your dog vomit unless a veterinarian or poison control tells you to. Vomiting when a dog is already sedated or seizing can cause more harm. Call first, and keep the wrapper so they can see the type and the amount.</p></div>
           </details>
           <details class="fold fold-q">
-            <summary><h3>My dog ate a chocolate chip cookie. How does this calculator estimate that?</h3></summary>
-            <div class="fold-body"><p>You can pick a cookie type, size, and count. The calculator converts that into a chocolate type and amount, then uses the same theobromine math as the rest of this page. Cookie recipes vary, so the estimate rounds chocolate up and uses the darker chocolate type when a cookie is made with semisweet chips. If the cookie was sugar-free, also check the <a href="./xylitol.html">xylitol calculator</a>. Call a veterinarian or poison control about any chocolate ingestion.</p></div>
+            <summary><h3>My dog ate a chocolate chip cookie. What should I do?</h3></summary>
+            <div class="fold-body"><p>Call a veterinarian or poison control about any chocolate ingestion. You can also use this calculator: pick chocolate chip cookie, the size, and how many. A regular chocolate chip cookie is counted as 6 g of dark chocolate, a small one as 4 g, and a large or bakery cookie as 22 g. Cookie recipes vary, so the estimate rounds chocolate up and uses the darker chocolate type for semisweet chips. If the cookie was sugar-free, also check the <a href="./xylitol.html">xylitol calculator</a>.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>My dog ate a brownie. What should I do?</h3></summary>
+            <div class="fold-body"><p>Call a veterinarian or poison control about any chocolate ingestion. In this calculator, pick brownie, then size and count. A regular brownie is counted as 6 g of dark chocolate, a small one as 3 g, and a large or bakery brownie as 19 g. Homemade brownies can vary, so the estimate rounds chocolate up.</p></div>
+          </details>
+          <details class="fold fold-q">
+            <summary><h3>How many chocolate chip cookies can kill a dog?</h3></summary>
+            <div class="fold-body"><p>This page cannot give a lethal cookie count or call any amount safe. It depends on your dog's weight and the cookie size. A regular chocolate chip cookie is counted as 6 g of dark chocolate, a small one as 4 g, and a large or bakery cookie as 22 g. Use the calculator with your dog's weight and how many were eaten, then call a veterinarian or poison control.</p></div>
           </details>
         </div>
       </section>
@@ -759,6 +786,6 @@
 <script src="../assets/share-result.js?v=2026110402" defer></script>
 <script src="../assets/ingest-timer.js?v=2026110402" defer></script>
 <script src="../assets/pet-profiles.js?v=2026102201" defer></script>
-<script src="./chocolate.js?v=2026111401"></script>
+<script src="./chocolate.js?v=2026111402"></script>
 </body>
 </html>
