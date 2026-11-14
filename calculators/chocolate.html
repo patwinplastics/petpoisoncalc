@@ -105,6 +105,14 @@
         "@type": "Answer",
         "text": "Do not try to make your dog vomit unless a veterinarian or poison control tells you to. Vomiting when a dog is already sedated or seizing can cause more harm. Call first, and keep the wrapper so they can see the type and the amount."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "My dog ate a chocolate chip cookie. How does this calculator estimate that?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can pick a cookie type, size, and count. The calculator converts that into a chocolate type and amount, then uses the same theobromine math as the rest of this page. Cookie recipes vary, so the estimate rounds chocolate up and uses the darker chocolate type when a cookie is made with semisweet chips. If the cookie was sugar-free, also check the xylitol calculator. Call a veterinarian or poison control about any chocolate ingestion."
+      }
     }
   ]
 }
@@ -122,6 +130,15 @@
 <link rel="stylesheet" href="../base.css?v=2026102101" />
 <link rel="stylesheet" href="../style.css?v=2026102701" />
 <link rel="stylesheet" href="../assets/site-shell.css?v=2026111204" />
+<style>
+  #cookieFields .cookie-type[data-v="unsure"] { grid-column: 1 / -1; }
+  #cookieMethodFold table.ref-table { width: 100%; min-width: 0; }
+  @media (max-width: 600px) {
+    #cookieMethodFold .ref-table { font-size: 0.8rem; }
+    #cookieMethodFold .ref-table th,
+    #cookieMethodFold .ref-table td { padding: 0.4rem 0.45rem; white-space: normal; }
+  }
+</style>
 
 <!-- Google tag (gtag.js) -->
 <script>
@@ -234,7 +251,126 @@
               <p class="error-msg" id="weightError">Enter a weight greater than 0.</p>
             </div>
 
+            <!-- What was eaten -->
+            <div class="field-group">
+              <span class="field-label">What was eaten?</span>
+              <div class="seg-group" role="group" aria-label="What was eaten" style="grid-template-columns: 1fr 1fr;">
+                <button type="button" class="seg-btn" id="modeChocolate" aria-pressed="true">
+                  <strong>Chocolate</strong>
+                  <span>Bar, chips, baking chocolate, or cocoa</span>
+                </button>
+                <button type="button" class="seg-btn" id="modeCookie" aria-pressed="false">
+                  <strong>Cookies with chocolate</strong>
+                  <span>Chocolate chip, s&rsquo;mores, sandwich, dipped, or brownie</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cookie path -->
+            <div id="cookieFields" hidden>
+              <div class="field-group">
+                <span class="field-label">What kind of cookie?</span>
+                <div class="seg-group" role="group" aria-label="Cookie type" style="grid-template-columns: 1fr 1fr;">
+                  <button type="button" class="seg-btn cookie-type" data-v="chip" aria-pressed="true">
+                    <strong>Chocolate chip</strong>
+                    <span>Semisweet chips, counted as dark</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-type" data-v="smores" aria-pressed="false">
+                    <strong>S&rsquo;mores cookie</strong>
+                    <span>Chips plus a milk chocolate topping</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-type" data-v="double" aria-pressed="false">
+                    <strong>Double chocolate cookie</strong>
+                    <span>Cocoa plus chips, counted as dark</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-type" data-v="sandwich" aria-pressed="false">
+                    <strong>Cream-filled sandwich cookie</strong>
+                    <span>Chocolate wafers with creme filling</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-type" data-v="dipped" aria-pressed="false">
+                    <strong>Chocolate-dipped or fudge-covered</strong>
+                    <span>A cookie coated or dipped in chocolate</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-type" data-v="brownie" aria-pressed="false">
+                    <strong>Brownie</strong>
+                    <span>Packaged or homemade</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-type" data-v="unsure" aria-pressed="false">
+                    <strong>I&rsquo;m not sure</strong>
+                    <span>Uses the highest reasonable cookie estimate</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <span class="field-label">Cookie size</span>
+                <div class="seg-group" role="group" aria-label="Cookie size" style="grid-template-columns: 1fr 1fr;">
+                  <button type="button" class="seg-btn cookie-size" data-v="small" aria-pressed="false">
+                    <strong>Small</strong>
+                    <span>Mini, or a smaller packaged cookie</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-size" data-v="regular" aria-pressed="true">
+                    <strong>Regular</strong>
+                    <span>Homemade tablespoon cookie, about 2-1/4 inch</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-size" data-v="large" aria-pressed="false">
+                    <strong>Large / bakery</strong>
+                    <span>Cafe cookie, or a 1/4-cup scoop</span>
+                  </button>
+                  <button type="button" class="seg-btn cookie-size" data-v="unsure" aria-pressed="false">
+                    <strong>I&rsquo;m not sure</strong>
+                    <span>Counted as large / bakery</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="cookieCountInput">How many cookies?</label>
+                <div class="input-row">
+                  <div class="input-shell">
+                    <input type="number" id="cookieCountInput" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 1" />
+                    <span class="unit-suffix">cookies</span>
+                  </div>
+                </div>
+                <p class="field-hint" id="cookieEstimate">Each regular chocolate chip cookie is counted as 6 g of dark chocolate.</p>
+                <p class="field-hint">If you know the chocolate weight, use the chocolate option instead. If the cookie is sugar-free, also check the <a href="./xylitol.html">xylitol calculator</a>.</p>
+                <p class="field-hint" id="smoresHint" hidden>For s&rsquo;mores cookies, chocolate is the concern. Graham cracker and marshmallow are not sources of theobromine.</p>
+                <p class="error-msg" id="cookieCountError">Enter how many cookies, greater than 0.</p>
+
+                <details class="fold" id="cookieMethodFold">
+                  <summary><h3 style="font-size: var(--text-sm); margin: 0;">How we estimate cookies</h3></summary>
+                  <div class="fold-body">
+                    <p>Cookie recipes vary, so these estimates round chocolate up and count semisweet chips as dark chocolate, the darker type on this calculator. Figures come from published recipes and USDA FoodData Central, then are converted into the chocolate types this page already uses. The theobromine math and urgency tiers are unchanged.</p>
+                    <div class="ref-table-wrap">
+                      <table class="ref-table">
+                        <caption style="caption-side: bottom; text-align: left; padding-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-muted);">Grams of dark chocolate, already rounded up.</caption>
+                        <thead>
+                          <tr>
+                            <th>Cookie</th>
+                            <th>Small</th>
+                            <th>Regular</th>
+                            <th>Large / bakery</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>Chocolate chip</td><td>4 g</td><td>6 g</td><td>22 g</td></tr>
+                          <tr><td>S&rsquo;mores cookie</td><td>6 g</td><td>9 g</td><td>32 g</td></tr>
+                          <tr><td>Double chocolate cookie</td><td>6 g</td><td>9 g</td><td>32 g</td></tr>
+                          <tr><td>Cream-filled sandwich cookie</td><td>2 g</td><td>3 g</td><td>11 g</td></tr>
+                          <tr><td>Chocolate-dipped or fudge-covered</td><td>3 g</td><td>4 g</td><td>14 g</td></tr>
+                          <tr><td>Brownie</td><td>3 g</td><td>6 g</td><td>19 g</td></tr>
+                          <tr><td>I&rsquo;m not sure</td><td>6 g</td><td>9 g</td><td>32 g</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p class="field-hint" style="margin-top: var(--space-3);">Chocolate chip amounts come from a standard published recipe: 12 oz (340 g) of semisweet chips for 5 dozen regular (rounded tablespoon) cookies, and 6 oz of chips for 8 large cookies dropped with a 1/4-cup scoop. Double chocolate cookies add 1/2 cup unsweetened cocoa (USDA: 1 cup cocoa powder = 86 g) in a published 54-cookie recipe. S&rsquo;mores cookies are counted as a chocolate chip cookie plus 1/4 of a 1.55 oz milk chocolate bar; graham and marshmallow are not theobromine sources. Sandwich, dipped, and packaged brownie figures use USDA FoodData Central theobromine values, converted into dark-chocolate grams and rounded up. Large brownies also use a published 13x9-inch recipe that starts with 4 oz unsweetened baking chocolate, counted as 1/12 of the pan, because homemade brownies can be stronger than packaged ones. If you are not sure what was eaten, the highest reasonable cookie in this table is used (a large double chocolate cookie). Sources are listed in the comments in chocolate.js and in Sources below.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
             <!-- Chocolate type -->
+            <div id="chocolateFields">
             <div class="field-group">
               <span class="field-label">What kind of chocolate?</span>
               <div class="seg-group" role="group" aria-label="Chocolate type" style="grid-template-columns: 1fr 1fr;">
@@ -282,6 +418,7 @@
               </div>
               <p class="error-msg" id="amountError">Enter an amount greater than 0.</p>
             </div>
+            </div>
 
             <button type="submit" class="btn-primary" id="calcBtn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
@@ -298,6 +435,8 @@
               </div>
               <h3 class="result-headline" id="resultHeadline"></h3>
               <p class="result-detail" id="resultDetail"></p>
+
+              <p class="field-hint" id="cookieNote" hidden></p>
 
               <div class="dose-readout">
                 <div class="dose-stat">
@@ -540,6 +679,10 @@
             <summary><h3>Should I make my dog vomit after eating chocolate?</h3></summary>
             <div class="fold-body"><p>Do not try to make your dog vomit unless a veterinarian or poison control tells you to. Vomiting when a dog is already sedated or seizing can cause more harm. Call first, and keep the wrapper so they can see the type and the amount.</p></div>
           </details>
+          <details class="fold fold-q">
+            <summary><h3>My dog ate a chocolate chip cookie. How does this calculator estimate that?</h3></summary>
+            <div class="fold-body"><p>You can pick a cookie type, size, and count. The calculator converts that into a chocolate type and amount, then uses the same theobromine math as the rest of this page. Cookie recipes vary, so the estimate rounds chocolate up and uses the darker chocolate type when a cookie is made with semisweet chips. If the cookie was sugar-free, also check the <a href="./xylitol.html">xylitol calculator</a>. Call a veterinarian or poison control about any chocolate ingestion.</p></div>
+          </details>
         </div>
       </section>
       <!-- ============ LEARN MORE ============ -->
@@ -565,6 +708,9 @@
           <li>Merck Veterinary Manual, <a href="https://www.merckvetmanual.com/toxicology/food-hazards/chocolate-toxicosis-in-animals" target="_blank" rel="noopener noreferrer">Chocolate Toxicosis in Animals</a></li>
           <li>VCA Animal Hospitals, <a href="https://vcahospitals.com/know-your-pet/chocolate-poisoning-in-dogs" target="_blank" rel="noopener noreferrer">Chocolate Poisoning in Dogs</a></li>
           <li>MyFoodData, <a href="https://www.myfooddata.com/articles/chocolate-high-in-theobromine.php" target="_blank" rel="noopener noreferrer">Top Chocolate Products Highest in Theobromine</a></li>
+          <li>USDA FoodData Central, chocolate chip cookies prepared from recipe (FDC 174955), commercially prepared chocolate chip cookies (FDC 172716), cream-filled chocolate sandwich cookies (FDC 172718), commercially prepared brownies (FDC 172713), chocolate-covered sugar wafers (FDC 174088), chocolate-coated graham crackers (FDC 174958), and unsweetened cocoa powder (FDC 169593)</li>
+          <li>Standard published chocolate chip cookie recipe (12 oz / 340 g semisweet chips, yield 5 dozen, rounded tablespoon) and large-cookie variation (6 oz chips, yield 8 cookies, 1/4-cup scoop), plus a published double chocolate cookie recipe (1/2 cup unsweetened cocoa and 12 oz chips, yield 54 cookies): <a href="https://www.verybestbaking.com/toll-house/recipes/original-nestle-toll-house-chocolate-chip-cookies/" target="_blank" rel="noopener noreferrer">regular</a>, <a href="https://www.verybestbaking.com/toll-house/recipes/original-nestle-toll-house-chocolate-chip-cookies-small-batch/" target="_blank" rel="noopener noreferrer">large</a>, <a href="https://www.verybestbaking.com/toll-house/recipes/double-chocolate-dream-cookies/" target="_blank" rel="noopener noreferrer">double chocolate</a></li>
+          <li>Published 13x9-inch brownie recipe using 4 oz unsweetened baking chocolate: <a href="https://www.kraftheinz.com/bakers/recipes/506344-bakers-one-bowl-brownies" target="_blank" rel="noopener noreferrer">BAKER&rsquo;S ONE BOWL Brownies</a></li>
           <li>ASPCA, <a href="https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets" target="_blank" rel="noopener noreferrer">People Foods to Avoid Feeding Your Pets</a></li>
           <li>ASPCA, <a href="https://www.aspca.org/pet-care/aspca-poison-control" target="_blank" rel="noopener noreferrer">ASPCA Animal Poison Control</a>: (888) 426-4435</li>
           <li>Pet Poison Helpline, <a href="https://www.petpoisonhelpline.com/poison/chocolate/" target="_blank" rel="noopener noreferrer">Chocolate</a>: (855) 764-7661</li>
@@ -613,6 +759,6 @@
 <script src="../assets/share-result.js?v=2026110402" defer></script>
 <script src="../assets/ingest-timer.js?v=2026110402" defer></script>
 <script src="../assets/pet-profiles.js?v=2026102201" defer></script>
-<script src="./chocolate.js?v=2026102101"></script>
+<script src="./chocolate.js?v=2026111401"></script>
 </body>
 </html>
