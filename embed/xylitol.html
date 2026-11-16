@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="/embed/frame.js?v=2026111804"></script>
+<meta name="robots" content="noindex, follow" />
+<title>Xylitol calculator for dogs</title>
+<meta name="description" content="Embeddable dog xylitol toxicity calculator. Same urgency estimate as PetPoisonCalc." />
+<link rel="canonical" href="https://petpoisoncalc.com/calculators/xylitol.html" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'" />
+<link rel="stylesheet" href="/embed/embed.css?v=2026111804" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body data-embed="xylitol">
+<div id="embed-root">
+  <p class="back-link" id="backToPicker" hidden><a id="backToPickerLink" href="index.html">All toxins</a></p>
+  <h1>Did your dog eat xylitol?</h1>
+  <p class="hotline">Happening now? Call your vet, <a href="tel:8884264435">ASPCA Animal Poison Control (888) 426-4435</a>, or <a href="tel:8557647661">Pet Poison Helpline (855) 764-7661</a>. Fees may apply.</p>
+  <p class="lede">Xylitol can cause dangerous low blood sugar within 30 minutes. This estimate cannot rule out risk, and every ingestion should be checked by a veterinarian or animal poison control.</p>
+
+  <form id="calcForm" method="post" action="xylitol.html" novalidate>
+    <div class="field-group">
+      <label class="field-label" for="weightInput">Dog's weight</label>
+      <div class="unit-toggle" role="group" aria-label="Weight unit">
+        <button type="button" id="unitLbs" aria-pressed="true">lbs</button>
+        <button type="button" id="unitKg" aria-pressed="false">kg</button>
+      </div>
+      <div class="input-row">
+        <div class="input-shell">
+          <input type="number" id="weightInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 45" aria-describedby="weightHint weightError" />
+          <span class="unit-suffix" id="weightUnitLabel">lbs</span>
+        </div>
+      </div>
+      <p class="field-hint" id="weightHint">If you're unsure, use your dog's last vet-recorded weight.</p>
+      <p class="error-msg" id="weightError" role="alert">Enter a weight greater than 0.</p>
+    </div>
+
+    <div class="field-group">
+      <span class="field-label">What did your dog eat?</span>
+      <div class="seg-group cols-2" role="group" aria-label="Product type">
+        <button type="button" class="seg-btn" id="typeGum" aria-pressed="true">
+          <strong>Sugar-free gum / mints</strong>
+          <span>About 0.3-1 g xylitol per piece</span>
+        </button>
+        <button type="button" class="seg-btn" id="typePB" aria-pressed="false">
+          <strong>Xylitol peanut butter</strong>
+          <span>About 5-13 g xylitol per 100 g</span>
+        </button>
+        <button type="button" class="seg-btn" id="typeBaked" aria-pressed="false">
+          <strong>Baked goods / candy</strong>
+          <span>Varies widely, check the label</span>
+        </button>
+        <button type="button" class="seg-btn" id="typePure" aria-pressed="false">
+          <strong>Pure xylitol / baking sub</strong>
+          <span>100% xylitol by weight</span>
+        </button>
+      </div>
+      <p class="field-hint">If you know the exact grams of xylitol from a label, choose Pure xylitol and enter that gram amount directly below.</p>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="amountInput">How much did your dog eat?</label>
+      <div class="input-row">
+        <div class="input-shell">
+          <input type="number" id="amountInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 3" aria-describedby="amountHint amountError" />
+          <span class="unit-suffix" id="amountUnitLabel">pieces</span>
+        </div>
+      </div>
+      <p class="field-hint" id="amountHint">For gum or mints, enter the number of pieces. For peanut butter, baked goods, or pure xylitol, enter grams eaten.</p>
+      <p class="error-msg" id="amountError" role="alert">Enter an amount greater than 0.</p>
+    </div>
+
+    <button type="submit" class="btn-primary" id="calcBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+      Calculate risk level
+    </button>
+  </form>
+
+  <div class="results" id="resultsWrap" tabindex="-1" aria-live="polite">
+    <div class="result-banner" id="resultBanner">
+      <div class="tier-label-inner">
+        <span class="tier-label" id="tierLabel"><span id="tierLabelText">Assessing</span></span>
+      </div>
+      <h2 class="result-headline" id="resultHeadline"></h2>
+      <p class="result-detail" id="resultDetail"></p>
+      <div class="dose-readout">
+        <div class="dose-stat">
+          <span class="num" id="doseMgKg">-</span>
+          <span class="lbl">Estimated dose (mg xylitol per kg body weight)</span>
+        </div>
+        <div class="dose-stat">
+          <span class="num" id="doseTotalG">-</span>
+          <span class="lbl">Estimated total xylitol ingested (g)</span>
+        </div>
+      </div>
+      <div class="action-block" id="actionBlock"></div>
+      <p class="result-disclaimer">This is an estimate, not a diagnosis, and it can be wrong. Whatever the result, call your veterinarian or a poison control line now: ASPCA Animal Poison Control <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline <a href="tel:8557647661">(855) 764-7661</a> (fees may apply). <a href="/pages/medical-disclaimer.html" target="_blank" rel="noopener">Read the medical disclaimer</a>.</p>
+    </div>
+    <button type="button" class="start-over" id="startOver">Start over</button>
+  </div>
+
+  <p class="embed-credit"><a id="creditLink" href="https://petpoisoncalc.com/calculators/xylitol.html?utm_source=embed&amp;utm_medium=referral&amp;utm_campaign=widget&amp;utm_content=inside" target="_blank" rel="noopener">Pet poison calculator by PetPoisonCalc</a></p>
+</div>
+<script src="/calculators/xylitol.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@
    Strategy: network first (so medical content is always the latest when online), falling back
    to the saved copy when the network fails or takes longer than a few seconds. */
 'use strict';
-var VERSION = 'ppc-2026111803';
+var VERSION = 'ppc-2026111804';
 var PRECACHE = [
   '/',
   '/guides/index.html',
@@ -105,6 +105,8 @@ var PRECACHE = [
   '/assets/img/card-rat-160.webp',
   '/assets/img/card-brom-160.webp'
 ];
+// /embed/ is intentionally not precached. Embed documents stay network-only below
+// so a saved copy cannot hide a calculator threshold fix.
 var TIMEOUT_MS = 3500;
 
 self.addEventListener('install', function (event) {
@@ -147,6 +149,19 @@ self.addEventListener('fetch', function (event) {
   if (req.method !== 'GET') { return; }
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) { return; }
+
+  // Widget iframes: always use the network, and never write them into the cache.
+  // A visit to the main site still controls this origin, but it must not serve a
+  // stale embed or embed.js over a newer threshold.
+  if (url.pathname === '/embed' || url.pathname.indexOf('/embed/') === 0) {
+    event.respondWith(fetch(req).catch(function () {
+      return new Response('You are offline. This calculator embed is not saved for offline use. Call ASPCA Animal Poison Control at (888) 426-4435 or Pet Poison Helpline at (855) 764-7661.', {
+        status: 503,
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+      });
+    }));
+    return;
+  }
 
   event.respondWith(new Promise(function (resolve) {
     var settled = false;
