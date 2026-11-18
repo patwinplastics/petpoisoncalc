@@ -6,13 +6,14 @@
    Strategy: network first (so medical content is always the latest when online), falling back
    to the saved copy when the network fails or takes longer than a few seconds. */
 'use strict';
-var VERSION = 'ppc-2026111801';
+var VERSION = 'ppc-2026111802';
 var PRECACHE = [
   '/',
   '/guides/index.html',
   '/pages/poison-proofing-checklist.html',
   '/pages/medical-disclaimer.html',
   '/pages/privacy.html',
+  '/pages/ate-several-things.html',
   '/404.html',
   '/base.css',
   '/style.css',
@@ -26,6 +27,7 @@ var PRECACHE = [
   '/assets/fold.js',
   '/assets/home.js',
   '/assets/ingest-timer.js',
+  '/assets/multi-check.js',
   '/assets/offline.js',
   '/assets/pet-profiles.js',
   '/assets/share-result.js',
