@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="/embed/frame.js?v=2026111804"></script>
+<meta name="robots" content="noindex, follow" />
+<title>Grape and raisin calculator</title>
+<meta name="description" content="Embeddable grape and raisin calculator for dogs and cats. Same urgency estimate as PetPoisonCalc." />
+<link rel="canonical" id="canonicalLink" href="https://petpoisoncalc.com/calculators/grapes-raisins.html" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'" />
+<link rel="stylesheet" href="/embed/embed.css?v=2026111804" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body data-embed="grapes">
+<div id="embed-root">
+  <p class="back-link" id="backToPicker" hidden><a id="backToPickerLink" href="index.html">All toxins</a></p>
+  <h1 id="embedTitle">Did your dog eat grapes or raisins?</h1>
+  <p class="hotline">Happening now? Call your vet, <a href="tel:8884264435">ASPCA Animal Poison Control (888) 426-4435</a>, or <a href="tel:8557647661">Pet Poison Helpline (855) 764-7661</a>. Fees may apply.</p>
+  <p class="lede" id="speciesIntro">There is no known safe dose of grapes or raisins for dogs. This tool estimates relative urgency. It cannot rule out risk at any dose.</p>
+
+  <form id="calcForm" method="post" action="grapes-raisins.html" novalidate>
+    <div class="field-group">
+      <span class="field-label" id="speciesLabel">Dog or cat?</span>
+      <div class="seg-group cols-2" role="group" aria-label="Species">
+        <button type="button" class="seg-btn" id="speciesDog" aria-pressed="true">
+          <strong>Dog</strong>
+          <span>Uses the dog grape and raisin calculator</span>
+        </button>
+        <button type="button" class="seg-btn" id="speciesCat" aria-pressed="false">
+          <strong>Cat</strong>
+          <span>Any amount is treated as an emergency</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" id="weightLabel" for="weightInput">Dog's weight</label>
+      <div class="unit-toggle" role="group" aria-label="Weight unit">
+        <button type="button" id="unitLbs" aria-pressed="true">lbs</button>
+        <button type="button" id="unitKg" aria-pressed="false">kg</button>
+      </div>
+      <div class="input-row">
+        <div class="input-shell">
+          <input type="number" id="weightInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 45" aria-describedby="weightHint weightError" />
+          <span class="unit-suffix" id="weightUnitLabel">lbs</span>
+        </div>
+      </div>
+      <p class="field-hint" id="weightHint">If you're unsure, use your pet's last vet-recorded weight.</p>
+      <p class="error-msg" id="weightError" role="alert">Enter a weight greater than 0.</p>
+    </div>
+
+    <div class="field-group">
+      <span class="field-label" id="fruitLabel">What did your dog eat?</span>
+      <div class="seg-group cols-2" role="group" aria-label="Fruit type">
+        <button type="button" class="seg-btn" id="typeGrape" aria-pressed="true">
+          <strong>Fresh grapes</strong>
+          <span>Red, green, or seedless</span>
+        </button>
+        <button type="button" class="seg-btn" id="typeRaisin" aria-pressed="false">
+          <strong>Raisins / currants</strong>
+          <span>Includes sultanas, dried</span>
+        </button>
+      </div>
+      <p class="field-hint">Raisins and currants are dried and concentrated, roughly 4 to 5 times more toxic per gram than fresh grapes.</p>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" id="countLabel" for="countInput">How many did your dog eat?</label>
+      <div class="stepper">
+        <button type="button" class="stepper-btn" id="countMinus" aria-label="Decrease count">&minus;</button>
+        <input type="number" id="countInput" inputmode="numeric" min="0" step="1" placeholder="e.g. 6" aria-describedby="countHint countError" />
+        <button type="button" class="stepper-btn" id="countPlus" aria-label="Increase count">+</button>
+      </div>
+      <p class="field-hint" id="countHint">Approximate is okay. If a whole bunch or box is missing, use the highest reasonable estimate, not the lowest.</p>
+      <p class="error-msg" id="countError" role="alert">Enter an amount greater than 0.</p>
+      <div class="gram-toggle-row">
+        <button type="button" class="text-link-btn" id="gramToggleBtn">I know the weight in grams instead</button>
+      </div>
+      <div class="gram-input-wrap" id="gramInputWrap">
+        <label class="field-label" for="gramInput">Total weight consumed (grams)</label>
+        <div class="input-row">
+          <div class="input-shell">
+            <input type="number" id="gramInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 40" />
+            <span class="unit-suffix">g</span>
+          </div>
+        </div>
+        <p class="field-hint">A kitchen scale reading overrides the count estimate above.</p>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-primary" id="calcBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+      Calculate risk level
+    </button>
+  </form>
+
+  <div class="results" id="resultsWrap" tabindex="-1" aria-live="polite">
+    <div class="result-banner" id="resultBanner">
+      <div class="tier-label-inner">
+        <span class="tier-label" id="tierLabel"><span id="tierLabelText">Assessing</span></span>
+      </div>
+      <h2 class="result-headline" id="resultHeadline"></h2>
+      <p class="result-detail" id="resultDetail"></p>
+      <div class="dose-readout" id="doseDog">
+        <div class="dose-stat">
+          <span class="num" id="doseGramsPerKg">-</span>
+          <span class="lbl">Estimated dose (g per kg body weight)</span>
+        </div>
+        <div class="dose-stat">
+          <span class="num" id="doseTartaric">-</span>
+          <span class="lbl">Fruit units per kg body weight</span>
+        </div>
+      </div>
+      <div class="dose-readout" id="doseCat" hidden>
+        <div class="dose-stat">
+          <span class="num" id="doseMgKg">-</span>
+          <span class="lbl">Estimated dose (grams of fruit per kg body weight)</span>
+        </div>
+        <div class="dose-stat">
+          <span class="num" id="doseTotal">-</span>
+          <span class="lbl">Grapes or raisins per kg body weight</span>
+        </div>
+      </div>
+      <div class="action-block" id="actionBlock"></div>
+      <p class="result-disclaimer">This is an estimate, not a diagnosis, and it can be wrong. Whatever the result, call your veterinarian or a poison control line now: ASPCA Animal Poison Control <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline <a href="tel:8557647661">(855) 764-7661</a> (fees may apply). <a href="/pages/medical-disclaimer.html" target="_blank" rel="noopener">Read the medical disclaimer</a>.</p>
+    </div>
+    <button type="button" class="start-over" id="startOver">Start over</button>
+  </div>
+
+  <p class="embed-credit"><a id="creditLink" href="https://petpoisoncalc.com/calculators/grapes-raisins.html?utm_source=embed&amp;utm_medium=referral&amp;utm_campaign=widget&amp;utm_content=inside" target="_blank" rel="noopener">Pet poison calculator by PetPoisonCalc</a></p>
+</div>
+</body>
+</html>

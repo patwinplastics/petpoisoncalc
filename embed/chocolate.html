@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="/embed/frame.js?v=2026111804"></script>
+<meta name="robots" content="noindex, follow" />
+<title>Chocolate calculator for dogs</title>
+<meta name="description" content="Embeddable dog chocolate toxicity calculator. Same urgency estimate as PetPoisonCalc." />
+<link rel="canonical" href="https://petpoisoncalc.com/calculators/chocolate.html" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'" />
+<link rel="stylesheet" href="/embed/embed.css?v=2026111804" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body data-embed="chocolate">
+<div id="embed-root">
+  <p class="back-link" id="backToPicker" hidden><a id="backToPickerLink" href="index.html">All toxins</a></p>
+  <h1>Did your dog eat chocolate?</h1>
+  <p class="hotline">Happening now? Call your vet, <a href="tel:8884264435">ASPCA Animal Poison Control (888) 426-4435</a>, or <a href="tel:8557647661">Pet Poison Helpline (855) 764-7661</a>. Fees may apply.</p>
+  <p class="lede">Estimate how urgently your dog needs help after eating chocolate, including cookies and brownies. This cannot rule out risk.</p>
+
+  <form id="calcForm" method="post" action="chocolate.html" novalidate>
+    <div class="field-group">
+      <label class="field-label" for="weightInput">Dog's weight</label>
+      <div class="unit-toggle" role="group" aria-label="Weight unit">
+        <button type="button" id="unitLbs" aria-pressed="true">lbs</button>
+        <button type="button" id="unitKg" aria-pressed="false">kg</button>
+      </div>
+      <div class="input-row">
+        <div class="input-shell">
+          <input type="number" id="weightInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 45" aria-describedby="weightHint weightError" />
+          <span class="unit-suffix" id="weightUnitLabel">lbs</span>
+        </div>
+      </div>
+      <p class="field-hint" id="weightHint">If you're unsure, use your dog's last vet-recorded weight.</p>
+      <p class="error-msg" id="weightError" role="alert">Enter a weight greater than 0.</p>
+    </div>
+
+    <div id="cookies">
+      <div class="field-group">
+        <span class="field-label">What was eaten?</span>
+        <div class="seg-group cols-2" role="group" aria-label="What was eaten">
+          <button type="button" class="seg-btn" id="modeChocolate" aria-pressed="true">
+            <strong>Chocolate</strong>
+            <span>Bar, chips, baking chocolate, or cocoa</span>
+          </button>
+          <button type="button" class="seg-btn" id="modeCookie" aria-pressed="false">
+            <strong>Cookies with chocolate</strong>
+            <span>Chocolate chip, s'mores, sandwich, dipped, or brownie</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="cookieFields" hidden>
+        <div class="field-group">
+          <span class="field-label">What kind of cookie?</span>
+          <div class="seg-group" role="group" aria-label="Cookie type">
+            <button type="button" class="seg-btn cookie-type" data-v="chip" aria-pressed="true">
+              <strong>Chocolate chip</strong>
+              <span>Semisweet chips, counted as dark</span>
+            </button>
+            <button type="button" class="seg-btn cookie-type" data-v="smores" aria-pressed="false">
+              <strong>S'mores cookie</strong>
+              <span>Chips plus a milk chocolate topping</span>
+            </button>
+            <button type="button" class="seg-btn cookie-type" data-v="double" aria-pressed="false">
+              <strong>Double chocolate cookie</strong>
+              <span>Cocoa plus chips, counted as dark</span>
+            </button>
+            <button type="button" class="seg-btn cookie-type" data-v="sandwich" aria-pressed="false">
+              <strong>Cream-filled sandwich cookie</strong>
+              <span>Chocolate wafers with creme filling</span>
+            </button>
+            <button type="button" class="seg-btn cookie-type" data-v="dipped" aria-pressed="false">
+              <strong>Chocolate-dipped or fudge-covered</strong>
+              <span>A cookie coated or dipped in chocolate</span>
+            </button>
+            <button type="button" class="seg-btn cookie-type" data-v="brownie" aria-pressed="false">
+              <strong>Brownie</strong>
+              <span>Packaged or homemade</span>
+            </button>
+            <button type="button" class="seg-btn cookie-type" data-v="unsure" aria-pressed="false">
+              <strong>I'm not sure</strong>
+              <span>Uses the highest reasonable cookie estimate</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <span class="field-label">Cookie size</span>
+          <div class="seg-group cols-2" role="group" aria-label="Cookie size">
+            <button type="button" class="seg-btn cookie-size" data-v="small" aria-pressed="false">
+              <strong>Small</strong>
+              <span>Mini, or a smaller packaged cookie</span>
+            </button>
+            <button type="button" class="seg-btn cookie-size" data-v="regular" aria-pressed="true">
+              <strong>Regular</strong>
+              <span>Homemade tablespoon cookie, about 2-1/4 inch</span>
+            </button>
+            <button type="button" class="seg-btn cookie-size" data-v="large" aria-pressed="false">
+              <strong>Large / bakery</strong>
+              <span>Cafe cookie, or a 1/4-cup scoop</span>
+            </button>
+            <button type="button" class="seg-btn cookie-size" data-v="unsure" aria-pressed="false">
+              <strong>I'm not sure</strong>
+              <span>Counted as large / bakery</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="cookieCountInput">How many cookies?</label>
+          <div class="input-row">
+            <div class="input-shell">
+              <input type="number" id="cookieCountInput" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 1" aria-describedby="cookieEstimate cookieCountError" />
+              <span class="unit-suffix">cookies</span>
+            </div>
+          </div>
+          <p class="field-hint" id="cookieEstimate">Each regular chocolate chip cookie is counted as 6 g of dark chocolate.</p>
+          <p class="field-hint">If you know the chocolate weight, use the chocolate option instead. If the cookie is sugar-free, also check the <a class="js-keep-theme" href="xylitol.html">xylitol calculator</a>.</p>
+          <p class="field-hint" id="smoresHint" hidden>For s'mores cookies, chocolate is the concern. Graham cracker and marshmallow are not sources of theobromine.</p>
+          <p class="error-msg" id="cookieCountError" role="alert">Enter how many cookies, greater than 0.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="chocolateFields">
+      <div class="field-group">
+        <span class="field-label">What kind of chocolate?</span>
+        <div class="seg-group cols-2" role="group" aria-label="Chocolate type">
+          <button type="button" class="seg-btn" id="typeBaking" aria-pressed="false">
+            <strong>Baking / unsweetened</strong>
+            <span>Highest risk, about 450 mg theobromine/oz</span>
+          </button>
+          <button type="button" class="seg-btn" id="typeDark" aria-pressed="true">
+            <strong>Dark chocolate</strong>
+            <span>About 130-230 mg theobromine/oz</span>
+          </button>
+          <button type="button" class="seg-btn" id="typeMilk" aria-pressed="false">
+            <strong>Milk chocolate</strong>
+            <span>About 60 mg theobromine/oz</span>
+          </button>
+          <button type="button" class="seg-btn" id="typeWhite" aria-pressed="false">
+            <strong>White chocolate</strong>
+            <span>Negligible theobromine</span>
+          </button>
+        </div>
+        <p class="field-hint">If unsure between dark and semi-sweet, choose dark for a more conservative estimate.</p>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="amountInput">How much did your dog eat?</label>
+        <div class="input-row">
+          <div class="input-shell">
+            <input type="number" id="amountInput" inputmode="decimal" min="0" step="0.1" placeholder="e.g. 3" aria-describedby="amountHint amountError" />
+            <span class="unit-suffix" id="amountUnitLabel">oz</span>
+          </div>
+          <div class="unit-toggle" role="group" aria-label="Amount unit">
+            <button type="button" id="amountUnitOz" aria-pressed="true">oz</button>
+            <button type="button" id="amountUnitG" aria-pressed="false">g</button>
+          </div>
+        </div>
+        <p class="field-hint" id="amountHint">Approximate is okay. If a whole bar or box is missing, use the highest reasonable estimate, not the lowest. 1 oz is about 28 g. A standard 1.55 oz candy bar is about 44 g.</p>
+        <p class="error-msg" id="amountError" role="alert">Enter an amount greater than 0.</p>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-primary" id="calcBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+      Calculate risk level
+    </button>
+  </form>
+
+  <div class="results" id="resultsWrap" tabindex="-1" aria-live="polite">
+    <div class="result-banner" id="resultBanner">
+      <div class="tier-label-inner">
+        <span class="tier-label" id="tierLabel"><span id="tierLabelText">Assessing</span></span>
+      </div>
+      <h2 class="result-headline" id="resultHeadline"></h2>
+      <p class="result-detail" id="resultDetail"></p>
+      <p class="field-hint" id="cookieNote" hidden></p>
+      <div class="dose-readout">
+        <div class="dose-stat">
+          <span class="num" id="doseTheobromine">-</span>
+          <span class="lbl">Estimated theobromine dose (mg per kg body weight)</span>
+        </div>
+        <div class="dose-stat">
+          <span class="num" id="doseTotalMg">-</span>
+          <span class="lbl">Total theobromine ingested (mg)</span>
+        </div>
+      </div>
+      <div class="action-block" id="actionBlock"></div>
+      <p class="result-disclaimer">This is an estimate, not a diagnosis, and it can be wrong. Whatever the result, call your veterinarian or a poison control line now: ASPCA Animal Poison Control <a href="tel:8884264435">(888) 426-4435</a> or Pet Poison Helpline <a href="tel:8557647661">(855) 764-7661</a> (fees may apply). <a href="/pages/medical-disclaimer.html" target="_blank" rel="noopener">Read the medical disclaimer</a>.</p>
+    </div>
+    <button type="button" class="start-over" id="startOver">Start over</button>
+  </div>
+
+  <p class="embed-credit"><a id="creditLink" href="https://petpoisoncalc.com/calculators/chocolate.html?utm_source=embed&amp;utm_medium=referral&amp;utm_campaign=widget&amp;utm_content=inside" target="_blank" rel="noopener">Pet poison calculator by PetPoisonCalc</a></p>
+</div>
+<script src="/calculators/chocolate.js"></script>
+</body>
+</html>
