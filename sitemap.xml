@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://petpoisoncalc.com/guides/dog-ate-grapes-raisins.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -146,13 +146,13 @@
   </url>
   <url>
     <loc>https://petpoisoncalc.com/guides/dog-ate-xylitol.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://petpoisoncalc.com/guides/index.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -188,7 +188,7 @@
   </url>
   <url>
     <loc>https://petpoisoncalc.com/guides/holiday-hazards-pets.html</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -286,6 +286,12 @@
     <loc>https://petpoisoncalc.com/pages/ate-several-things.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petpoisoncalc.com/guides/can-dogs-eat-cranberries.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

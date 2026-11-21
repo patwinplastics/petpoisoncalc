@@ -63,6 +63,8 @@ These images were created with an AI image generator for PetPoisonCalc. They are
 | assets/img/nicprod-{cig,butts,vape,gum,patch,pouch}-320.webp | calculators/nicotine.html, guides/dog-ate-nicotine.html, guides/dog-ate-nicotine-pouch.html (nicotine products grid) | Generic cigarettes, butts, vape pen, gum and lozenges, patch, pouches and tin |
 | assets/img/photo-rodent-bait-{600,1200}.webp | calculators/rat-poison.html, calculators/bromethalin.html, guides/dog-ate-rat-poison.html, guides/dog-ate-bromethalin.html | Generic bait pellets, blocks, and a place pack |
 | assets/img/card-*-160.webp | Homepage calculator cards | One substance thumbnail per calculator (17) |
+| assets/img/guide-cranberries-{600,1200}.webp and assets/img/guide-cranberries-og.jpg | guides/can-dogs-eat-cranberries.html (hero and Open Graph image) | A golden retriever looking at a bowl of fresh cranberries on a Thanksgiving table |
+| assets/img/infographic-cranberries-{600,1200}.webp | guides/can-dogs-eat-cranberries.html | Infographic separating plain cranberries from risky mix-ins |
 
 assets/mascot.svg is an original hand-built SVG made for PetPoisonCalc.
 
