@@ -203,7 +203,7 @@
 
 <link rel="stylesheet" href="./base.css?v=2026102101" />
 <link rel="stylesheet" href="./style.css?v=2026102701" />
-<link rel="stylesheet" href="./assets/site-shell.css?v=2026111603" />
+<link rel="stylesheet" href="./assets/site-shell.css?v=2026112201" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -319,14 +319,38 @@
 
       <!-- ============ CALCULATOR PICKER ============ -->
       <section aria-labelledby="picker-heading">
-        <h2 id="picker-heading" class="card-heading">Choose a calculator</h2>
-        <p class="card-subheading">Select what your pet ate to get a weight-adjusted risk assessment.</p>
+        <div class="eat-search">
+          <h2 id="picker-heading" class="eat-search-heading">What Did Your Pet Eat?</h2>
+          <p class="eat-search-sub">Search or tap an item to get a weight-adjusted risk check.</p>
 
-        <div class="calc-filter">
-          <label class="field-label" for="calcFilter">Search calculators</label>
-          <input type="search" id="calcFilter" class="calc-filter-input" placeholder="Type what your pet ate, e.g. gum, Tylenol, lily" autocomplete="off" aria-describedby="calcFilterStatus" />
-          <p class="field-hint" id="calcFilterStatus" aria-live="polite"></p>
-          <p class="field-hint"><a href="./pages/ate-several-things.html"><strong>Ate more than one thing? Check several at once &rarr;</strong></a></p>
+          <form class="eat-search-form" id="calcSearchForm" role="search" action="#calcGrid">
+            <label class="visually-hidden" for="calcFilter">Search calculators by what your pet ate</label>
+            <div class="eat-search-box">
+              <svg class="eat-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input type="search" id="calcFilter" class="calc-filter-input" placeholder="gum, Tylenol, lily..." autocomplete="off" enterkeyhint="go" aria-describedby="calcFilterStatus" />
+              <button type="submit" class="eat-search-btn">Check Risk</button>
+            </div>
+          </form>
+          <p class="eat-search-status" id="calcFilterStatus" aria-live="polite"></p>
+
+          <div class="eat-chips" role="group" aria-label="Common items pets eat">
+            <a class="eat-chip" href="./calculators/chocolate.html">Chocolate</a>
+            <a class="eat-chip" href="./calculators/xylitol.html">Sugar-Free Gum (Xylitol)</a>
+            <a class="eat-chip" href="./calculators/grapes-raisins.html">Grapes &amp; Raisins</a>
+            <a class="eat-chip" href="./calculators/onions-garlic.html">Onions &amp; Garlic</a>
+            <a class="eat-chip" href="./calculators/ibuprofen.html">Ibuprofen (Advil)</a>
+            <a class="eat-chip" href="./calculators/acetaminophen.html">Tylenol</a>
+            <a class="eat-chip" href="./calculators/lily-cats.html">Lilies (Cats)</a>
+            <a class="eat-chip" href="./calculators/marijuana-thc.html">THC Edibles</a>
+            <a class="eat-chip" href="./calculators/macadamia-nuts.html" data-start="11-04" data-end="01-06" hidden>Macadamia Nuts</a>
+            <a class="eat-chip" href="./calculators/salt-ice-melt.html" data-start="11-04" data-end="03-15" hidden>Ice Melt &amp; Salt Dough</a>
+            <a class="eat-chip" href="./calculators/antifreeze.html" data-start="11-04" data-end="03-15" hidden>Antifreeze</a>
+          </div>
+
+          <div class="eat-search-foot">
+            <a class="eat-multi-btn" href="./pages/ate-several-things.html">Ate More Than One Thing? Check Several at Once &rarr;</a>
+            <span class="eat-emergency">Emergency? ASPCA Poison Control: <a href="tel:8884264435">(888) 426-4435</a></span>
+          </div>
         </div>
         <div class="calc-picker-grid" id="calcGrid">
 
@@ -670,7 +694,7 @@
 <script src="./assets/offline.js?v=2026111101" defer></script>
 <script src="./assets/er-vet.js?v=2026102801" defer></script>
 <script src="./assets/email-signup.js?v=2026110403" defer></script>
-<script src="./assets/home.js?v=2026111101" defer></script>
+<script src="./assets/home.js?v=2026112201" defer></script>
 <script src="./assets/fold.js?v=2026111201" defer></script>
 </body>
 </html>
