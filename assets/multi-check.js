@@ -24,11 +24,12 @@
     ['rat-poison', 'Rat or mouse poison (blood thinner type)', 1, 0],
     ['bromethalin', 'Bromethalin rat or mouse bait', 1, 1],
     ['antifreeze', 'Antifreeze or coolant', 1, 1],
-    ['salt-ice-melt', 'Salt, ice melt, or salt dough', 1, 1]
+    ['salt-ice-melt', 'Salt, ice melt, or salt dough', 1, 1],
+    ['caffeine', 'Caffeine (coffee grounds, pills, energy drinks)', 1, 1]
   ];
   var NO_WEIGHT = { 'lily-cats': 1, 'rat-poison': 1 };
   var PAIN = { ibuprofen: 1, naproxen: 1, aspirin: 1, acetaminophen: 1 };
-  var CAT_EMERGENCY = { 'grapes-raisins-cat': 1, aspirin: 1, acetaminophen: 1, antifreeze: 1, nicotine: 1, 'salt-ice-melt': 1 };
+  var CAT_EMERGENCY = { 'grapes-raisins-cat': 1, aspirin: 1, acetaminophen: 1, antifreeze: 1, nicotine: 1, 'salt-ice-melt': 1, caffeine: 1 };
   var DOG_EMERGENCY = { antifreeze: 1 };
   function find(slug) { for (var i = 0; i < ITEMS.length; i++) { if (ITEMS[i][0] === slug) { return ITEMS[i]; } } return null; }
   function load() { try { var p = JSON.parse(window.sessionStorage.getItem(KEY) || 'null'); return p && p.items && p.items.length ? p : null; } catch (e) { return null; } }
