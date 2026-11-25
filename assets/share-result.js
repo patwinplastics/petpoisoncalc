@@ -42,6 +42,11 @@
       var when = window.PetPoisonCalcIngestLine();
       if (when) { lines.push('- ' + when); }
     }
+    // Optional poison control call notes from call-log.js (kept on this device only)
+    if (typeof window.PetPoisonCalcCallLines === 'function') {
+      var callLines = window.PetPoisonCalcCallLines();
+      if (callLines.length) { lines.push(''); lines.push('Poison control:'); callLines.forEach(function (l) { lines.push('- ' + clean(l)); }); }
+    }
     // Custom-strength inputs that sit outside a field group
     form.querySelectorAll('[id^="customMgWrap"]').forEach(function (w) {
       var inp = w.querySelector('input');
