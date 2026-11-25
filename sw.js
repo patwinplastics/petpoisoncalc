@@ -6,7 +6,7 @@
    Strategy: network first (so medical content is always the latest when online), falling back
    to the saved copy when the network fails or takes longer than a few seconds. */
 'use strict';
-var VERSION = 'ppc-2026112301';
+var VERSION = 'ppc-2026112501';
 var PRECACHE = [
   '/',
   '/guides/index.html',
@@ -52,6 +52,7 @@ var PRECACHE = [
   '/calculators/onions-garlic.html',
   '/calculators/rat-poison.html',
   '/calculators/salt-ice-melt.html',
+  '/calculators/caffeine.html',
   '/calculators/xylitol.html',
   '/calculators/acetaminophen.js',
   '/calculators/antifreeze.js',
@@ -69,6 +70,7 @@ var PRECACHE = [
   '/calculators/onions-garlic.js',
   '/calculators/rat-poison.js',
   '/calculators/salt-ice-melt.js',
+  '/calculators/caffeine.js',
   '/calculators/xylitol.js',
   '/assets/img/thumb-acet-240.webp',
   '/assets/img/thumb-antifreeze-240.webp',
@@ -99,6 +101,7 @@ var PRECACHE = [
   '/assets/img/card-acetaminophen-160.webp',
   '/assets/img/card-antifreeze-160.webp',
   '/assets/img/card-salt-160.webp',
+  '/assets/img/card-caffeine-160.webp',
   '/assets/img/card-onion-160.webp',
   '/assets/img/card-macadamia-160.webp',
   '/assets/img/card-thc-160.webp',

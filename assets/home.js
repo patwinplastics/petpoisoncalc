@@ -31,6 +31,7 @@
     'bromethalin': 'rat mouse poison rodent bait block pellet rodenticide tomcat',
     'grapes-raisins-cat': 'grape raisin currant sultana fruit kitten',
     'antifreeze': 'coolant radiator ethylene glycol engine car garage puddle leak drip snow globe brake fluid de-icer deicer winter prestone cabin toilet rv',
+    'caffeine': 'coffee espresso coffee grounds coffee beans k-cup pod tea energy drink red bull monster redbull pre-workout preworkout caffeine pill no-doz vivarin diet pill guarana soda cola mocha latte matcha green tea black tea stimulant methylxanthine',
     'salt-ice-melt': 'salt rock salt ice melt icemelt ice-melt de-icer deicer sidewalk driveway snow winter paws calcium chloride magnesium chloride potassium chloride urea halite sea salt kosher table salt dough ornament playdough play-doh play dough christmas craft'
   };
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.calc-picker-card'));
