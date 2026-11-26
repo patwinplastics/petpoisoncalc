@@ -31,6 +31,7 @@ var PRECACHE = [
   '/assets/offline.js',
   '/assets/pet-profiles.js',
   '/assets/share-result.js',
+  '/assets/call-log.js',
   '/assets/shell.js',
   '/assets/fonts/Fraunces-var.woff2',
   '/assets/fonts/IBMPlexMono-600.woff2',
