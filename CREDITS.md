@@ -64,8 +64,11 @@ These images were created with an AI image generator for PetPoisonCalc. They are
 | assets/img/photo-rodent-bait-{600,1200}.webp | calculators/rat-poison.html, calculators/bromethalin.html, guides/dog-ate-rat-poison.html, guides/dog-ate-bromethalin.html | Generic bait pellets, blocks, and a place pack |
 | assets/img/card-*-160.webp | Homepage calculator cards | One substance thumbnail per calculator (17) |
 | assets/img/guide-cranberries-{600,1200}.webp and assets/img/guide-cranberries-og.jpg | guides/can-dogs-eat-cranberries.html (hero and Open Graph image) | A golden retriever looking at a bowl of fresh cranberries on a Thanksgiving table |
+| assets/img/card-caffeine-160.webp | index.html (calculator card) | Original hand-built SVG illustration of a coffee cup and beans |
 | assets/img/infographic-cranberries-{600,1200}.webp | guides/can-dogs-eat-cranberries.html | Infographic separating plain cranberries from risky mix-ins |
 
 assets/mascot.svg is an original hand-built SVG made for PetPoisonCalc.
 
 The chocolate amount drawing, the rodent bait panel graphic, and the symptom timelines are hand-built SVG and CSS.
+
+The caffeine amounts chart in guides/dog-ate-coffee-caffeine.html is hand-built HTML and CSS.

@@ -60,7 +60,7 @@
 
 <link rel="stylesheet" href="../base.css?v=2026102101" />
 <link rel="stylesheet" href="../style.css?v=2026102101" />
-<link rel="stylesheet" href="../assets/site-shell.css?v=2026111603" />
+<link rel="stylesheet" href="../assets/site-shell.css?v=2026112502" />
 
 <!-- Google AdSense -->
 <!-- Loaded after the page finishes loading so ads never delay content -->
@@ -163,6 +163,7 @@
           <p class="section-intro"><strong>My pets (optional).</strong> If you choose to save a pet on a calculator page, the pet's name, species, weight, and the date you saved it are stored in your browser's local storage on your device, so calculators can fill in the weight for you next time. This information never leaves your device: it is not sent to PetPoisonCalc, Google, or anyone else. Nothing is stored unless you tap Save. You can delete a saved pet at any time with the remove button next to its name, or by clearing your browser's site data.</p>
           <p class="section-intro"><strong>Ate several things (optional).</strong> If you use the "Ate more than one thing?" page, the items you tick, your pet's species, and its weight are kept in your browser's session storage for that tab only, and the weight is added to the calculator links so each calculator can fill it in. This information never leaves your device and is cleared when you close the tab.</p>
           <p class="section-intro"><strong>When did it happen? (optional).</strong> On calculator pages you can tap a button or enter the time your pet ate something, so a running clock shows how long ago it was. That time is kept in your browser's session storage for that page only, so it survives a reload, and it is deleted when you close the tab or tap Clear. It is never sent to PetPoisonCalc, Google, or anyone else. It is included in the "Copy result" and "Share with my vet" summary only when you use those buttons. When you set a time, Google Analytics records an anonymous "ingest_time_set" event saying only which kind of button was used (a preset, the clock, or not sure), so we can tell whether the feature is useful. The time itself and pet details are not included.</p>
+          <p class="section-intro"><strong>Call notes (optional).</strong> On calculator pages, tapping a poison control phone number notes the time of the tap, and you can type a case number and what poison control told you. These notes are stored in your browser's local storage on your device for 48 hours, then deleted, or sooner if you tap Clear Notes. They are not sent to PetPoisonCalc, Google, or anyone else, and they are included in the Copy result or Share with my vet text only if you choose to use those buttons. The only thing recorded is an anonymous Google Analytics event, call_notes_used, with no text and no time.</p>
           <p class="section-intro"><strong>Offline copies.</strong> So the calculators still work without a signal, your browser saves copies of PetPoisonCalc's own pages, scripts, and images in its cache on your device (using a standard "service worker"). These are the same files anyone can download from the site. They contain nothing about you or your pet, and nothing you type into a calculator is saved in them or sent anywhere. If you install the site to your home screen, Google Analytics records an anonymous "app_installed" event with no other details. You can remove the offline copies at any time by clearing your browser's site data for petpoisoncalc.com.</p>
           <p class="section-intro"><strong>Find a 24/7 emergency vet near me.</strong> This button opens a Google Maps search for emergency vets in a new tab. PetPoisonCalc does not ask for or see your location; Google Maps uses whatever location access you have already given your browser or the Maps app, under Google's own privacy policy. When you tap the button, Google Analytics records an anonymous "er_vet_click" event with only where on the page it was tapped, so we can tell whether the button is useful. No pet details or location are included.</p>
           <p class="section-intro" id="email"><strong>Email list (optional, when offered).</strong> If we offer a signup form for seasonal pet safety emails and you choose to sign up, your email address goes directly from your browser to our email service provider, Kit (ConvertKit), which stores it, asks you to confirm, and sends the emails under <a href="https://kit.com/privacy" target="_blank" rel="noopener noreferrer">Kit's privacy policy</a>. We use it only to send those emails, never sell it, and every email has an unsubscribe link. Google Analytics records only an anonymous "email_signup_submit" event with where on the page the form was used, never your address. You can unsubscribe at any time or email us to have your address deleted.</p>
@@ -206,7 +207,7 @@
 
         <section class="info-section legal-section" aria-labelledby="retention-heading" id="retention">
           <h2 id="retention-heading">How long information is kept</h2>
-          <p class="section-intro">Calculator inputs are never stored, except the optional "When did it happen?" time, which stays in your browser tab until you close it. Google Analytics keeps data according to the retention setting in our account (Google allows 2 to 14 months for most user-level data). Emails you send us are kept only as long as needed to respond and keep a record of corrections. Email list addresses are kept by Kit until you unsubscribe or ask us to delete them. Google and GitHub keep their own data according to their own policies.</p>
+          <p class="section-intro">Calculator inputs are never stored, except the optional "When did it happen?" time, which stays in your browser tab until you close it, and the optional call notes, which stay on your device for 48 hours. Google Analytics keeps data according to the retention setting in our account (Google allows 2 to 14 months for most user-level data). Emails you send us are kept only as long as needed to respond and keep a record of corrections. Email list addresses are kept by Kit until you unsubscribe or ask us to delete them. Google and GitHub keep their own data according to their own policies.</p>
         </section>
 
         <section class="info-section legal-section" aria-labelledby="children-heading" id="children">
@@ -288,6 +289,7 @@
       <a href="/calculators/macadamia-nuts.html">Macadamia nuts</a>
       <a href="/calculators/antifreeze.html">Antifreeze</a>
       <a href="/calculators/salt-ice-melt.html">Ice melt &amp; salt</a>
+      <a href="/calculators/caffeine.html">Caffeine</a>
     </nav>
   </div>
 </footer>
