@@ -48,14 +48,14 @@
   box.className = 'call-log';
   box.setAttribute('aria-labelledby', 'callLogTitle');
   box.innerHTML =
-    '<h4 class="call-log-title" id="callLogTitle">Call notes <span class="call-log-optional">Optional</span></h4>' +
+    '<h4 class="call-log-title" id="callLogTitle">Call Notes <span class="call-log-optional">Optional</span></h4>' +
     '<p class="call-log-hint">Tap a poison control number above and the time is noted here. After the call, jot down the case number and what they said, so you can tell your vet.</p>' +
     '<ul class="call-log-calls" id="callLogCalls" aria-live="polite"></ul>' +
     '<label class="call-log-label" for="callCase">Case number</label>' +
     '<input type="text" id="callCase" class="call-log-input" maxlength="40" autocomplete="off" autocapitalize="characters" placeholder="From the poison control call" />' +
     '<label class="call-log-label" for="callNotes">What they told you</label>' +
     '<textarea id="callNotes" class="call-log-input" rows="3" maxlength="600" placeholder="Example: watch for vomiting, go to the ER if shaking starts"></textarea>' +
-    '<div class="call-log-foot"><button type="button" class="call-log-clear" id="callLogClear">Clear notes</button>' +
+    '<div class="call-log-foot"><button type="button" class="call-log-clear" id="callLogClear">Clear Notes</button>' +
     '<span class="call-log-privacy">Saved only on this device for 48 hours. Nothing is sent anywhere. Copy result and Share with my vet include these notes.</span></div>';
   var share = banner.querySelector('.share-result');
   var anchor = share || actions;
