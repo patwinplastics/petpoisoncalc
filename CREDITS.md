@@ -72,3 +72,18 @@ assets/mascot.svg is an original hand-built SVG made for PetPoisonCalc.
 The chocolate amount drawing, the rodent bait panel graphic, and the symptom timelines are hand-built SVG and CSS.
 
 The caffeine amounts chart in guides/dog-ate-coffee-caffeine.html is hand-built HTML and CSS.
+
+### Generated guide illustrations (November 27, 2026)
+
+Created with an AI image generator for PetPoisonCalc, captioned as illustrations on each page. No brands, packaging text, or lettering. The sago palm illustration was checked against the existing sago palm card image.
+
+| File | Used on | What it shows |
+|---|---|---|
+| assets/img/guide-bread-dough-{600,1200}.webp | guides/dog-ate-bread-dough.html | A beagle at the counter sniffing a bowl of rising dough |
+| assets/img/guide-alcohol-{600,1200}.webp | guides/dog-drank-alcohol.html | A small terrier sniffing unlabeled beer and wine glasses on a coffee table |
+| assets/img/guide-adhd-{600,1200}.webp | guides/dog-ate-adderall-adhd-medication.html | A Labrador puppy next to a tipped-over blank-label pill bottle on a desk |
+| assets/img/guide-vitamin-d-{600,1200}.webp | guides/dog-ate-vitamin-d.html | A cat and a corgi looking at spilled softgels and gummies |
+| assets/img/guide-iron-{600,1200}.webp | guides/dog-ate-iron-pills.html | A dog sniffing a bag next to spilled dark red tablets |
+| assets/img/guide-sago-{600,1200}.webp | guides/dog-ate-sago-palm.html | A dog sniffing a potted sago palm (Cycas revoluta) with seeds on the patio |
+
+The "at a glance" risk cards in these six guides are hand-built HTML and CSS, using the same thresholds as the matching calculators.
