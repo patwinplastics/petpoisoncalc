@@ -41,7 +41,13 @@
     'grapes-raisins-cat': 'grape raisin currant sultana fruit kitten',
     'antifreeze': 'coolant radiator ethylene glycol engine car garage puddle leak drip snow globe brake fluid de-icer deicer winter prestone cabin toilet rv',
     'caffeine': 'coffee espresso coffee grounds coffee beans k-cup pod tea energy drink red bull monster redbull pre-workout preworkout caffeine pill no-doz vivarin diet pill guarana soda cola mocha latte matcha green tea black tea stimulant methylxanthine',
-    'salt-ice-melt': 'salt rock salt ice melt icemelt ice-melt de-icer deicer sidewalk driveway snow winter paws calcium chloride magnesium chloride potassium chloride urea halite sea salt kosher table salt dough ornament playdough play-doh play dough christmas craft'
+    'salt-ice-melt': 'salt rock salt ice melt icemelt ice-melt de-icer deicer sidewalk driveway snow winter paws calcium chloride magnesium chloride potassium chloride urea halite sea salt kosher table salt dough ornament playdough play-doh play dough christmas craft',
+    'alcohol': 'alcohol beer wine liquor vodka rum whiskey tequila gin cocktail eggnog punch margarita ethanol booze drunk hand sanitizer purell mouthwash listerine vanilla extract',
+    'bread-dough': 'bread dough raw dough yeast pizza dough roll rolls sourdough starter proofing rising bake baking',
+    'vitamin-d': 'vitamin d vitamin d3 d2 cholecalciferol supplement multivitamin gummy gummies softgel drops calcium calcipotriene calcitriol psoriasis cream dovonex',
+    'iron': 'iron pill iron supplement ferrous sulfate fumarate gluconate prenatal vitamin multivitamin anemia oxygen absorber',
+    'adhd-medication': 'adhd add adderall vyvanse ritalin concerta focalin dexedrine amphetamine methylphenidate stimulant prescription pill medicine',
+    'sago-palm': 'sago palm cycad cycas coontie cardboard palm plant seed nut houseplant'
   };
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.calc-picker-card'));
   cards.forEach(function (card) {

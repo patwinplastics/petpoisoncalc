@@ -25,12 +25,18 @@
     ['bromethalin', 'Bromethalin rat or mouse bait', 1, 1],
     ['antifreeze', 'Antifreeze or coolant', 1, 1],
     ['salt-ice-melt', 'Salt, ice melt, or salt dough', 1, 1],
-    ['caffeine', 'Caffeine (coffee grounds, pills, energy drinks)', 1, 1]
+    ['caffeine', 'Caffeine (coffee grounds, pills, energy drinks)', 1, 1],
+    ['alcohol', 'Alcohol (beer, wine, liquor, hand sanitizer)', 1, 1],
+    ['bread-dough', 'Raw bread or pizza dough', 1, 1],
+    ['vitamin-d', 'Vitamin D pills, gummies, or cream', 1, 1],
+    ['iron', 'Iron pills or prenatal vitamins', 1, 1],
+    ['adhd-medication', 'ADHD medication (Adderall, Vyvanse, Ritalin)', 1, 1],
+    ['sago-palm', 'Sago palm (any part)', 1, 1]
   ];
-  var NO_WEIGHT = { 'lily-cats': 1, 'rat-poison': 1 };
+  var NO_WEIGHT = { 'lily-cats': 1, 'rat-poison': 1, 'bread-dough': 1, 'sago-palm': 1 };
   var PAIN = { ibuprofen: 1, naproxen: 1, aspirin: 1, acetaminophen: 1 };
-  var CAT_EMERGENCY = { 'grapes-raisins-cat': 1, aspirin: 1, acetaminophen: 1, antifreeze: 1, nicotine: 1, 'salt-ice-melt': 1, caffeine: 1 };
-  var DOG_EMERGENCY = { antifreeze: 1 };
+  var CAT_EMERGENCY = { 'grapes-raisins-cat': 1, aspirin: 1, acetaminophen: 1, antifreeze: 1, nicotine: 1, 'salt-ice-melt': 1, caffeine: 1, alcohol: 1, 'bread-dough': 1, 'vitamin-d': 1, 'adhd-medication': 1, 'sago-palm': 1 };
+  var DOG_EMERGENCY = { antifreeze: 1, 'bread-dough': 1, 'sago-palm': 1 };
   function find(slug) { for (var i = 0; i < ITEMS.length; i++) { if (ITEMS[i][0] === slug) { return ITEMS[i]; } } return null; }
   function load() { try { var p = JSON.parse(window.sessionStorage.getItem(KEY) || 'null'); return p && p.items && p.items.length ? p : null; } catch (e) { return null; } }
   function save(p) { try { window.sessionStorage.setItem(KEY, JSON.stringify(p)); } catch (e) { /* storage off: links still carry the weight */ } }
