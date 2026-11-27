@@ -6,7 +6,7 @@
    Strategy: network first (so medical content is always the latest when online), falling back
    to the saved copy when the network fails or takes longer than a few seconds. */
 'use strict';
-var VERSION = 'ppc-2026112601';
+var VERSION = 'ppc-2026112701';
 var PRECACHE = [
   '/',
   '/guides/index.html',
@@ -47,6 +47,12 @@ var PRECACHE = [
   '/calculators/ibuprofen.html',
   '/calculators/lily-cats.html',
   '/calculators/macadamia-nuts.html',
+  '/calculators/alcohol.html',
+  '/calculators/bread-dough.html',
+  '/calculators/vitamin-d.html',
+  '/calculators/iron.html',
+  '/calculators/adhd-medication.html',
+  '/calculators/sago-palm.html',
   '/calculators/marijuana-thc.html',
   '/calculators/naproxen.html',
   '/calculators/nicotine.html',
@@ -65,6 +71,12 @@ var PRECACHE = [
   '/calculators/ibuprofen.js',
   '/calculators/lily-cats.js',
   '/calculators/macadamia-nuts.js',
+  '/calculators/alcohol.js',
+  '/calculators/bread-dough.js',
+  '/calculators/vitamin-d.js',
+  '/calculators/iron.js',
+  '/calculators/adhd-medication.js',
+  '/calculators/sago-palm.js',
   '/calculators/marijuana-thc.js',
   '/calculators/naproxen.js',
   '/calculators/nicotine.js',
@@ -83,6 +95,12 @@ var PRECACHE = [
   '/assets/img/thumb-ibuprofen-240.webp',
   '/assets/img/thumb-lily-easter-240.webp',
   '/assets/img/thumb-macadamia-240.webp',
+  '/assets/img/thumb-alcohol-240.webp',
+  '/assets/img/thumb-bread-dough-240.webp',
+  '/assets/img/thumb-vitamin-d-240.webp',
+  '/assets/img/thumb-iron-240.webp',
+  '/assets/img/thumb-adhd-240.webp',
+  '/assets/img/thumb-sago-240.webp',
   '/assets/img/thumb-naproxen-240.webp',
   '/assets/img/thumb-nicotine-240.webp',
   '/assets/img/thumb-onion-240.webp',
@@ -107,7 +125,13 @@ var PRECACHE = [
   '/assets/img/card-macadamia-160.webp',
   '/assets/img/card-thc-160.webp',
   '/assets/img/card-rat-160.webp',
-  '/assets/img/card-brom-160.webp'
+  '/assets/img/card-brom-160.webp',
+  '/assets/img/card-alcohol-160.webp',
+  '/assets/img/card-bread-dough-160.webp',
+  '/assets/img/card-vitamin-d-160.webp',
+  '/assets/img/card-iron-160.webp',
+  '/assets/img/card-adhd-160.webp',
+  '/assets/img/card-sago-160.webp'
 ];
 // /embed/ is intentionally not precached. Embed documents stay network-only below
 // so a saved copy cannot hide a calculator threshold fix.
